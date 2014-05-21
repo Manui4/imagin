@@ -1,0 +1,7 @@
+parameters:
+#    man_manuia.example.class: Man\Bundle\ManuiaBundle\Example
+
+services:
+#    man_manuia.example:
+#        class: %man_manuia.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

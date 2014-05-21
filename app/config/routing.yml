@@ -1,0 +1,4 @@
+man_manuia:
+    resource: "@ManManuiaBundle/Resources/config/routing.yml"
+    prefix:   /
+

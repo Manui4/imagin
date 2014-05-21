@@ -1,0 +1,3 @@
+man_manuia_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ManManuiaBundle:Default:index }
