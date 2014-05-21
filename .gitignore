@@ -12,6 +12,7 @@
 composer.lock
 .settings/
 .project
+.buildpath
 web/img/
 web/assetic
 web/css
