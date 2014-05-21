@@ -1,1 +1,10 @@
-Hello {{ name }}!
+{% extends "ManManuiaBundle::layout.html.twig" %}
+
+{% block content_header_more %}
+    {{ parent() }}
+    <li><a href="{{ path('_demo') }}">Demo Home</a></li>
+{% endblock %}
+
+{% block content %}
+    Hello {{ name }}!
+{% endblock %}

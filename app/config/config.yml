@@ -33,7 +33,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    # bundles:        [ ManManuiaBundle ] If you want assetic to include your bundles by default, you can comment (with #) the line bundles: []
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
