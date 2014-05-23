@@ -1,0 +1,28 @@
+/* ==|====================
+   Module/Button
+   ======================= */
+
+.btn{
+    display: inline-block;
+    padding: 0 40px;
+
+    font-size: 15px;
+    color:#000;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+
+    background-color: transparent;
+    background-color: rgba($color, 0);
+    border: 2px solid $color;
+    cursor: pointer;
+    @include transition-duration;
+
+    &:hover{
+        background-color: $color;
+        border-color: $color;
+        color:#FFF;
+    }
+}
+
+.btn-small{ line-height: 30px; }

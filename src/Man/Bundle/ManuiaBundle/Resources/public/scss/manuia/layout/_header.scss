@@ -1,0 +1,97 @@
+/* ==|====================
+   Layout/Header
+   ======================= */
+
+.l-header {
+    margin: 1.5em 0;
+    
+    .header-logo {
+        padding-left: 1.5em;
+        height: 7.5em;
+        display: block;
+        float: left;
+
+        img { @include transition-duration;}
+        &:hover{
+            img{ @include opacity(0.8); }
+        }
+    }
+    
+    @media only screen and (max-width : $width-device-m ) {
+        .header-logo {
+            padding-left: 1.5em;
+            height: 4.5em;
+        }
+    }
+
+    .header-menu, .header-toggle {
+        float: right;
+
+        .menu-item {
+            padding-right: 1.5em;
+            float: left;
+            &:before {
+                content : '|';
+                margin-right: 1.5em;
+                color: $color-1;
+            }
+            &:first-child:before{ display: none; }
+            &:hover a, &.is-active a { 
+                @include transition-duration;
+                color: $color-3; 
+            }
+        }
+    }
+
+    .header-toggle {
+        padding: 0 0.5em;
+        
+        .navbar-toggle {
+
+            background-color: $color-0;
+            background-image: none;
+            border: 2px solid $color-navbar-toggle;
+            @include  border-radius(4px);
+            float: right;
+            padding: 10px 5px;
+            position: relative;
+            outline:none;
+            text-transform: none;
+
+            @include appearance(none);
+            @include border-radius(5px);
+
+            &:focus {
+                @include transition-duration;
+                background-color: $color-3;
+            }
+            
+            .icon-bar {
+                background-color: $color-navbar-toggle;
+                display: block;
+                width: 22px;
+                height: 2px;
+                
+                position: relative;
+                top: -6px;
+                margin: 0 auto;
+                @include  border-radius(1px);
+                &:before, &:after {
+                    content:'';
+                    background-color: $color-navbar-toggle;
+                    display: block;
+                    position: relative;
+                    top: 6px;
+                    width: 22px;
+                    height: 2px;
+                    @include  border-radius(1px);
+                }
+                &:after {
+                    top: 10px;
+                }
+            }
+        }
+    }
+}
+
+

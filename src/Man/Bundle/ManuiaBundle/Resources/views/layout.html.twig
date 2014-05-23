@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
+{#         <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -10,24 +11,14 @@
 
 
         {% block stylesheets %}
-            {% stylesheets output="css/compiled/main.css" filter="cssrewrite"
-                '@ManManuiaBundle/Resources/public/css/*'
-                '@ManManuiaBundle/Resources/public/css/vendor/*'
-             %}
-                <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+            {% stylesheets '@ManManuiaBundle/Resources/public/css/*' %}
+{#              <link rel="stylesheet" type="text/css" href="{{ asset_url }}">#}
             {% endstylesheets %}
-            <style>
-                    body {
-                            padding-top: 50px;
-                    }
-                    .sidebar{
-                            margin-top: 50px;
-                    }
-            </style>
+            <link rel="stylesheet" type="text/css" href="{{ asset("/bundles/manmanuia/css/style.css") }}">
+            <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Kreon' rel='stylesheet' type='text/css'>
         {% endblock %}
     </head>
     <body>
-
         {% for flashMessage in app.session.flashbag.get('notice') %}
         <div class="flash-message">
             <em>Notice</em>: {{ flashMessage }}
@@ -36,39 +27,50 @@
 
 
         {% block body %}
-        <div class="menu-header">
+        <header class="l-header">
+            <div class="m-hide">
+	            <a class="header-logo" href="{{ path('man_manuia_homepage') }}">
+	                <img src="/bundles/manmanuia/images/logo_s-orange.png" alt="Logo">
+	            </a>
+            </div>
+            <div class="s-hide-only">
+	            <a class="header-logo" href="{{ path('man_manuia_homepage') }}">
+	                <img src="/bundles/manmanuia/images/logo_ml-orange.png" alt="Logo">
+	            </a>
+            </div>
+
             {% block menu_header %}
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="{{ path('_demo') }}">Blog</a>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
-                        <ul class="nav navbar-nav">
-                        {% block content_header_more %}
-                            <li><a href="{{ path('_demo') }}">Demo Home</a></li>
-                        {% endblock %}
-                        </ul>
-                    </div>
-                </div>
+            <div class="header-toggle m-hide">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-menu">
+                   <span class="icon icon-bar"></span>
+               </button>
+            </div>
+            <div class="header-menu s-hide-only" role="navigation">
+                {% block content_header_more %}
+                    <nav class="menu-item"><a href="{{ path('_demo') }}">Demo Home</a></nav>
+                {% endblock %}
             </div>
             {% endblock %}
-        </div>
+            <div class="clearfix"></div>
+        </header>
 
-        <div class="content container">
+        <div class="l-content">
             {% block content %}{% endblock %}
         </div>
-        {% endblock %}
+        {% endblock %} <!-- block body -->
 
         {% block javascripts %}
-            {% javascripts '@ManManuiaBundle/Resources/public/js/*' %}
+            {% javascripts
+                '@ManManuiaBundle/Resources/public/js/*'
+                '@ManManuiaBundle/Resources/public/js/vendor/jquery-1.10.2.min.js'
+             %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
+{#             <script type="text/javascript" src="{{ asset("/bundles/manmanuia/js/vendor/jquery-1.10.2.min.js") }}"></script>#}
+
         {% endblock %}
     </body>
 </html>
+
+
+

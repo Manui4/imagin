@@ -1,0 +1,9 @@
+/* ==|====================
+   Layout/Content
+   ======================= */
+
+.l-content {
+    margin-right: auto;
+    margin-left: auto;
+    @include clearfix;
+}

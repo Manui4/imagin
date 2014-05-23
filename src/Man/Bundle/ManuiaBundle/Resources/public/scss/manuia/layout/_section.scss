@@ -1,0 +1,49 @@
+/* ==|====================
+   Layout/Section
+   ======================= */
+
+.section {
+    background-color: $color-bg-section;
+    color: $color-text-section;
+    position: relative;
+    display: block;
+    
+    margin: 7.5em 0;
+    padding: 1.5em;
+    
+    /* z-index : 5; */
+    &:before, &:after{
+        content:'';
+        background-color: $color-bg-section;
+
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: -1;
+
+        @include transform-origin(0);
+        @include transform(skewY(-3deg));
+    }
+    &:after{
+        background-color: $color-bg-section;
+        @include transform-origin(100%);
+    }
+}
+
+
+@media ( max-width : $width-device-s) {
+    .section { 
+         margin: 3em 0;
+    }
+}
+
+@media ( max-width : $width-device-m) {
+    .section { 
+         margin: 4.5em 0;
+    }
+}
+
+.section h1 {
+    /* margin-top: -1.5em; */
+    
+    text-align: right;
+}

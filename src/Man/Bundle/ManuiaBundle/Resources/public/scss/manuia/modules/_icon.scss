@@ -1,0 +1,14 @@
+/* ==|====================
+   Module/Button
+   ======================= */
+
+@import "icon/*.png";
+
+$icon-layout: smart;
+@include all-icon-sprites(true);
+
+.icon{
+    display: inline-block;
+    vertical-align: middle;
+}
+

@@ -1,0 +1,24 @@
+/* ==|====================
+   Layout/Container
+   ======================= */
+
+.l-container {
+    
+    margin-right: auto;
+    margin-left: auto;
+    
+    margin-top: emtopx($line-height-base-nounit, $font-size-base-nounit, 0);
+    /* border:1px solid $color-9; */
+    
+    background-color: $color-bg-container;
+    width: 100%;
+    
+    @include clearfix;
+    
+}
+
+@media ( min-width : $width-device-l) {
+    .l-container { 
+         width: $width-device-l + $gutter;
+    }
+}

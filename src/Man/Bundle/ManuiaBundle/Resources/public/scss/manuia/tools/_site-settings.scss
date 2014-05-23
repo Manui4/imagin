@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+// ----------------------
+// == Site settings
+// ----------------------
+
+// Html 5 Element
+$audio-canvas-video: false; // True | False
+
+// Fonts
+$font1: "PT Sans", Arial, Helvetica, sans-serif;
+$font2: "Kreon", serif;
+
+$line-height-base: 1.5em;
+$font-size-base: 16px;
+$margin-bottom-headline: 1.5rem;
+$line-height-base-nounit: 1.5;
+$font-size-base-nounit: 16;
+$margin-bottom-headline: 1.5rem;
+
+
+// = Colors
+// -----------------------------
+
+// Graphic chart
+$color-0: #508fb7; // bleu
+$color-1: #343232; // noir
+$color-2: #23c48f; // vert
+$color-3: #f59755; // orange
+$color-4: #f5ebe4; // gris - orange
+$color-5: #ffffff; // blanc
+$color-6: #bdb4b1; // gris
+$color-7: #508f4d; // vert
+$color-8: #d5d57f; // jaune
+$color-9: #ec3f5c; // rouge 
+
+$color-10: #27ae60; // NEPHRETIS
+$color-11: #ecf0f1; // CLAUD
+$color-12: #d35400; // PUMPKIN
+$color-13: #34495e; // WET ASPHALT
+$color-14: #2980b9; // BELIZE HOLE
+$color-15: #7a7a7a; // GRIS
+
+// Background
+$color-bg-container: rgba($color-9, 0.2);
+$color-bg-grid: rgba($color-1, 0.2);
+$color-bg-grid: $color-1;
+$color-bg-section: rgba($color-1, 0.2);
+$color-bg-section: $color-1;
+
+// Text
+$color-text-base: $color-3;
+$color-text-strong: $color-13;
+$color-text-section: $color-15;
+$color-text-grid: $color-15;
+
+// link
+$color-link: $color-2;
+$color-link-hover: darken($color-link, 10%);
+
+// headline
+$color-headline: $color-3;
+
+// Mixin Placeholder
+$color-mixin-placeholder: lighten($color-15, 10%);;
+
+// Selection
+$color-selection: $color-0;
+$color-selection-bg: $color-1;
+
+// Logo
+$color-logo-s: $color-2;
+$color-logo-s-hover: darken($color-link, 10%);
+
+// Btn
+$color-navbar-toggle: $color-1;
+$bg-btn: #555;
+$bg-btn-hover: darken($bg-btn, 10%);
+$clr-btn: #212121;
+$clr-btn-hover: darken($clr-btn, 10%);
+
+// = Grid
+// -----------------------------
+$columns: 12!default;
+$gutter: 20px!default;
+$width-device-s : 320px!default;
+$width-device-m : 520px!default;
+$width-device-l : 1140px!default;
+
+// Max width wrapper
+$wrapper-width: pxtoem(1140, 16);
+
+// = Prefix
+// -----------------------------
+
+$prefix-for-webkit:    true !default;
+$prefix-for-mozilla:   true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera:     true !default;
+$prefix-for-spec:      true !default; // required for keyframe mixin
+
+// = Responsive
+// -----------------------------
+
+$width-desktop: 75em; // 1200/16
+$width-tablet: 62em; // 992/16
+$width-mobile: 48em; // 768/16
+
+// = Transition Duration
+// -----------------------------
+$default-transition-duration: 0.3s;
