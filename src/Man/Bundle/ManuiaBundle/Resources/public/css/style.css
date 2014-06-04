@@ -765,8 +765,10 @@ strong {
       -webkit-transition-duration: 0.3s;
       -moz-transition-duration: 0.3s;
       -o-transition-duration: 0.3s;
-      transition-duration: 0.3s; }
-    /* line 16, ../scss/manuia/layout/_header.scss */
+      transition-duration: 0.3s;
+      width: 100px;
+      max-height: 100px; }
+    /* line 20, ../scss/manuia/layout/_header.scss */
     .l-header .header-logo:hover img {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
       opacity: 0.8;
@@ -776,36 +778,36 @@ strong {
         filter: alpha(opacity=80);
         zoom: 1; }
   @media only screen and (max-width: 768px) {
-    /* line 21, ../scss/manuia/layout/_header.scss */
+    /* line 25, ../scss/manuia/layout/_header.scss */
     .l-header .header-logo {
       padding-left: 1.5em;
       height: 4.5em; } }
-  /* line 27, ../scss/manuia/layout/_header.scss */
+  /* line 31, ../scss/manuia/layout/_header.scss */
   .l-header .header-menu, .l-header .header-toggle {
     float: right; }
-    /* line 30, ../scss/manuia/layout/_header.scss */
+    /* line 34, ../scss/manuia/layout/_header.scss */
     .l-header .header-menu .menu-item, .l-header .header-toggle .menu-item {
       padding-right: 1.5em;
       float: left; }
-      /* line 33, ../scss/manuia/layout/_header.scss */
+      /* line 37, ../scss/manuia/layout/_header.scss */
       .l-header .header-menu .menu-item:before, .l-header .header-toggle .menu-item:before {
         content: '|';
         margin-right: 1.5em;
         color: #343232; }
-      /* line 38, ../scss/manuia/layout/_header.scss */
+      /* line 42, ../scss/manuia/layout/_header.scss */
       .l-header .header-menu .menu-item:first-child:before, .l-header .header-toggle .menu-item:first-child:before {
         display: none; }
-      /* line 39, ../scss/manuia/layout/_header.scss */
+      /* line 43, ../scss/manuia/layout/_header.scss */
       .l-header .header-menu .menu-item:hover a, .l-header .header-menu .menu-item.is-active a, .l-header .header-toggle .menu-item:hover a, .l-header .header-toggle .menu-item.is-active a {
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
         color: #f59755; }
-  /* line 46, ../scss/manuia/layout/_header.scss */
+  /* line 50, ../scss/manuia/layout/_header.scss */
   .l-header .header-toggle {
     padding: 0 0.5em; }
-    /* line 49, ../scss/manuia/layout/_header.scss */
+    /* line 53, ../scss/manuia/layout/_header.scss */
     .l-header .header-toggle .navbar-toggle {
       background-image: none;
       border: 2px solid #343232;
@@ -821,14 +823,14 @@ strong {
       appearance: none;
       -moz-border-radius: 5px;
       border-radius: 5px; }
-      /* line 62, ../scss/manuia/layout/_header.scss */
+      /* line 66, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle:focus {
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
         background-color: #b4b1b1; }
-      /* line 67, ../scss/manuia/layout/_header.scss */
+      /* line 71, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle .icon-bar {
         background-color: #343232;
         display: block;
@@ -839,7 +841,7 @@ strong {
         margin: 0 auto;
         -moz-border-radius: 1px;
         border-radius: 1px; }
-        /* line 77, ../scss/manuia/layout/_header.scss */
+        /* line 81, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-toggle .navbar-toggle .icon-bar:after {
           content: '';
           background-color: #343232;
@@ -850,7 +852,7 @@ strong {
           height: 2px;
           -moz-border-radius: 1px;
           border-radius: 1px; }
-        /* line 87, ../scss/manuia/layout/_header.scss */
+        /* line 91, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:after {
           top: 10px; }
 
