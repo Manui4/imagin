@@ -679,14 +679,14 @@ body {
   font-size: 16px;
   line-height: 1.5em;
   background-size: 1.5em 1.5em;
-  color: #f59755;
-  /* &:hover { */
-  background-image: -webkit-linear-gradient(white, white 98%, black 100%);
-  background-image: -moz-linear-gradient(white, white 98%, black 100%);
-  background-image: -o-linear-gradient(white, white 98%, black 100%);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.98, white), to(black));
-  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
-  /* } */ }
+  color: #f59755; }
+  /* line 17, ../scss/manuia/base/_base.scss */
+  body:hover {
+    background-image: -webkit-linear-gradient(white, white 98%, black 100%);
+    background-image: -moz-linear-gradient(white, white 98%, black 100%);
+    background-image: -o-linear-gradient(white, white 98%, black 100%);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.98, white), to(black));
+    background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%); }
 
 /* line 26, ../scss/manuia/base/_base.scss */
 p, ul, ol, blockquote {
@@ -775,7 +775,7 @@ strong {
       .lt-ie7 .l-header .header-logo:hover img {
         filter: alpha(opacity=80);
         zoom: 1; }
-  @media only screen and (max-width: 520px) {
+  @media only screen and (max-width: 768px) {
     /* line 21, ../scss/manuia/layout/_header.scss */
     .l-header .header-logo {
       padding-left: 1.5em;
@@ -883,10 +883,10 @@ strong {
   .l-container:after {
     clear: both; }
 
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
   /* line 21, ../scss/manuia/layout/_container.scss */
   .l-container {
-    width: 1160px; } }
+    width: 1220px; } }
 /* ==|====================
    Layout/Content
    ======================= */
@@ -1232,7 +1232,7 @@ strong {
 .s-hide-only {
   display: none; }
 
-@media only screen and (min-width: 520px) {
+@media only screen and (min-width: 768px) {
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
     margin: 0 auto;
@@ -1533,7 +1533,7 @@ strong {
   /* line 53, ../scss/manuia/layout/_grid.scss */
   .s-hide-only {
     display: block; } }
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1200px) {
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
     margin: 0 auto;
@@ -1875,11 +1875,11 @@ strong {
     -o-transform-origin: 100%;
     transform-origin: 100%; }
 
-@media (max-width: 320px) {
+@media (max-width: 368px) {
   /* line 34, ../scss/manuia/layout/_section.scss */
   .section {
     margin: 3em 0; } }
-@media (max-width: 520px) {
+@media (max-width: 768px) {
   /* line 40, ../scss/manuia/layout/_section.scss */
   .section {
     margin: 4.5em 0; } }

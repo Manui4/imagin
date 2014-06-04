@@ -83,12 +83,12 @@ $clr-btn-hover: darken($clr-btn, 10%);
 // -----------------------------
 $columns: 12!default;
 $gutter: 20px!default;
-$width-device-s : 320px!default;
-$width-device-m : 520px!default;
-$width-device-l : 1140px!default;
+$width-device-s : 368px !default;
+$width-device-m : 768px !default;
+$width-device-l : 1200px !default;
 
 // Max width wrapper
-$wrapper-width: pxtoem(1140, 16);
+$wrapper-width: pxtoem(1200, 16);
 
 // = Prefix
 // -----------------------------
@@ -102,9 +102,9 @@ $prefix-for-spec:      true !default; // required for keyframe mixin
 // = Responsive
 // -----------------------------
 
-$width-desktop: 75em; // 1200/16
-$width-tablet: 62em; // 992/16
-$width-mobile: 48em; // 768/16
+//$width-desktop: 75em; // 1200/16
+//$width-tablet: 62em; // 992/16
+//$width-mobile: 48em; // 768/16
 
 // = Transition Duration
 // -----------------------------
