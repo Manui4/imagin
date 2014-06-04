@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{% block title %}{% endblock %} >> Manuia</title>
+
+
+        {% block stylesheets %}
+            {% stylesheets '@ManManuiaBundle/Resources/public/css/*' %}
+{#              <link rel="stylesheet" type="text/css" href="{{ asset_url }}">#}
+            {% endstylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset("/bundles/manmanuia/css/style.css") }}">
+            <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Kreon' rel='stylesheet' type='text/css'>
+        {% endblock %}
+    </head>
+    <body>
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash-message">
+            <em>Notice</em>: {{ flashMessage }}
+        </div>
+        {% endfor %}
+
+
+        {% block body %}
+            <header class="l-header">
+                <div class="l-container">
+                {{ include('ManManuiaBundle:Template:header.html.twig',{
+                    'color': 'dark',
+                    'menu_header' : block('menu_header'),
+                    'content_header_more' : block('content_header_more')
+                }) }}
+                </div>
+            </header>
+
+            <section class="l-content">
+                {% block content %}{% endblock %}
+            </section>
+        {% endblock %} <!-- block body -->
+
+        {% block javascripts %}
+            {% javascripts
+                '@ManManuiaBundle/Resources/public/js/*'
+                '@ManManuiaBundle/Resources/public/js/vendor/jquery-1.10.2.min.js'
+             %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
+    </body>
+</html>
+
+
+

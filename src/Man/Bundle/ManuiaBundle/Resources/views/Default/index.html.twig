@@ -1,9 +1,9 @@
-{% extends "ManManuiaBundle::layout.html.twig" %}
+{% extends "ManManuiaBundle:Template:layout.html.twig" %}
 
 {% block content_header_more %}
     {{ parent() }}
-    <div class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Test</a></div>
-    <div class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Test</a></div>
+    <span class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Test 2</a></span>
+    <span class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Test 3</a></span>
 {% endblock %}
 
 {% block content %}

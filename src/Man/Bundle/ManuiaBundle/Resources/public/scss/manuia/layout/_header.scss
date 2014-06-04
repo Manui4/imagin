@@ -47,8 +47,6 @@
         padding: 0 0.5em;
         
         .navbar-toggle {
-
-            background-color: $color-0;
             background-image: none;
             border: 2px solid $color-navbar-toggle;
             @include  border-radius(4px);
@@ -63,7 +61,7 @@
 
             &:focus {
                 @include transition-duration;
-                background-color: $color-3;
+                background-color: $color-bg-navbar-toggle-focus;
             }
             
             .icon-bar {

@@ -42,7 +42,7 @@ $color-14: #2980b9; // BELIZE HOLE
 $color-15: #7a7a7a; // GRIS
 
 // Background
-$color-bg-container: rgba($color-9, 0.2);
+$color-bg-container: none; // rgba($color-9, 0.2);
 $color-bg-grid: rgba($color-1, 0.2);
 $color-bg-grid: $color-1;
 $color-bg-section: rgba($color-1, 0.2);
@@ -62,7 +62,7 @@ $color-link-hover: darken($color-link, 10%);
 $color-headline: $color-3;
 
 // Mixin Placeholder
-$color-mixin-placeholder: lighten($color-15, 10%);;
+$color-mixin-placeholder: lighten($color-15, 10%);
 
 // Selection
 $color-selection: $color-0;
@@ -74,6 +74,7 @@ $color-logo-s-hover: darken($color-link, 10%);
 
 // Btn
 $color-navbar-toggle: $color-1;
+$color-bg-navbar-toggle-focus : lighten($color-navbar-toggle, 50%);
 $bg-btn: #555;
 $bg-btn-hover: darken($bg-btn, 10%);
 $clr-btn: #212121;

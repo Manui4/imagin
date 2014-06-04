@@ -807,7 +807,6 @@ strong {
     padding: 0 0.5em; }
     /* line 49, ../scss/manuia/layout/_header.scss */
     .l-header .header-toggle .navbar-toggle {
-      background-color: #508fb7;
       background-image: none;
       border: 2px solid #343232;
       -moz-border-radius: 4px;
@@ -822,14 +821,14 @@ strong {
       appearance: none;
       -moz-border-radius: 5px;
       border-radius: 5px; }
-      /* line 64, ../scss/manuia/layout/_header.scss */
+      /* line 62, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle:focus {
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
-        background-color: #f59755; }
-      /* line 69, ../scss/manuia/layout/_header.scss */
+        background-color: #b4b1b1; }
+      /* line 67, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle .icon-bar {
         background-color: #343232;
         display: block;
@@ -840,7 +839,7 @@ strong {
         margin: 0 auto;
         -moz-border-radius: 1px;
         border-radius: 1px; }
-        /* line 79, ../scss/manuia/layout/_header.scss */
+        /* line 77, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-toggle .navbar-toggle .icon-bar:after {
           content: '';
           background-color: #343232;
@@ -851,13 +850,10 @@ strong {
           height: 2px;
           -moz-border-radius: 1px;
           border-radius: 1px; }
-        /* line 89, ../scss/manuia/layout/_header.scss */
+        /* line 87, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:after {
           top: 10px; }
 
-/* ==|====================
-   Layout/Nav
-   ======================= */
 /* ==|====================
    Layout/Footer
    ======================= */
@@ -870,7 +866,7 @@ strong {
   margin-left: auto;
   margin-top: 24px;
   /* border:1px solid $color-9; */
-  background-color: rgba(236, 63, 92, 0.2);
+  background-color: none;
   width: 100%; }
   /* line 28, ../scss/manuia/tools/_mixins.scss */
   .lt-ie8 .l-container {
