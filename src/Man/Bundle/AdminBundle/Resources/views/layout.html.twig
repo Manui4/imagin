@@ -1,0 +1,30 @@
+{% extends "ManManuiaBundle:Template:layout.html.twig" %}
+
+{% block content_header_more %}
+    {{ parent() }}
+    {% set route = app.request.attributes.get('_route') %}
+    <span class="menu-item{% if 'man_admin_dashboard' == route %} active{% endif %}" ><a href="{{ url('man_admin_dashboard') }}">{{ 'dashboard'|trans|capitalize }}</a></span>
+    <span class="menu-item{% if 'man_admin_post_list' == route %} active{% endif %}"  ><a href="{{ url('man_admin_post_list') }}">{{ 'posts'|trans|capitalize }}</a></span>
+    <span class="menu-item{% if 'man_admin_comment_list' == route %} active{% endif %}" ><a href="{{ url('man_admin_comment_list') }}">{{ 'comments'|trans|capitalize }}</a></span>
+    <span class="menu-item{% if 'man' == route %} active{% endif %}" ><a href="{{ url('man_admin_post_list') }}">{{ 'references'|trans|capitalize }}</a></span>
+    <span class="menu-item"><a href="{{ url('admin_logout') }}">{{ 'Logout'|trans }}</a></span>
+{% endblock %}
+
+{% block content %}
+    <div class="l-container">
+        {% for flashMessage in app.session.flashbag.get('admin') %}
+        <div class="row">
+            <div class="col-s-12">
+                <div class="alert alert-info">
+                    {{ flashMessage }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="row">
+            {% block admin_content %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}
+

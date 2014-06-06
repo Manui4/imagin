@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+
+    {% block head_meta %}
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>{% block title %}{% endblock %} >> Manuia</title>
+        <meta name="robots" content="index,follow" />
+        <meta property='og:title' content='{{ block('title') }}'/>
+        <meta property='og:description' content='{{ block('description') }}'/>
+        <meta property='og:site_name' content='Manuia'/>
+        <meta property='og:type' content='website'/>
+        <meta property='og:image' content='http://manuia.local/bundles/manmanuia/images/logo_ml-dark.png' />
 
-        {% block stylesheets %}
-            {% stylesheets '@ManManuiaBundle/Resources/public/css/*' %}
-{#              <link rel="stylesheet" type="text/css" href="{{ asset_url }}">#}
-            {% endstylesheets %}
-            <link rel="apple-touch-icon" sizes="130×130" href="/apple-touch-icon.png" />
-            <link rel="stylesheet" type="text/css" href="{{ asset("/bundles/manmanuia/css/style.css") }}">
-            <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Kreon' rel='stylesheet' type='text/css'>
-        {% endblock %}
+        <link rel="alternate" type="application/rss+xml"  href="{{ url('man_blog_feed_rss') }}" title="Man RSS">
+    {% endblock head_meta %}
+
+    <link rel="alternate" type="application/rss+xml"  href="{{ url('man_blog_feed_rss') }}" title="Man RSS">
+    <title>{% block title %}{% endblock %} >> Manuia</title>
+
+    {% block stylesheets %}
+        {% stylesheets '@ManManuiaBundle/Resources/public/css/*' %}
+{#             <link rel="stylesheet" type="text/css" href="{{ asset_url }}">#}
+        {% endstylesheets %}
+        <link rel="apple-touch-icon" sizes="130×130" href="/apple-touch-icon.png" />
+        <link rel="stylesheet" type="text/css" href="{{ asset("/bundles/manmanuia/css/style.css") }}">
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Kreon'>
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+    {% endblock %}
+
     </head>
-    <body>
+    <body class="{% block body_class %}{% endblock body_class %}">
         {% for flashMessage in app.session.flashbag.get('notice') %}
         <div class="flash-message">
             <em>Notice</em>: {{ flashMessage }}
@@ -43,8 +59,9 @@
 
         {% block javascripts %}
             {% javascripts
-                '@ManManuiaBundle/Resources/public/js/*'
                 '@ManManuiaBundle/Resources/public/js/vendor/jquery-1.10.2.min.js'
+                '@ManManuiaBundle/Resources/public/js/bootstrap/bootstrap.js'
+                '@ManManuiaBundle/Resources/public/js/*'
              %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}

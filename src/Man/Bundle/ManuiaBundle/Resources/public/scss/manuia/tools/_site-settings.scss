@@ -48,6 +48,11 @@ $color-bg-grid: $color-1;
 $color-bg-section: rgba($color-1, 0.2);
 $color-bg-section: $color-1;
 
+// Table
+$color-table-row-hover: lighten($color-0, 45%);
+$color-table-row-striped: lighten($color-7, 50%);
+$color-table-lborder-hover: lighten($color-7, 10%);
+
 // Text
 $color-text-base: $color-3;
 $color-text-strong: $color-13;
@@ -75,10 +80,10 @@ $color-logo-s-hover: darken($color-link, 10%);
 // Btn
 $color-navbar-toggle: $color-1;
 $color-bg-navbar-toggle-focus : lighten($color-navbar-toggle, 50%);
-$bg-btn: #555;
-$bg-btn-hover: darken($bg-btn, 10%);
-$clr-btn: #212121;
-$clr-btn-hover: darken($clr-btn, 10%);
+$color-bg-btn: $color-8;
+$color-bg-btn-hover: darken($color-bg-btn, 10%);
+$color-bg-btn-text: darken($color-bg-btn, 60%);
+$color-bg-btn-text-hover: darken($color-bg-btn, 60%);
 
 // = Grid
 // -----------------------------

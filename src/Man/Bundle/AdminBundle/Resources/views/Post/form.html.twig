@@ -1,0 +1,59 @@
+{{ form_start(form) }}
+
+{{ form_widget(form.title, {'attr': {
+    'class': 'form-input',
+    'placeholder': form.title.vars.label
+}}) }}
+<div class="message warning">
+    {{ form_errors(form.title) }}
+</div>
+
+{{ form_widget(form.slug, {'attr': {
+    'class': 'form-input',
+    'placeholder': form.slug.vars.label
+}}) }}
+<div class="message warning">
+    {{ form_errors(form.slug) }}
+</div>
+
+{{ form_widget(form.description, {'attr': {
+    'rows': 7,
+    'class': 'form-textarea',
+    'placeholder': form.description.vars.label
+}}) }}
+<div class="message warning">
+    {{ form_errors(form.description) }}
+</div>
+
+{{ form_widget(form.content, {'attr': {
+    'rows': 15,
+    'class': 'form-textarea',
+    'placeholder': form.content.vars.label
+}}) }}
+<div class="message warning">
+    {{ form_errors(form.content) }}
+</div>
+
+<div class="checkbox">
+    <label>
+      {{ form_widget(form.published) }} {{ form.published.vars.label }}
+    </label>
+</div>
+<div class="message warning">
+    {{ form_errors(form.published) }}
+</div>
+
+{{ form_widget(form.published, {'attr': {
+    'class': 'form-input',
+    'placeholder': form.published.vars.label
+}}) }} {{ form.published.vars.label }}
+<div class="message warning">
+    {{ form_errors(form.published) }}
+</div>
+
+
+{{ form_row(form.save, {'attr': {
+    'class': 'btn btn-small'
+}}) }}
+
+{{ form_end(form) }}

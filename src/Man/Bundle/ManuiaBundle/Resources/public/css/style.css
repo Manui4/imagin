@@ -645,11 +645,18 @@ td,
 th {
   padding: 0; }
 
+/*!
+ * Bootstrap v3.1.1 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 /* ===========================
    Base
    =========================== */
-/* line 4, ../scss/manuia/base/_base.scss */
-* {
+/* line 7, ../scss/manuia/base/_base.scss */
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -672,79 +679,168 @@ th {
   background: #7a7a7a;
   text-shadow: none; }
 
-/* line 8, ../scss/manuia/base/_base.scss */
+/* line 12, ../scss/manuia/base/_base.scss */
 body {
   margin-top: 20px;
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
   background-size: 1.5em 1.5em;
-  color: #f59755; }
-  /* line 17, ../scss/manuia/base/_base.scss */
-  body:hover {
-    background-image: -webkit-linear-gradient(white, white 98%, black 100%);
-    background-image: -moz-linear-gradient(white, white 98%, black 100%);
-    background-image: -o-linear-gradient(white, white 98%, black 100%);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.98, white), to(black));
-    background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%); }
+  color: #f59755;
+  /* &:hover { */
+  background-image: -webkit-linear-gradient(white, white 98%, black 100%);
+  background-image: -moz-linear-gradient(white, white 98%, black 100%);
+  background-image: -o-linear-gradient(white, white 98%, black 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.98, white), to(black));
+  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  /* } */ }
 
-/* line 26, ../scss/manuia/base/_base.scss */
+/* line 30, ../scss/manuia/base/_base.scss */
 p, ul, ol, blockquote {
   padding: 1.5em;
   margin: 0; }
 
-/* line 31, ../scss/manuia/base/_base.scss */
+/* line 35, ../scss/manuia/base/_base.scss */
 a {
   color: #23c48f;
   text-decoration: none; }
-  /* line 35, ../scss/manuia/base/_base.scss */
+  /* line 39, ../scss/manuia/base/_base.scss */
   a:hover {
     color: #1b996f; }
 
-/* line 40, ../scss/manuia/base/_base.scss */
+/* line 44, ../scss/manuia/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   margin-bottom: 1.5rem;
   color: #f59755;
   font-family: "Kreon", serif; }
 
-/* line 47, ../scss/manuia/base/_base.scss */
+/* line 51, ../scss/manuia/base/_base.scss */
 p, ul, blockquote, hr {
   line-height: 1.5em; }
 
-/* line 48, ../scss/manuia/base/_base.scss */
+/* line 52, ../scss/manuia/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
 
-/* line 49, ../scss/manuia/base/_base.scss */
+/* line 53, ../scss/manuia/base/_base.scss */
 h1 {
   font-size: 1.5em; }
 
-/* line 50, ../scss/manuia/base/_base.scss */
+/* line 54, ../scss/manuia/base/_base.scss */
 h2 {
   font-size: 1.375em; }
 
-/* line 51, ../scss/manuia/base/_base.scss */
+/* line 55, ../scss/manuia/base/_base.scss */
 h3 {
   font-size: 1.25em; }
 
-/* line 52, ../scss/manuia/base/_base.scss */
+/* line 56, ../scss/manuia/base/_base.scss */
 h4 {
   font-size: 1.125em; }
 
-/* line 53, ../scss/manuia/base/_base.scss */
+/* line 57, ../scss/manuia/base/_base.scss */
 h5 {
   font-size: 1em; }
 
-/* line 54, ../scss/manuia/base/_base.scss */
+/* line 58, ../scss/manuia/base/_base.scss */
 h6 {
   font-size: 1em;
   color: #f8b485; }
 
-/* line 57, ../scss/manuia/base/_base.scss */
+/* line 61, ../scss/manuia/base/_base.scss */
 strong {
   color: #34495e;
   font-weight: bold; }
+
+/* ==|====================
+   Base/Form
+   ======================= */
+/* line 4, ../scss/manuia/base/_form.scss */
+input, textarea, button, select {
+  outline: none;
+  text-transform: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+/* line 12, ../scss/manuia/base/_form.scss */
+.form-input, .form-textarea {
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin: 0 0 10px 0;
+  padding: 0 30px;
+  font-size: 15px;
+  line-height: 1.75;
+  font-family: "Open Sans", sans-serif;
+  color: #737373;
+  border: 2px solid #d9d9d9;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  /* line 26, ../scss/manuia/base/_form.scss */
+  .form-input:focus, .form-textarea:focus {
+    border-color: #f59755; }
+
+/* line 28, ../scss/manuia/base/_form.scss */
+.form-textarea {
+  height: 150px;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+/* line 35, ../scss/manuia/base/_form.scss */
+.form-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  line-height: 1.75;
+  font-family: "Open Sans", sans-serif;
+  color: #737373; }
+  /* line 47, ../scss/manuia/base/_form.scss */
+  .form-select .form-control {
+    background-color: #fff;
+    background-image: none;
+    margin: 0 0 10px 0;
+    padding: 10px 0 10px 30px;
+    width: 100%;
+    border: 2px solid #d9d9d9;
+    height: 45px;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+    /* line 57, ../scss/manuia/base/_form.scss */
+    .form-select .form-control:focus {
+      border-color: #f59755; }
+    /* line 59, ../scss/manuia/base/_form.scss */
+    .form-select .form-control option {
+      font-size: 15px;
+      line-height: 1.75;
+      font-family: "Open Sans", sans-serif;
+      color: #737373; }
+      /* line 64, ../scss/manuia/base/_form.scss */
+      .form-select .form-control option:focus {
+        border-color: #f59755; }
+  /* line 68, ../scss/manuia/base/_form.scss */
+  .form-select:after {
+    content: "▼";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 15px;
+    line-height: 1.75;
+    font-family: "Open Sans", sans-serif;
+    color: #737373; }
 
 /* Fonts */
 /* Layout */
@@ -757,17 +853,17 @@ strong {
   /* line 8, ../scss/manuia/layout/_header.scss */
   .l-header .header-logo {
     padding-left: 1.5em;
-    height: 7.5em;
+    height: 9em;
     display: block;
     float: left; }
     /* line 14, ../scss/manuia/layout/_header.scss */
     .l-header .header-logo img {
+      border: 2px solid rgba(0, 0, 0, 0);
       -webkit-transition-duration: 0.3s;
       -moz-transition-duration: 0.3s;
       -o-transition-duration: 0.3s;
       transition-duration: 0.3s;
-      width: 100px;
-      max-height: 100px; }
+      height: 9em; }
     /* line 20, ../scss/manuia/layout/_header.scss */
     .l-header .header-logo:hover img {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
@@ -780,34 +876,37 @@ strong {
   @media only screen and (max-width: 768px) {
     /* line 25, ../scss/manuia/layout/_header.scss */
     .l-header .header-logo {
-      padding-left: 1.5em;
-      height: 4.5em; } }
-  /* line 31, ../scss/manuia/layout/_header.scss */
+      height: 4.5em; }
+      /* line 27, ../scss/manuia/layout/_header.scss */
+      .l-header .header-logo img {
+        border: 1px solid rgba(0, 0, 0, 0);
+        height: 4.5em; } }
+  /* line 34, ../scss/manuia/layout/_header.scss */
   .l-header .header-menu, .l-header .header-toggle {
     float: right; }
-    /* line 34, ../scss/manuia/layout/_header.scss */
+    /* line 37, ../scss/manuia/layout/_header.scss */
     .l-header .header-menu .menu-item, .l-header .header-toggle .menu-item {
       padding-right: 1.5em;
       float: left; }
-      /* line 37, ../scss/manuia/layout/_header.scss */
+      /* line 40, ../scss/manuia/layout/_header.scss */
       .l-header .header-menu .menu-item:before, .l-header .header-toggle .menu-item:before {
         content: '|';
         margin-right: 1.5em;
         color: #343232; }
-      /* line 42, ../scss/manuia/layout/_header.scss */
+      /* line 45, ../scss/manuia/layout/_header.scss */
       .l-header .header-menu .menu-item:first-child:before, .l-header .header-toggle .menu-item:first-child:before {
         display: none; }
-      /* line 43, ../scss/manuia/layout/_header.scss */
+      /* line 46, ../scss/manuia/layout/_header.scss */
       .l-header .header-menu .menu-item:hover a, .l-header .header-menu .menu-item.is-active a, .l-header .header-toggle .menu-item:hover a, .l-header .header-toggle .menu-item.is-active a {
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
         color: #f59755; }
-  /* line 50, ../scss/manuia/layout/_header.scss */
+  /* line 53, ../scss/manuia/layout/_header.scss */
   .l-header .header-toggle {
     padding: 0 0.5em; }
-    /* line 53, ../scss/manuia/layout/_header.scss */
+    /* line 56, ../scss/manuia/layout/_header.scss */
     .l-header .header-toggle .navbar-toggle {
       background-image: none;
       border: 2px solid #343232;
@@ -823,14 +922,14 @@ strong {
       appearance: none;
       -moz-border-radius: 5px;
       border-radius: 5px; }
-      /* line 66, ../scss/manuia/layout/_header.scss */
+      /* line 69, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle:focus {
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
         background-color: #b4b1b1; }
-      /* line 71, ../scss/manuia/layout/_header.scss */
+      /* line 74, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle .icon-bar {
         background-color: #343232;
         display: block;
@@ -841,7 +940,7 @@ strong {
         margin: 0 auto;
         -moz-border-radius: 1px;
         border-radius: 1px; }
-        /* line 81, ../scss/manuia/layout/_header.scss */
+        /* line 84, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-toggle .navbar-toggle .icon-bar:after {
           content: '';
           background-color: #343232;
@@ -852,7 +951,7 @@ strong {
           height: 2px;
           -moz-border-radius: 1px;
           border-radius: 1px; }
-        /* line 91, ../scss/manuia/layout/_header.scss */
+        /* line 94, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:after {
           top: 10px; }
 
@@ -866,8 +965,6 @@ strong {
 .l-container {
   margin-right: auto;
   margin-left: auto;
-  margin-top: 24px;
-  /* border:1px solid $color-9; */
   background-color: none;
   width: 100%; }
   /* line 28, ../scss/manuia/tools/_mixins.scss */
@@ -882,7 +979,7 @@ strong {
     clear: both; }
 
 @media (min-width: 1200px) {
-  /* line 21, ../scss/manuia/layout/_container.scss */
+  /* line 16, ../scss/manuia/layout/_container.scss */
   .l-container {
     width: 1220px; } }
 /* ==|====================
@@ -2001,8 +2098,115 @@ strong {
   display: inline-block;
   vertical-align: middle; }
 
-/* @import "modules/btn";
+/* ==|====================
+   Module/Button
+   ======================= */
+/* line 5, ../scss/manuia/modules/_btn.scss */
+.btn {
+  display: inline-block;
+  padding: 0 0.5em;
+  color: #1a1a08;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  background-color: transparent;
+  border: none;
+  /*border: 2px solid $color-bg-btn;
+  margin-top: -2px; */
+  color: #d5d57f;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-border-radius: 1.5em;
+  border-radius: 1.5em; }
+  /* line 23, ../scss/manuia/modules/_btn.scss */
+  .btn:hover {
+    background-color: #c8c859;
+    border-color: #c8c859;
+    color: #1a1a08; }
+  /* line 29, ../scss/manuia/modules/_btn.scss */
+  .btn .btn-small {
+    line-height: 1.5em; }
+  /* line 30, ../scss/manuia/modules/_btn.scss */
+  .btn .btn-xsmall {
+    line-height: 0.5em; }
 
-@import "modules/table";
-@import "modules/video";
-@import "modules/select2" */
+/* ==|=====================
+   Module/Table
+   ======================== */
+/* line 5, ../scss/manuia/modules/_table.scss */
+table {
+  max-width: 100%;
+  background-color: white;
+  color: #343232; }
+
+/* line 10, ../scss/manuia/modules/_table.scss */
+th {
+  text-align: left; }
+
+/* line 13, ../scss/manuia/modules/_table.scss */
+.table {
+  width: 100%;
+  margin-bottom: 3em; }
+
+/* line 22, ../scss/manuia/modules/_table.scss */
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 0 1.5em;
+  line-height: 3em;
+  vertical-align: top; }
+
+/* line 27, ../scss/manuia/modules/_table.scss */
+.table > thead > tr > th {
+  vertical-align: bottom;
+  background-color: #343232;
+  color: #f5ebe4;
+  font: bold; }
+
+/* line 39, ../scss/manuia/modules/_table.scss */
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0; }
+
+/* line 44, ../scss/manuia/modules/_table.scss */
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #e9f3e8; }
+
+/* line 48, ../scss/manuia/modules/_table.scss */
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  /* background-color: $color-table-row-hover; */ }
+
+/* line 52, ../scss/manuia/modules/_table.scss */
+.table-hover > tbody > tr:hover {
+  border-left: 2px solid #67ab64;
+  border-bottom: 1px solid #67ab64; }
+
+/* ==|====================
+   Module/Video responsive
+   ======================= */
+/* line 5, ../scss/manuia/modules/_video.scss */
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+  /* line 12, ../scss/manuia/modules/_video.scss */
+  .video iframe, .video object, .video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }

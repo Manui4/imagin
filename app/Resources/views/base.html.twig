@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="{{ app.request.locale }}">
+  {% block head %}
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% endblock %}"/>
+    <meta name="keywords" content="{% block keywords %}{% endblock %}"/>
+    
+    {% block stylesheets %}{% endblock %}
+    
+    {% block head_meta %}
+    <meta charset="UTF-8" />
+    {% block head_meta_viewport %}<meta name="viewport" content="width=device-width, initial-scale=1.0">{% endblock head_meta_viewport %}
+    {% endblock head_meta %}
+    
+    {% block head_script %}{% endblock %}
+
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    {% block head_bottom %}
+    {% endblock head_bottom %}
+  </head>
+  {% endblock head %}
+  {% block body %}
+  {% block body_open_tag %}
+  <body class="{% block body_class %}{% endblock body_class %}">
+  {% endblock %}
+    {% block body_top %}{% endblock %}
+      
+    {% block navbar %}{% endblock %}
+      
+    {% block content_before %}{% endblock %}
+    
+    <div id="content" class="container-fluid">
+      {% block content_top %}{% endblock %}
+      
+      {% block content %}{% endblock %}
+        
+      {% block content_bottom %}{% endblock %}
+        
+      {% block footer %}
+      <footer>
+        {% block footer_top %}{% endblock %}
+
+        {% block footer_content %}{% endblock %}
+
+        {% block footer_bottom %}{% endblock %}
+      </footer>
+      {% endblock footer %}  
+    </div>
+      
+    {% block content_after %}{% endblock %}
+      
+    {% block body_script %}{% endblock %}
+      
+    {% block body_bottom %}{% endblock %}
+  </body>
+  {% endblock body %}
 </html>

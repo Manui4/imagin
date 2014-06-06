@@ -2,4 +2,54 @@
    Module/Table
    ======================== */
 
-.table {}
+table {
+  max-width: 100%;
+  background-color: $color-5;
+  color: $color-1;
+}
+th {
+  text-align: left;
+}
+.table {
+  width: 100%;
+  margin-bottom: 3em;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding:0 1.5em;
+  line-height: 3em;
+  vertical-align: top;
+}
+.table > thead > tr > th {
+    vertical-align: bottom;
+    background-color: $color-1;
+    color: $color-4;
+    
+    font: bold;
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: $color-table-row-striped;
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  /* background-color: $color-table-row-hover; */
+}
+
+.table-hover > tbody > tr:hover {
+  border-left: 2px solid $color-table-lborder-hover;
+  border-bottom: 1px solid $color-table-lborder-hover;
+}

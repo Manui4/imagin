@@ -7,14 +7,14 @@
     
     .header-logo {
         padding-left: 1.5em;
-        height: 7.5em;
+        height: 9em;
         display: block;
         float: left;
 
         img { 
+            border: 2px solid rgba(0, 0, 0, 0);
             @include transition-duration;
-            width: 100px;
-            max-height: 100px;
+            height: 9em;
         }
         &:hover{
             img{ @include opacity(0.8); }
@@ -23,8 +23,11 @@
     
     @media only screen and (max-width : $width-device-m ) {
         .header-logo {
-            padding-left: 1.5em;
             height: 4.5em;
+            img { 
+                border: 1px solid rgba(0, 0, 0, 0);
+                height: 4.5em;
+            }
         }
     }
 

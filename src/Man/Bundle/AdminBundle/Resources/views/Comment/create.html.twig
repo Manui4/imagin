@@ -1,0 +1,14 @@
+{% extends 'ManAdminBundle::layout.html.twig' %}
+
+{% form_theme form '::form_theme.html.twig' %}
+
+{% block title %}{{ 'Comment creation'|trans }}{% endblock %}
+
+{% block admin_content %}
+    <div class="col-s-12">
+        <h1>{{ 'Comment creation'|trans }}</h1>
+    </div>
+    <div class="col-s-12">
+        {{ include('ManAdminBundle:Comment:form.html.twig', {'form': form}) }}
+    </div>
+{% endblock %}

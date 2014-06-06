@@ -1,0 +1,17 @@
+{% macro submit(text, icon, icon_background) %}
+    <button class="btn btn-primary" type="submit">
+        <i class="icon-{{ icon|default('ok') }} icon-{{ icon_background|default('white') }}"></i>
+        {{ text }}
+    </button>
+{% endmacro %}
+
+{% macro reset(text) %}
+    <button type="button" class="btn">{{ text|default('Cancel') }}</button>
+{% endmacro %}
+
+{% macro primary(url, text, icon, icon_background) %}
+    <a href="{{ url|default('') }}" class="btn btn-primary" type="button">
+        <i class="icon-{{ icon|default('ok') }} icon-{{ icon_background|default('white') }}"></i>
+        {{ text }}
+    </a>
+{% endmacro %}

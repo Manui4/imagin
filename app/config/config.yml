@@ -60,6 +60,10 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
+knp_markdown:
+    parser:
+         service: man_blog.markdown.parser.geshi
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"

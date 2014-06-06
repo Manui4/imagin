@@ -12,19 +12,19 @@
 
 {# ~~~~~~~~~~~~~~ Menu #}
 {% block menu_header %}
-<div class="header-toggle m-hide">
-    <button type="button" class="navbar-toggle" data-toggle="collapse"
-        data-target=".header-menu">
-        <span class="icon icon-bar"></span>
-    </button>
-</div>
-<nav class="header-menu s-hide-only" role="navigation">
-    {% block content_header_more %}
-        <span class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Accueil</a></span>
-        <span class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Test</a></span>
-        {{ content_header_more | raw }}
-    {% endblock %}
-</nav>
-{{ menu_header | raw }}
+    <div class="header-toggle m-hide">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target=".header-menu">
+            <span class="icon icon-bar"></span>
+        </button>
+    </div>
+    <nav class="header-menu s-hide-only" role="navigation">
+        {% block content_header_more %}
+            <span class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Accueil</a></span>
+            <span class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Test</a></span>
+            {{ content_header_more | raw }}
+        {% endblock %}
+    </nav>
+    {{ menu_header | raw }}
 {% endblock %}
-<div class="clearfix"></div>
+

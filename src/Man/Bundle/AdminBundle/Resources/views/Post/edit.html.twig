@@ -1,0 +1,12 @@
+{% extends 'ManAdminBundle::layout.html.twig' %}
+
+{% block title %}{{ 'Post edition'|trans }}{% endblock %}
+
+{% block admin_content %}
+    <div class="col-s-12">
+        <h1>{{ 'Post creation'|trans }}</h1>
+    </div>
+    <div class="col-s-12">
+        {{ include('ManAdminBundle:Post:form.html.twig', {'form': form}) }}
+    </div>
+{% endblock %}

@@ -2,3 +2,13 @@ man_manuia:
     resource: "@ManManuiaBundle/Resources/config/routing.yml"
     prefix:   /
 
+man_admin:
+    resource: "@ManAdminBundle/Controller/"
+    type:     annotation
+
+man_blog:
+    resource: "@ManBlogBundle/Controller/"
+    type:     annotation
+
+admin_logout:
+    pattern:   /admin/logout

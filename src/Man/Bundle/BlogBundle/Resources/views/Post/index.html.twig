@@ -1,0 +1,28 @@
+{% extends "ManManuiaBundle:Template:layout.html.twig" %}
+
+{% block title %}{{ parent() }} - {{ 'blog'|trans|capitalize }}{% endblock %}
+
+
+{% block content %}
+    <section class="section">
+    <div class="l-container">
+
+        <h1>Articles</h1>
+
+        <div class="zone-articles">
+            {% for post in posts %}
+            <div class="article">
+                <div class="title">
+                    <a href="{{ url('man_blog_post', {slug: post.slug}) }}"><h2>{{ post.title|capitalize }}</h2></a>
+                <hr />
+                </div>
+                <p class="description">
+                    {% autoescape false %}{{ post.description|markdown }}{% endautoescape %}
+                </p>
+          </div>
+          {% endfor %}
+          <div class="clearfix"></div>
+        </div>
+    </div>
+    </section>
+{% endblock content %}

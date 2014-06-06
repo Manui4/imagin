@@ -23,7 +23,7 @@ input, textarea, button, select {
 
     border: 2px solid #d9d9d9;
     @include transition-duration;
-    &:focus{ border-color:$color; }
+    &:focus{ border-color:$color-3; }
 }
 .form-textarea {
     @extend .form-input;
@@ -54,14 +54,14 @@ input, textarea, button, select {
         border: 2px solid #d9d9d9;
         height: 45px;
         @include transition-duration;
-        &:focus{ border-color:$color; }
+        &:focus{ border-color:$color-3; }
     
         option {
             font-size: 15px;
             line-height: 1.75;
             font-family: "Open Sans", sans-serif;
             color:#737373;
-            &:focus{ border-color:$color; }
+            &:focus{ border-color:$color-3; }
         }
     }
     

@@ -18,7 +18,14 @@
         "sensio/distribution-bundle": "~2.3",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "wozbe/redirect-bundle": "~1.1",
+        "jms/di-extra-bundle": "~1.4",
+        "jms/translation-bundle": "~1.1",
+        "jms/security-extra-bundle": "~1.5",
+        "knplabs/knp-markdown-bundle": "~1.2",
+        "easybook/geshi": "~1.0.8.11",
+        "suin/php-rss-writer": "~1.2"
     },
     "scripts": {
         "post-install-cmd": [

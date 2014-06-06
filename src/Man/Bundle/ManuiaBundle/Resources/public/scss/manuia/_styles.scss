@@ -12,8 +12,11 @@
 /* Base */ 
 @import "base/reset";
 @import "base/normalize";
+@import "base/bootstrap";
 @import "base/base";
-// @import "base/form";
+@import "base/form";
+
+
 
 /* Fonts */
 // @import "fonts/...";
@@ -28,8 +31,7 @@
 
 /* Modules */
 @import "modules/icon";
-/* @import "modules/btn";
-
+@import "modules/btn";
 @import "modules/table";
 @import "modules/video";
-@import "modules/select2" */;
+

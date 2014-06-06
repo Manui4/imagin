@@ -1,0 +1,52 @@
+{{ form_start(form) }}
+
+{{ form_widget(form.username, {'attr': {
+    'class': 'form-input',
+    'placeholder': form.username.vars.label
+}}) }}
+<div class="message warning">
+    {{ form_errors(form.username) }}
+</div>
+
+{{ form_widget(form.email, {'attr': {
+    'class': 'form-input',
+    'placeholder': form.email.vars.label
+}}) }}
+<div class="message warning">
+    {{ form_errors(form.email) }}
+</div>
+
+{{ form_widget(form.website, {'attr': {
+    'class': 'form-input',
+    'placeholder': form.website.vars.label
+}}) }}
+<div class="message warning">
+    {{ form_errors(form.website) }}
+</div>
+
+{{ form_widget(form.content, {'attr': {
+    'rows': 15,
+    'class': 'form-textarea',
+    'placeholder': form.content.vars.label
+}}) }}
+<div class="message warning">
+    {{ form_errors(form.content) }}
+</div>
+
+
+{{ form.published.vars.label }}
+{{ form_widget(form.published, {'attr': {
+    'class': 'form-checkbox',
+    'placeholder': form.published.vars.label
+}}) }}
+
+<div class="message warning">
+    {{ form_errors(form.published) }}
+</div>
+
+
+{{ form_row(form.save, {'attr': {
+    'class': 'btn btn-small'
+}}) }}
+
+{{ form_end(form) }}
