@@ -923,10 +923,14 @@ input, textarea, button, select {
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
         color: #343232; }
-  /* line 65, ../scss/manuia/layout/_header.scss */
+    @media only screen and (max-width: 768px) {
+      /* line 65, ../scss/manuia/layout/_header.scss */
+      .l-header .header-menu .menu-item, .l-header .header-toggle .menu-item {
+        float: none; } }
+  /* line 71, ../scss/manuia/layout/_header.scss */
   .l-header .header-toggle {
     padding: 0 0.5em; }
-    /* line 68, ../scss/manuia/layout/_header.scss */
+    /* line 74, ../scss/manuia/layout/_header.scss */
     .l-header .header-toggle .navbar-toggle {
       background-image: none;
       border: 2px solid #343232;
@@ -942,14 +946,14 @@ input, textarea, button, select {
       appearance: none;
       -moz-border-radius: 5px;
       border-radius: 5px; }
-      /* line 81, ../scss/manuia/layout/_header.scss */
+      /* line 87, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle:focus {
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
         background-color: #b4b1b1; }
-      /* line 86, ../scss/manuia/layout/_header.scss */
+      /* line 92, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle .icon-bar {
         background-color: #343232;
         display: block;
@@ -960,7 +964,7 @@ input, textarea, button, select {
         margin: 0 auto;
         -moz-border-radius: 1px;
         border-radius: 1px; }
-        /* line 96, ../scss/manuia/layout/_header.scss */
+        /* line 102, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-toggle .navbar-toggle .icon-bar:after {
           content: '';
           background-color: #343232;
@@ -971,7 +975,7 @@ input, textarea, button, select {
           height: 2px;
           -moz-border-radius: 1px;
           border-radius: 1px; }
-        /* line 106, ../scss/manuia/layout/_header.scss */
+        /* line 112, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:after {
           top: 10px; }
 
@@ -1959,7 +1963,7 @@ input, textarea, button, select {
   position: relative;
   display: block;
   margin-top: 1.5em;
-  margin-bottom: 9em;
+  margin-bottom: 7.5em;
   padding: 1.5em 0; }
   /* line 15, ../scss/manuia/layout/_section.scss */
   .section:before, .section:after {
@@ -1997,8 +2001,9 @@ input, textarea, button, select {
 @media (max-width: 768px) {
   /* line 40, ../scss/manuia/layout/_section.scss */
   .section {
-    margin: 4.5em 0; } }
-/* line 45, ../scss/manuia/layout/_section.scss */
+    margin-top: 1.5em;
+    margin-bottom: 3.5em; } }
+/* line 46, ../scss/manuia/layout/_section.scss */
 .section h1 {
   /* margin-top: -1.5em; */
   text-align: right; }
@@ -2216,15 +2221,16 @@ th {
 
 /* line 53, ../scss/manuia/modules/_table.scss */
 .table-hover > tbody > tr:hover {
-  border-left: 2px solid #67ab64;
-  border-bottom: 1px solid #67ab64; }
+  /* border-left: 4px solid $color-table-lborder-hover;
+  border-right: 4px solid $color-table-lborder-hover; */
+  color: #f59755; }
 
 @media (max-width: 768px) {
-  /* line 59, ../scss/manuia/modules/_table.scss */
+  /* line 60, ../scss/manuia/modules/_table.scss */
   .responsive-table-line td:before {
     content: attr(data-title); }
 
-  /* line 67, ../scss/manuia/modules/_table.scss */
+  /* line 68, ../scss/manuia/modules/_table.scss */
   .responsive-table-line table,
   .responsive-table-line thead,
   .responsive-table-line tbody,
@@ -2234,11 +2240,11 @@ th {
     display: block;
     border-bottom: 1px dotted; }
 
-  /* line 71, ../scss/manuia/modules/_table.scss */
+  /* line 72, ../scss/manuia/modules/_table.scss */
   .responsive-table-line thead tr {
     display: none; }
 
-  /* line 74, ../scss/manuia/modules/_table.scss */
+  /* line 75, ../scss/manuia/modules/_table.scss */
   .responsive-table-line td {
     position: relative;
     border: 0px solid transparent;
@@ -2246,7 +2252,7 @@ th {
     white-space: normal;
     text-align: right; }
 
-  /* line 81, ../scss/manuia/modules/_table.scss */
+  /* line 82, ../scss/manuia/modules/_table.scss */
   .responsive-table-line td:before {
     position: absolute;
     top: 0px;
