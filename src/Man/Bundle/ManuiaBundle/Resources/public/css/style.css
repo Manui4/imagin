@@ -2202,16 +2202,59 @@ th {
 .table-striped > tbody > tr:nth-child(odd) > th {
   background-color: #e9f3e8; }
 
-/* line 48, ../scss/manuia/modules/_table.scss */
+/* line 49, ../scss/manuia/modules/_table.scss */
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
   /* background-color: $color-table-row-hover; */ }
 
-/* line 52, ../scss/manuia/modules/_table.scss */
+/* line 53, ../scss/manuia/modules/_table.scss */
 .table-hover > tbody > tr:hover {
   border-left: 2px solid #67ab64;
   border-bottom: 1px solid #67ab64; }
 
+@media (max-width: 768px) {
+  /* line 59, ../scss/manuia/modules/_table.scss */
+  .responsive-table-line td:before {
+    content: attr(data-title); }
+
+  /* line 67, ../scss/manuia/modules/_table.scss */
+  .responsive-table-line table,
+  .responsive-table-line thead,
+  .responsive-table-line tbody,
+  .responsive-table-line th,
+  .responsive-table-line td,
+  .responsive-table-line tr {
+    display: block;
+    border-bottom: 1px dotted; }
+
+  /* line 71, ../scss/manuia/modules/_table.scss */
+  .responsive-table-line thead tr {
+    display: none; }
+
+  /* line 74, ../scss/manuia/modules/_table.scss */
+  .responsive-table-line td {
+    position: relative;
+    border: 0px solid transparent;
+    padding-left: 50% !important;
+    white-space: normal;
+    text-align: right; }
+
+  /* line 81, ../scss/manuia/modules/_table.scss */
+  .responsive-table-line td:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 45%;
+    padding-right: 15px;
+    height: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    text-align: left;
+    padding: 2px;
+    background-color: #508fb7;
+    color: #f5ebe4;
+    font: bold; } }
 /* ==|====================
    Module/Video responsive
    ======================= */

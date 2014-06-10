@@ -44,6 +44,7 @@ th {
 .table-striped > tbody > tr:nth-child(odd) > th {
   background-color: $color-table-row-striped;
 }
+
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
   /* background-color: $color-table-row-hover; */
@@ -52,4 +53,46 @@ th {
 .table-hover > tbody > tr:hover {
   border-left: 2px solid $color-table-lborder-hover;
   border-bottom: 1px solid $color-table-lborder-hover;
+}
+
+@media ( max-width : $width-device-m) {
+    .responsive-table-line td:before {
+        content: attr(data-title);
+    }
+    .responsive-table-line table,
+    .responsive-table-line thead,
+    .responsive-table-line tbody,
+    .responsive-table-line th,
+    .responsive-table-line td,
+    .responsive-table-line tr {
+        display: block;
+        border-bottom: 1px dotted;
+    }
+    .responsive-table-line thead tr {
+        display: none;
+    }
+    .responsive-table-line td {
+        position: relative;
+        border: 0px solid transparent;
+        padding-left: 50% !important;
+        white-space: normal;
+        text-align: right;
+    }
+    .responsive-table-line td:before {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 45%;
+        padding-right: 15px;
+        height: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        text-align: left;
+        padding: 2px;
+
+        background-color: $color-table-bg-header;
+        color: $color-4;
+        font: bold;
+    }
 }

@@ -6,7 +6,7 @@
 {% block content %}
 <section class="section">
     <div class="l-container">
-       <div class="row">
+       <div class="row responsive-table-line">
             <h2>Gestion des Articles {% set content_post_create %}<small>Ajouter un article</small>{% endset %} </h2>
 
             {% set url_post_create = url('man_admin_post_create') %}
@@ -20,19 +20,19 @@
             <table class="table table-striped table-bordered table-hover">
               <thead>
                 <tr>
-                  <th>{{ 'Title'|trans }}</th>
-                  <th>{{ 'Created At'|trans }}</th>
-                  <th>{{ 'Published'|trans }}</th>
-                  <th>{{ 'Actions'|trans }}</th>
+                  <th>Titre</th>
+                  <th>Créé le</th>
+                  <th>Publié</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {% for post in posts %}
                 <tr>
-                  <td>{{ post.title }}</td>
-                  <td>{{ post.createdAt|date('d/m/Y') }}</td>
-                  <td>{{ helpers.label(post.published, 'Published'|trans) }}</td>
-                  <td>
+                  <td data-title="Titre" >{{ post.title }}</td>
+                  <td data-title="Créé le" >{{ post.createdAt|date('d/m/Y') }}</td>
+                  <td data-title="Publié" >{{ helpers.label(post.published, 'Published'|trans) }}</td>
+                  <td data-title="Actions" >
                     {% set content_post_edit %}<span class="glyphicon glyphicon-edit">Editer</span>{% endset %}
                     {% set url_post_edit = url('man_admin_post_edit', {'slug': post.slug}) %}
                     {{ helpers.link_small(

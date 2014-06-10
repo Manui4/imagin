@@ -5,26 +5,26 @@
 {% block content %}
 <section class="section">
     <div class="l-container">
-       <div class="row">
+       <div class="row responsive-table-line">
             <h2>Comment management</h2>
 			<table class="table table-striped table-bordered table-hover">
 			  <thead>
 			    <tr>
-			      <th>{{ 'Author'|trans }}</th>
-			      <th>{{ 'Post'|trans }}</th>
-			      <th>{{ 'Created At'|trans }}</th>
-			      <th>{{ 'Published'|trans }}</th>
-			      <th>{{ 'Actions'|trans }}</th>
+			      <th>Auteur</th>
+			      <th>Post</th>
+			      <th>Créé le</th>
+			      <th>Publié</th>
+			      <th>Actions</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    {% for comment in comments %}
 			    <tr>
-			      <td>{{ comment.username }}</td>
-			      <td>{{ comment.post.slug }}</td>
-			      <td>{{ comment.createdAt|date('d/m/Y') }}</td>
-			      <td>{% if comment.published %}<span class="label label-success">Published</span>{% else %}<span class="label label-primary">Not Published</span>{% endif %}</td>
-			      <td>
+			      <td data-title="Auteur" >{{ comment.username }}</td>
+			      <td data-title="Post" >{{ comment.post.slug }}</td>
+			      <td data-title="Créé le" >{{ comment.createdAt|date('d/m/Y') }}</td>
+			      <td data-title="Publié" >{% if comment.published %}<span class="label label-success">Published</span>{% else %}<span class="label label-primary">Not Published</span>{% endif %}</td>
+			      <td data-title="Actions" >
 			        <a href="{{ url('man_admin_comment_edit', {'id': comment.id}) }}">
 			          <button type="button" class="btn btn-small">
 			            <span class="glyphicon glyphicon-edit">Editer</span>
