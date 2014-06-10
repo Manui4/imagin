@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
-
     {% block head_meta %}
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
@@ -40,17 +38,21 @@
         </div>
         {% endfor %}
 
-
         {% block body %}
+
+            {% set manuia_color_logo = 'yellow' %}
+            {% block header %}
             <header class="l-header">
                 <div class="l-container">
                 {{ include('ManManuiaBundle:Template:header.html.twig',{
-                    'color': 'white',
+                    'color':  manuia_color_logo,
                     'menu_header' : block('menu_header'),
                     'content_header_more' : block('content_header_more')
                 }) }}
                 </div>
             </header>
+            {% endblock %}
+
 
             <section class="l-content">
                 {% block content %}{% endblock %}

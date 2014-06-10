@@ -1,18 +1,24 @@
 {% extends "ManManuiaBundle:Template:layout.html.twig" %}
 
+
+{% block header %}
+    {% set manuia_color_logo = 'pink' %}
+    {{ parent() }}
+{% endblock %}
+
 {% block content_header_more %}
     {{ parent() }}
     {% set route = app.request.attributes.get('_route') %}
     <br /><br />
-    <span class="menu-item{% if 'man_admin_dashboard' == route %} active{% endif %}" ><a href="{{ url('man_admin_dashboard') }}">{{ 'dashboard'|trans|capitalize }}</a></span>
-    <span class="menu-item{% if 'man_admin_post_list' == route %} active{% endif %}"  ><a href="{{ url('man_admin_post_list') }}">{{ 'posts'|trans|capitalize }}</a></span>
-    <span class="menu-item{% if 'man_admin_comment_list' == route %} active{% endif %}" ><a href="{{ url('man_admin_comment_list') }}">{{ 'comments'|trans|capitalize }}</a></span>
-    <span class="menu-item{% if 'man' == route %} active{% endif %}" ><a href="{{ url('man_admin_post_list') }}">{{ 'references'|trans|capitalize }}</a></span>
+    <span class="menu-item{% if 'man_admin_dashboard' == route %} is-active{% endif %}" ><a href="{{ url('man_admin_dashboard') }}">{{ 'dashboard'|trans|capitalize }}</a></span>
+    <span class="menu-item{% if 'man_admin_post_list' == route %} is-active{% endif %}"  ><a href="{{ url('man_admin_post_list') }}">{{ 'posts'|trans|capitalize }}</a></span>
+    <span class="menu-item{% if 'man_admin_comment_list' == route %} is-active{% endif %}" ><a href="{{ url('man_admin_comment_list') }}">{{ 'comments'|trans|capitalize }}</a></span>
     <span class="menu-item"><a href="{{ url('admin_logout') }}">{{ 'Logout'|trans }}</a></span>
 {% endblock %}
 
 {% block content %}
-
+{#         {% block manuia_color %}pink{% endblock %}#}
+        {% set manuia_color_logo = 'pink' %}
         {% for flashMessage in app.session.flashbag.get('admin') %}
         <div class="l-container">
 	        <div class="row">

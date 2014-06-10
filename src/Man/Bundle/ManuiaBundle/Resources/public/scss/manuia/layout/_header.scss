@@ -46,14 +46,18 @@
             }
             
             display: block;
-            &:hover { 
+            &:hover {
                 @include transition-duration;
-                background-color: $color-0; 
+                background-color: $color-0;
             }
             &:first-child:before{ display: none; }
-            &:hover a, &.is-active a { 
+            &.is-active a {
                 @include transition-duration;
-                color: $color-1; 
+                color: $color-0;
+            }
+            &:hover a {
+                @include transition-duration;
+                color: $color-1;
             }
         }
     }
