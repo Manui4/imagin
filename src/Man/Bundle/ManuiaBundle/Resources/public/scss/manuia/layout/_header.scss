@@ -3,8 +3,8 @@
    ======================= */
 
 .l-header {
-    margin: 1.5em 0;
-    
+    background-color: $color-bg-header;
+
     .header-logo {
         padding-left: 1.5em;
         height: 9em;
@@ -35,17 +35,25 @@
         float: right;
 
         .menu-item {
-            padding-right: 1.5em;
+            margin-top: 1.5em;
+            margin-left: 0.5em;
+            padding:0 1.5em;
             float: left;
-            &:before {
-                content : '|';
-                margin-right: 1.5em;
-                color: $color-1;
+            @include border-radius(1.5em);
+            background-color: $color-1;
+            a {
+                color: $color-6;
+            }
+            
+            display: block;
+            &:hover { 
+                @include transition-duration;
+                background-color: $color-0; 
             }
             &:first-child:before{ display: none; }
             &:hover a, &.is-active a { 
                 @include transition-duration;
-                color: $color-3; 
+                color: $color-1; 
             }
         }
     }

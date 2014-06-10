@@ -10,13 +10,14 @@
 @include selection ($color-6, $color-15);
 
 body {
-    margin-top: $gutter;
+    /* margin-top: $gutter; */
     
     font-family: $font1;
     font-size: $font-size-base;
     line-height: $line-height-base;
     background-size: $line-height-base $line-height-base;
     color: $color-text-base;
+    
     
     /* &:hover { */
         background-image: -webkit-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
@@ -25,6 +26,9 @@ body {
         background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(0.98, #ffffff), to(#000000));
         background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
     /* } */
+    
+/*     background:url(../images/header.jpg) center top fixed;
+    @include background-size(cover); */
 }
 
 p,ul,ol,blockquote {

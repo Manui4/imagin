@@ -4,59 +4,58 @@
 {% block title %}{{ 'Posts'|trans }}{% endblock %}
 
 {% block content %}
-<div class="l-container">
+<section class="section">
+    <div class="l-container">
+       <div class="row">
+            <h2>Gestion des Articles {% set content_post_create %}<small>Ajouter un article</small>{% endset %} </h2>
 
-{# <div class="col-s-12">#}
-    <h2>Gestion des Articles</h2>
-    {% set content_post_create %}<span>Ajouter un article</span>{% endset %}
-    {% set url_post_create = url('man_admin_post_create') %}
-    {{ helpers.link_small(
-        content_post_create,
-        url_post_create,
-        'small'
-    ) }}
-{# </div>#}
+            {% set url_post_create = url('man_admin_post_create') %}
+            {{ helpers.link_small(
+                content_post_create,
+                url_post_create,
+                'small',
+                'btn-mb'
+            ) }}
 
-{# <div class="col-s-12">#}
-	<table class="table table-striped table-bordered table-hover">
-	  <thead>
-	    <tr>
-	      <th>{{ 'Title'|trans }}</th>
-	      <th>{{ 'Created At'|trans }}</th>
-	      <th>{{ 'Published'|trans }}</th>
-	      <th>{{ 'Actions'|trans }}</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    {% for post in posts %}
-	    <tr>
-	      <td>{{ post.title }}</td>
-	      <td>{{ post.createdAt|date('d/m/Y') }}</td>
-	      <td>{{ helpers.label(post.published, 'Published'|trans) }}</td>
-	      <td>
-	        {% set content_post_edit %}<span class="glyphicon glyphicon-edit">Editer</span>{% endset %}
-	        {% set url_post_edit = url('man_admin_post_edit', {'slug': post.slug}) %}
-	        {{ helpers.link_small(
-	          content_post_edit,
-	          url_post_edit
-	        ) }}
+            <table class="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>{{ 'Title'|trans }}</th>
+                  <th>{{ 'Created At'|trans }}</th>
+                  <th>{{ 'Published'|trans }}</th>
+                  <th>{{ 'Actions'|trans }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for post in posts %}
+                <tr>
+                  <td>{{ post.title }}</td>
+                  <td>{{ post.createdAt|date('d/m/Y') }}</td>
+                  <td>{{ helpers.label(post.published, 'Published'|trans) }}</td>
+                  <td>
+                    {% set content_post_edit %}<span class="glyphicon glyphicon-edit">Editer</span>{% endset %}
+                    {% set url_post_edit = url('man_admin_post_edit', {'slug': post.slug}) %}
+                    {{ helpers.link_small(
+                      content_post_edit,
+                      url_post_edit
+                    ) }}
 
-	        {% set content_post_edit %}<span class="glyphicon glyphicon-remove">Supprimer</span>{% endset %}
-	        {% set url_post_edit = url('man_admin_post_remove', {'slug': post.slug}) %}
-	        {{ helpers.link_small(
-	          content_post_edit,
-	          url_post_edit,
-	          'danger',
-	          {
-	            'data-method': 'DELETE',
-	            'data-confirm': 'You will delete a post, are you sure ?'}
-	        ) }}
-	      </td>
-	    </tr>
-	    {% endfor %}
-	  </tbody>
-	</table>
-{# </div>#}
-
-</div>
+                    {% set content_post_edit %}<span class="glyphicon glyphicon-remove">Supprimer</span>{% endset %}
+                    {% set url_post_edit = url('man_admin_post_remove', {'slug': post.slug}) %}
+                    {{ helpers.link_small(
+                      content_post_edit,
+                      url_post_edit,
+                      'danger',
+                      {
+                        'data-method': 'DELETE',
+                        'data-confirm': 'You will delete a post, are you sure ?'}
+                    ) }}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        </div>
+    </div>
+</section>
 {% endblock %}

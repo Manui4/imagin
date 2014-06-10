@@ -28,8 +28,8 @@
         {% endstylesheets %}
         <link rel="apple-touch-icon" sizes="130×130" href="/apple-touch-icon.png" />
         <link rel="stylesheet" type="text/css" href="{{ asset("/bundles/manmanuia/css/style.css") }}">
-        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Kreon'>
-        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+{#         <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Kreon'>#}
+{#         <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">#}
     {% endblock %}
 
     </head>
@@ -45,7 +45,7 @@
             <header class="l-header">
                 <div class="l-container">
                 {{ include('ManManuiaBundle:Template:header.html.twig',{
-                    'color': 'dark',
+                    'color': 'white',
                     'menu_header' : block('menu_header'),
                     'content_header_more' : block('content_header_more')
                 }) }}

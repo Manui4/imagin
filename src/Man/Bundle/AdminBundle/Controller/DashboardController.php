@@ -20,6 +20,11 @@ class DashboardController extends Controller
      */
     public function indexAction()
     {
-        return array();
+        return $this->render('ManAdminBundle:Dashboard:index.html.twig', array(
+            'contentInfo' => [
+                ['name' => 'articles','nb'=>12],
+                ['name' => 'commentaires','nb'=>15],
+            ]
+        ));
     }
 }

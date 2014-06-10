@@ -8,10 +8,10 @@
     position: relative;
     display: block;
     
-    margin: 7.5em 0;
-    padding: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 9em;
+    padding: 1.5em 0;
     
-    /* z-index : 5; */
     &:before, &:after{
         content:'';
         background-color: $color-bg-section;

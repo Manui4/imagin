@@ -1,4 +1,5 @@
 {# ~~~~~~~~~~~~~~ Logo #}
+<div class="col-s-3">
 <div class="m-hide">
     <a class="header-logo" href="{{ path('man_manuia_homepage') }}">
         <img src="/bundles/manmanuia/images/logo_s-{{ color }}.png" alt="Logo">
@@ -9,7 +10,8 @@
         <img src="/bundles/manmanuia/images/logo_ml-{{ color }}.png" alt="Logo">
     </a>
 </div>
-
+</div>
+<div class="col-s-9">
 {# ~~~~~~~~~~~~~~ Menu #}
 {% block menu_header %}
     <div class="header-toggle m-hide">
@@ -21,10 +23,11 @@
     <nav class="header-menu s-hide-only" role="navigation">
         {% block content_header_more %}
             <span class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Accueil</a></span>
-            <span class="menu-item"><a href="{{ path('man_manuia_homepage') }}">Test</a></span>
+            <span class="menu-item"><a href="{{ path('man_admin_dashboard') }}">Admin</a></span>
+            <span class="menu-item"><a href="{{ path('man_blog') }}">Blog</a></span>
             {{ content_header_more | raw }}
         {% endblock %}
     </nav>
     {{ menu_header | raw }}
 {% endblock %}
-
+</div>

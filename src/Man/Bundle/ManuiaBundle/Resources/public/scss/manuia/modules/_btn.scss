@@ -26,6 +26,11 @@
         color:$color-bg-btn-text-hover;
     }
 
-    .btn-small{ line-height: 1.5em; }
-    .btn-xsmall{ line-height: 0.5em; }
+    
 }
+
+.btn-small{ line-height: 1.5em; }
+    .btn-xsmall{ line-height: 0.5em; }
+    .btn-mb {
+        margin-bottom: 1.5em;
+    }
