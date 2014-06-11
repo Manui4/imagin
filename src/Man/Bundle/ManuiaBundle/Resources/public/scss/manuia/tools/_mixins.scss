@@ -199,6 +199,11 @@ $prefix-for-spec:      true !default;
 	@include prefixer(box-sizing, $box, webkit moz spec);
 }
 
+/* @mixin box-sizing($bs) {
+  $bs: unquote($bs);
+  @include experimental(box-sizing, $bs, -moz, -webkit, not -o, not -ms, not -khtml, official);
+} */
+
 // = Filter
 // -----------------------------
 @mixin filter (

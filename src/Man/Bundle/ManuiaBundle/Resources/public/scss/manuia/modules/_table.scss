@@ -66,8 +66,8 @@ th {
     .responsive-table-line th,
     .responsive-table-line td,
     .responsive-table-line tr {
+        /* box-sizing: border-box; */
         display: block;
-        border-bottom: 1px dotted;
     }
     .responsive-table-line thead tr {
         display: none;
@@ -78,6 +78,10 @@ th {
         padding-left: 50% !important;
         white-space: normal;
         text-align: right;
+        height: 3em;
+        &:last-child {
+            border-bottom: 1px dotted;
+        }
     }
     .responsive-table-line td:before {
         position: absolute;

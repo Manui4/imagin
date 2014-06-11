@@ -1,6 +1,16 @@
 {% macro link_small (content, url, type, attribute_list) %}
   {% import _self as helpers %}
-  {{ helpers.link_base(content, url, type, attribute_list, 'btn-xs') }}
+  {{ helpers.link_base(content, url, type, attribute_list, 'btn-small') }}
+{% endmacro %}
+
+{% macro link_xsmall (content, url, type, attribute_list) %}
+  {% import _self as helpers %}
+  {{ helpers.link_base(content, url, type, attribute_list, 'btn-xsmall') }}
+{% endmacro %}
+
+{% macro link_large (content, url, type, attribute_list) %}
+  {% import _self as helpers %}
+  {{ helpers.link_base(content, url, type, attribute_list, 'btn-large') }}
 {% endmacro %}
 
 {% macro link (content, url, type, attribute_list) %}
@@ -10,8 +20,12 @@
 
 {% macro link_base (content, url, type, attribute_list, class) %}
     {% spaceless %}
-    <a class="link" href="{{ url }}" {% for attribute, value in attribute_list %}{{ '%attribute%="%value%"'|replace({'%attribute%': attribute, '%value%': value})|raw }} {% endfor %}>
-        <button type="button" class="btn btn-{{ type|default('default') }} {{ class }}">
+    <a class="link"
+        href="{{ url }}"
+        {% for attribute, value in attribute_list %}
+            {{ '%attribute%="%value%"'|replace({'%attribute%': attribute, '%value%': value})|raw }}
+        {% endfor %}>
+        <button type="button" class="btn {{ type|default('default') }} {{ class }}">
             {{ content }}
         </button>
     </a>

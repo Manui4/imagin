@@ -62,20 +62,27 @@
         }
         
         @media only screen and (max-width : $width-device-m ) {
+            padding: 0;
+
             .menu-item {
                 margin: 0;
-                padding:0.7em 1.5em;
+                padding:0.7em;
                 height: 3em;
                 
                 float: none;
                 @include border-radius(0);
+            }
+
+            .sub-item {
+                padding-left: 2.5em;
+                &:before {content:'|--'; margin-right: 0.5em; font-size: 2em;} 
             }
         }
     }
 
     .header-toggle {
         padding: 0 0.5em;
-        
+        /* margin-top: 3em; */
         .navbar-toggle {
             background-image: none;
             border: 2px solid $color-navbar-toggle;
@@ -121,5 +128,7 @@
         }
     }
 }
+
+
 
 

@@ -10,6 +10,10 @@
  * Date: June 2014
  */
 /* Tools */
+/* @mixin box-sizing($bs) {
+  $bs: unquote($bs);
+  @include experimental(box-sizing, $bs, -moz, -webkit, not -o, not -ms, not -khtml, official);
+} */
 /* ===========================
    Tools/Helpers
    =========================== */
@@ -112,7 +116,7 @@
   list-style: none;
   margin: 0;
   padding: 0; }
-  /* line 227, ../scss/manuia/tools/_mixins.scss */
+  /* line 232, ../scss/manuia/tools/_mixins.scss */
   .ul-list-inline li {
     display: inline-block;
     vertical-align: middle; }
@@ -149,54 +153,7 @@
   text-align: right; }
 
 /* Base */
-/* ==|====================
-   Base/Reset
-   ======================= */
-/**
-    * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
-    * http://cssreset.com
-    */
-/* html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
-    {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-HTML5 display-role reset for older browsers
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
-    {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,ul {
-    list-style: none;
-}
-
-blockquote,q {
-    quotes: none;
-}
-
-blockquote:before,blockquote:after,q:before,q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-} */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-/* line 61, ../scss/manuia/base/_reset.scss */
+/* line 17, ../../../../../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -213,39 +170,46 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline; }
 
-/* HTML5 display-role reset for older browsers */
-/* line 71, ../scss/manuia/base/_reset.scss */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-/* line 74, ../scss/manuia/base/_reset.scss */
-body {
+/* line 22, ../../../../../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
   line-height: 1; }
 
-/* line 77, ../scss/manuia/base/_reset.scss */
+/* line 24, ../../../../../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 80, ../scss/manuia/base/_reset.scss */
-blockquote, q {
-  quotes: none; }
-
-/* line 84, ../scss/manuia/base/_reset.scss */
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-/* line 88, ../scss/manuia/base/_reset.scss */
+/* line 26, ../../../../../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* line 28, ../../../../../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* @import "base/reset"; */
 /* ==|====================
    Base/Normalize
    ======================= */
@@ -719,6 +683,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 55, ../scss/manuia/base/_base.scss */
 p, ul, blockquote, hr {
+  display: block;
   line-height: 1.5em; }
 
 /* line 56, ../scss/manuia/base/_base.scss */
@@ -844,6 +809,25 @@ input, textarea, button, select {
     font-family: "Open Sans", sans-serif;
     color: #737373; }
 
+/* ===========================
+   Color
+   =========================== */
+/* line 5, ../scss/manuia/base/_color.scss */
+.info {
+  color: #508fb7 !important; }
+
+/* line 9, ../scss/manuia/base/_color.scss */
+.success {
+  color: #23c48f !important; }
+
+/* line 13, ../scss/manuia/base/_color.scss */
+.warning {
+  color: #f59755 !important; }
+
+/* line 17, ../scss/manuia/base/_color.scss */
+.error, .danger {
+  color: #ec3f5c !important; }
+
 /* Fonts */
 /* Layout */
 /* ==|====================
@@ -924,18 +908,30 @@ input, textarea, button, select {
         transition-duration: 0.3s;
         color: #343232; }
     @media only screen and (max-width: 768px) {
-      /* line 65, ../scss/manuia/layout/_header.scss */
-      .l-header .header-menu .menu-item, .l-header .header-toggle .menu-item {
-        margin: 0;
-        padding: 0.7em 1.5em;
-        height: 3em;
-        float: none;
-        -moz-border-radius: 0;
-        border-radius: 0; } }
-  /* line 76, ../scss/manuia/layout/_header.scss */
+      /* line 34, ../scss/manuia/layout/_header.scss */
+      .l-header .header-menu, .l-header .header-toggle {
+        padding: 0; }
+        /* line 67, ../scss/manuia/layout/_header.scss */
+        .l-header .header-menu .menu-item, .l-header .header-toggle .menu-item {
+          margin: 0;
+          padding: 0.7em;
+          height: 3em;
+          float: none;
+          -moz-border-radius: 0;
+          border-radius: 0; }
+        /* line 76, ../scss/manuia/layout/_header.scss */
+        .l-header .header-menu .sub-item, .l-header .header-toggle .sub-item {
+          padding-left: 2.5em; }
+          /* line 78, ../scss/manuia/layout/_header.scss */
+          .l-header .header-menu .sub-item:before, .l-header .header-toggle .sub-item:before {
+            content: '|--';
+            margin-right: 0.5em;
+            font-size: 2em; } }
+  /* line 83, ../scss/manuia/layout/_header.scss */
   .l-header .header-toggle {
-    padding: 0 0.5em; }
-    /* line 79, ../scss/manuia/layout/_header.scss */
+    padding: 0 0.5em;
+    /* margin-top: 3em; */ }
+    /* line 86, ../scss/manuia/layout/_header.scss */
     .l-header .header-toggle .navbar-toggle {
       background-image: none;
       border: 2px solid #343232;
@@ -951,14 +947,14 @@ input, textarea, button, select {
       appearance: none;
       -moz-border-radius: 5px;
       border-radius: 5px; }
-      /* line 92, ../scss/manuia/layout/_header.scss */
+      /* line 99, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle:focus {
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
         background-color: #b4b1b1; }
-      /* line 97, ../scss/manuia/layout/_header.scss */
+      /* line 104, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle .icon-bar {
         background-color: #343232;
         display: block;
@@ -969,7 +965,7 @@ input, textarea, button, select {
         margin: 0 auto;
         -moz-border-radius: 1px;
         border-radius: 1px; }
-        /* line 107, ../scss/manuia/layout/_header.scss */
+        /* line 114, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-toggle .navbar-toggle .icon-bar:after {
           content: '';
           background-color: #343232;
@@ -980,7 +976,7 @@ input, textarea, button, select {
           height: 2px;
           -moz-border-radius: 1px;
           border-radius: 1px; }
-        /* line 117, ../scss/manuia/layout/_header.scss */
+        /* line 124, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:after {
           top: 10px; }
 
@@ -1963,7 +1959,7 @@ input, textarea, button, select {
    ======================= */
 /* line 5, ../scss/manuia/layout/_section.scss */
 .section {
-  background-color: #343232;
+  background-color: none;
   color: #7a7a7a;
   position: relative;
   display: block;
@@ -1973,7 +1969,7 @@ input, textarea, button, select {
   /* line 15, ../scss/manuia/layout/_section.scss */
   .section:before, .section:after {
     content: '';
-    background-color: #343232;
+    background-color: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -1992,7 +1988,7 @@ input, textarea, button, select {
     transform: skewY(-3deg); }
   /* line 26, ../scss/manuia/layout/_section.scss */
   .section:after {
-    background-color: #343232;
+    background-color: none;
     -webkit-transform-origin: 100%;
     -moz-transform-origin: 100%;
     -ms-transform-origin: 100%;
@@ -2000,18 +1996,27 @@ input, textarea, button, select {
     transform-origin: 100%; }
 
 @media (max-width: 368px) {
-  /* line 34, ../scss/manuia/layout/_section.scss */
+  /* line 33, ../scss/manuia/layout/_section.scss */
   .section {
     margin: 3em 0; } }
 @media (max-width: 768px) {
-  /* line 40, ../scss/manuia/layout/_section.scss */
+  /* line 39, ../scss/manuia/layout/_section.scss */
   .section {
     margin-top: 1.5em;
     margin-bottom: 3.5em; } }
-/* line 46, ../scss/manuia/layout/_section.scss */
+/* line 45, ../scss/manuia/layout/_section.scss */
 .section h1 {
-  /* margin-top: -1.5em; */
+  padding: 1em;
+  height: 3em;
+  background-color: #477e44;
   text-align: right; }
+
+/* line 52, ../scss/manuia/layout/_section.scss */
+.section hr {
+  padding: 0;
+  height: 3em;
+  margin: 0;
+  margin-top: -1px; }
 
 /* Modules */
 /* ==|====================
@@ -2131,7 +2136,7 @@ input, textarea, button, select {
 /* ==|====================
    Module/Button
    ======================= */
-/* line 5, ../scss/manuia/modules/_btn.scss */
+/* line 4, ../scss/manuia/modules/_btn.scss */
 .btn {
   display: inline-block;
   padding: 0 0.5em;
@@ -2139,10 +2144,10 @@ input, textarea, button, select {
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.5em;
+  height: 1.5em;
   background-color: transparent;
   border: none;
-  /*border: 2px solid $color-bg-btn;
-  margin-top: -2px; */
+  border: 2px solid #d5d57f;
   color: #d5d57f;
   cursor: pointer;
   -webkit-transition-duration: 0.3s;
@@ -2151,21 +2156,37 @@ input, textarea, button, select {
   transition-duration: 0.3s;
   -moz-border-radius: 1.5em;
   border-radius: 1.5em; }
-  /* line 23, ../scss/manuia/modules/_btn.scss */
+  /* line 21, ../scss/manuia/modules/_btn.scss */
   .btn:hover {
     background-color: #c8c859;
     border-color: #c8c859;
     color: #1a1a08; }
 
-/* line 32, ../scss/manuia/modules/_btn.scss */
+/* line 28, ../scss/manuia/modules/_btn.scss */
+.btn-large {
+  line-height: 1.5em;
+  height: 2em;
+  font-size: 1.5em;
+  padding: 0 1.5em;
+  border: 5px solid #d5d57f; }
+
+/* line 36, ../scss/manuia/modules/_btn.scss */
 .btn-small {
-  line-height: 1.5em; }
+  line-height: 1em;
+  height: 1.2em;
+  font-size: 1em;
+  padding: 0 0.5em;
+  border: 1px solid #d5d57f; }
 
-/* line 33, ../scss/manuia/modules/_btn.scss */
+/* line 44, ../scss/manuia/modules/_btn.scss */
 .btn-xsmall {
-  line-height: 0.5em; }
+  line-height: 0.7em;
+  height: 1em;
+  font-size: 0.7em;
+  padding: 0 0.5em;
+  border: 1px solid #d5d57f; }
 
-/* line 34, ../scss/manuia/modules/_btn.scss */
+/* line 52, ../scss/manuia/modules/_btn.scss */
 .btn-mb {
   margin-bottom: 1.5em; }
 
@@ -2242,8 +2263,8 @@ th {
   .responsive-table-line th,
   .responsive-table-line td,
   .responsive-table-line tr {
-    display: block;
-    border-bottom: 1px dotted; }
+    /* box-sizing: border-box; */
+    display: block; }
 
   /* line 72, ../scss/manuia/modules/_table.scss */
   .responsive-table-line thead tr {
@@ -2255,9 +2276,13 @@ th {
     border: 0px solid transparent;
     padding-left: 50% !important;
     white-space: normal;
-    text-align: right; }
+    text-align: right;
+    height: 3em; }
+    /* line 82, ../scss/manuia/modules/_table.scss */
+    .responsive-table-line td:last-child {
+      border-bottom: 1px dotted; }
 
-  /* line 82, ../scss/manuia/modules/_table.scss */
+  /* line 86, ../scss/manuia/modules/_table.scss */
   .responsive-table-line td:before {
     position: absolute;
     top: 0px;

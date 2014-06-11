@@ -52,7 +52,7 @@ a {
     font-family: $font2;
 }
 
-p, ul, blockquote, hr { line-height: 1.5em; }
+p, ul, blockquote, hr { display: block; line-height: 1.5em; }
 h1, h2, h3, h4, h5, h6 { @extend %headline; text-transform: uppercase;}
 h1 { font-size: 1.5em;}
 h2 { font-size: 1.375em;}

@@ -7,16 +7,30 @@
 <section class="section">
     <div class="l-container">
        <div class="row responsive-table-line">
-            <h2>Gestion des Articles {% set content_post_create %}<small>Ajouter un article</small>{% endset %} </h2>
+            <h2>Gestion des Articles</h2>
 
+            <p>
+            {% set content_post_create %}Ajouter un article{% endset %}
             {% set url_post_create = url('man_admin_post_create') %}
             {{ helpers.link_small(
                 content_post_create,
-                url_post_create,
-                'small',
-                'btn-mb'
+                url_post_create
             ) }}
 
+{#             {% set content_post_create %}Ajouter un article{% endset %}#}
+{#             {% set url_post_create = url('man_admin_post_create') %}#}
+{#             {{ helpers.link(#}
+{#                 content_post_create,#}
+{#                 url_post_create#}
+{#             ) }}#}
+
+{#             {% set content_post_create %}Ajouter un article{% endset %}#}
+{#             {% set url_post_create = url('man_admin_post_create') %}#}
+{#             {{ helpers.link_large(#}
+{#                 content_post_create,#}
+{#                 url_post_create#}
+{#             ) }}#}
+            </p>
             <table class="table table-striped table-bordered table-hover">
               <thead>
                 <tr>
@@ -35,14 +49,14 @@
                   <td data-title="Actions" >
                     {% set content_post_edit %}<span class="glyphicon glyphicon-edit">Editer</span>{% endset %}
                     {% set url_post_edit = url('man_admin_post_edit', {'slug': post.slug}) %}
-                    {{ helpers.link_small(
+                    {{ helpers.link_xsmall(
                       content_post_edit,
                       url_post_edit
                     ) }}
 
                     {% set content_post_edit %}<span class="glyphicon glyphicon-remove">Supprimer</span>{% endset %}
                     {% set url_post_edit = url('man_admin_post_remove', {'slug': post.slug}) %}
-                    {{ helpers.link_small(
+                    {{ helpers.link_xsmall(
                       content_post_edit,
                       url_post_edit,
                       'danger',

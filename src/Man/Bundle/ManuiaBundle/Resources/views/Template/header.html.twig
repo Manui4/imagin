@@ -27,8 +27,8 @@
             {% set route = app.request.attributes.get('_route') %}
             {% block content_header_more %}
                 <span class="menu-item{% if 'man_manuia_homepage' == route %} is-active{% endif %}"><a href="{{ path('man_manuia_homepage') }}">Accueil</a></span>
-                <span class="menu-item{% if 'man_admin_dashboard' == route %} is-active{% endif %}"><a href="{{ path('man_admin_dashboard') }}">Admin</a></span>
                 <span class="menu-item{% if 'man_blog' == route %} is-active{% endif %}"><a href="{{ path('man_blog') }}">Blog</a></span>
+                <span class="menu-item{% if 'man_admin_dashboard' == route %} is-active{% endif %}"><a href="{{ path('man_admin_dashboard') }}">Admin</a></span>
                 {{ content_header_more | raw }}
             {% endblock %}
         </nav>

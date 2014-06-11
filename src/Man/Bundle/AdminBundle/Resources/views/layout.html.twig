@@ -9,10 +9,10 @@
 {% block content_header_more %}
     {{ parent() }}
     {% set route = app.request.attributes.get('_route') %}
-    <span class="menu-item{% if 'man_admin_dashboard' == route %} is-active{% endif %}" ><a href="{{ url('man_admin_dashboard') }}">{{ 'dashboard'|trans|capitalize }}</a></span>
-    <span class="menu-item{% if 'man_admin_post_list' == route %} is-active{% endif %}"  ><a href="{{ url('man_admin_post_list') }}">{{ 'posts'|trans|capitalize }}</a></span>
-    <span class="menu-item{% if 'man_admin_comment_list' == route %} is-active{% endif %}" ><a href="{{ url('man_admin_comment_list') }}">{{ 'comments'|trans|capitalize }}</a></span>
-    <span class="menu-item"><a href="{{ url('admin_logout') }}">{{ 'Logout'|trans }}</a></span>
+    <span class="menu-item{% if 'man_admin_dashboard' == route %} is-active{% endif %} sub-item" ><a href="{{ url('man_admin_dashboard') }}">{{ 'dashboard'|trans|capitalize }}</a></span>
+    <span class="menu-item{% if 'man_admin_post_list' == route %} is-active{% endif %} sub-item" ><a href="{{ url('man_admin_post_list') }}">{{ 'posts'|trans|capitalize }}</a></span>
+    <span class="menu-item{% if 'man_admin_comment_list' == route %} is-active{% endif %} sub-item" ><a href="{{ url('man_admin_comment_list') }}">{{ 'comments'|trans|capitalize }}</a></span>
+    <span class="menu-item"><a class="danger" href="{{ url('admin_logout') }}">Déconnexion</a></span>
 {% endblock %}
 
 {% block content %}

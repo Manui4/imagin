@@ -1,0 +1,19 @@
+/* ===========================
+   Color
+   =========================== */
+
+.info {
+    color: $color-0!important;
+}
+
+.success {
+    color: $color-2!important;
+}
+
+.warning {
+    color: $color-3!important;
+}
+
+.error, .danger {
+    color: $color-9!important;
+}
