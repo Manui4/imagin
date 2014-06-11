@@ -651,13 +651,13 @@ body {
   line-height: 1.5em;
   background-size: 1.5em 1.5em;
   color: #f59755;
-  /* &:hover { */
-  background-image: -webkit-linear-gradient(white, white 98%, black 100%);
-  background-image: -moz-linear-gradient(white, white 98%, black 100%);
-  background-image: -o-linear-gradient(white, white 98%, black 100%);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.98, white), to(black));
-  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
-  /* } */
+  /* &:hover {
+      background-image: -webkit-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+      background-image: -moz-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+      background-image: -o-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(0.98, #ffffff), to(#000000));
+      background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  } */
   /*     background:url(../images/header.jpg) center top fixed;
       @include background-size(cover); */ }
 
@@ -688,7 +688,7 @@ p, ul, blockquote, hr {
 
 /* line 56, ../scss/manuia/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase; }
+  text-transform: capitalize; }
 
 /* line 57, ../scss/manuia/base/_base.scss */
 h1 {
@@ -1959,7 +1959,7 @@ input, textarea, button, select {
    ======================= */
 /* line 5, ../scss/manuia/layout/_section.scss */
 .section {
-  background-color: none;
+  background-color: #343232;
   color: #7a7a7a;
   position: relative;
   display: block;
@@ -1969,7 +1969,7 @@ input, textarea, button, select {
   /* line 15, ../scss/manuia/layout/_section.scss */
   .section:before, .section:after {
     content: '';
-    background-color: none;
+    background-color: #343232;
     position: absolute;
     top: 0;
     left: 0;
@@ -1988,7 +1988,7 @@ input, textarea, button, select {
     transform: skewY(-3deg); }
   /* line 26, ../scss/manuia/layout/_section.scss */
   .section:after {
-    background-color: none;
+    background-color: #343232;
     -webkit-transform-origin: 100%;
     -moz-transform-origin: 100%;
     -ms-transform-origin: 100%;

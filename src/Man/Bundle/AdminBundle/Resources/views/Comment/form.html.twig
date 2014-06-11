@@ -36,7 +36,7 @@
 
 {{ form.published.vars.label }}
 {{ form_widget(form.published, {'attr': {
-    'class': 'form-checkbox',
+    'class': 'form-input',
     'placeholder': form.published.vars.label
 }}) }}
 
@@ -44,9 +44,10 @@
     {{ form_errors(form.published) }}
 </div>
 
-
+<p>
 {{ form_row(form.save, {'attr': {
     'class': 'btn btn-small'
 }}) }}
+</p>
 
 {{ form_end(form) }}

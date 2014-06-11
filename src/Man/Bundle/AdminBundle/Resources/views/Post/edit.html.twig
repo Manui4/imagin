@@ -3,10 +3,14 @@
 {% block title %}{{ 'Post edition'|trans }}{% endblock %}
 
 {% block admin_content %}
-    <div class="col-s-12">
-        <h1>{{ 'Post creation'|trans }}</h1>
+<section class="section">
+    <div class="l-container">
+        <div class="col-s-12">
+            <h1>Créer un article</h1>
+        </div>
+        <div class="col-s-12">
+            {{ include('ManAdminBundle:Post:form.html.twig', {'form': form}) }}
+        </div>
     </div>
-    <div class="col-s-12">
-        {{ include('ManAdminBundle:Post:form.html.twig', {'form': form}) }}
-    </div>
+</section>
 {% endblock %}

@@ -43,17 +43,20 @@
     {{ form_errors(form.published) }}
 </div>
 
+{{ form.published.vars.label }}
 {{ form_widget(form.published, {'attr': {
     'class': 'form-input',
     'placeholder': form.published.vars.label
-}}) }} {{ form.published.vars.label }}
+}}) }}
+
 <div class="message warning">
     {{ form_errors(form.published) }}
 </div>
 
-
+<p>
 {{ form_row(form.save, {'attr': {
     'class': 'btn btn-small'
 }}) }}
+</p>
 
 {{ form_end(form) }}

@@ -4,23 +4,23 @@
 
 {% block admin_content %}
     <section class="section">
-	    <div class="l-container">
-		    <div class="col-s-8 col-s-center col-m-6 col-m-center">
-		        <h1>Admin <br/><small>login is mandatory</small></h1>
+        <div class="l-container">
+            <div class="col-s-12">
+                <h1>Authentification</h1>
 
-				{% if error %}
-				    <div class="alert alert-warning">{{ error.message }}</div>
-				{% endif %}
-			</div>
-		    <div class="col-s-12 col-m-6 col-m-center">
-		        <form action="{{ path('admin_login_check') }}" method="post" class="form">
+                {% if error %}
+                    <div class="alert alert-warning">{{ error.message }}</div>
+                {% endif %}
+            </div>
+            <div class="col-s-12 col-m-6 col-m-center">
+                <form action="{{ path('admin_login_check') }}" method="post" class="form">
 
-		            <input type="text" class="form-input" placeholder="Username" id="username" name="_username" value="{{ last_username }}" />
-		            <input type="password" class="form-input" placeholder="Password" id="password" name="_password" />
+                    <input type="text" class="form-input" placeholder="Username" id="username" name="_username" value="{{ last_username }}" />
+                    <input type="password" class="form-input" placeholder="Password" id="password" name="_password" />
 
-		            <button type="submit" class="btn btn-small">{{ 'Login'|trans }}</button>
-		        </form>
-		    </div>
-	    </div>
+                    <button type="submit" class="btn btn-small">{{ 'Login'|trans }}</button>
+                </form>
+            </div>
+        </div>
     </section>
 {% endblock %}
