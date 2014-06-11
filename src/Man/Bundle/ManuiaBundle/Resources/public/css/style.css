@@ -926,11 +926,16 @@ input, textarea, button, select {
     @media only screen and (max-width: 768px) {
       /* line 65, ../scss/manuia/layout/_header.scss */
       .l-header .header-menu .menu-item, .l-header .header-toggle .menu-item {
-        float: none; } }
-  /* line 71, ../scss/manuia/layout/_header.scss */
+        margin: 0;
+        padding: 0.7em 1.5em;
+        height: 3em;
+        float: none;
+        -moz-border-radius: 0;
+        border-radius: 0; } }
+  /* line 76, ../scss/manuia/layout/_header.scss */
   .l-header .header-toggle {
     padding: 0 0.5em; }
-    /* line 74, ../scss/manuia/layout/_header.scss */
+    /* line 79, ../scss/manuia/layout/_header.scss */
     .l-header .header-toggle .navbar-toggle {
       background-image: none;
       border: 2px solid #343232;
@@ -946,14 +951,14 @@ input, textarea, button, select {
       appearance: none;
       -moz-border-radius: 5px;
       border-radius: 5px; }
-      /* line 87, ../scss/manuia/layout/_header.scss */
+      /* line 92, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle:focus {
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
         background-color: #b4b1b1; }
-      /* line 92, ../scss/manuia/layout/_header.scss */
+      /* line 97, ../scss/manuia/layout/_header.scss */
       .l-header .header-toggle .navbar-toggle .icon-bar {
         background-color: #343232;
         display: block;
@@ -964,7 +969,7 @@ input, textarea, button, select {
         margin: 0 auto;
         -moz-border-radius: 1px;
         border-radius: 1px; }
-        /* line 102, ../scss/manuia/layout/_header.scss */
+        /* line 107, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-toggle .navbar-toggle .icon-bar:after {
           content: '';
           background-color: #343232;
@@ -975,7 +980,7 @@ input, textarea, button, select {
           height: 2px;
           -moz-border-radius: 1px;
           border-radius: 1px; }
-        /* line 112, ../scss/manuia/layout/_header.scss */
+        /* line 117, ../scss/manuia/layout/_header.scss */
         .l-header .header-toggle .navbar-toggle .icon-bar:after {
           top: 10px; }
 
