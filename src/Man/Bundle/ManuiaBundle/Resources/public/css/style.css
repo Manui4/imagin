@@ -127,28 +127,28 @@
 
 /* =Wordpress alignment
 -------------------*/
-/* line 115, ../scss/manuia/tools/_helpers.scss */
+/* line 114, ../scss/manuia/tools/_helpers.scss */
 .alignleft {
   display: inline;
   float: left; }
 
-/* line 119, ../scss/manuia/tools/_helpers.scss */
+/* line 118, ../scss/manuia/tools/_helpers.scss */
 .alignright {
   display: inline;
   float: right; }
 
-/* line 123, ../scss/manuia/tools/_helpers.scss */
+/* line 122, ../scss/manuia/tools/_helpers.scss */
 .aligncenter {
   clear: both;
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 129, ../scss/manuia/tools/_helpers.scss */
+/* line 128, ../scss/manuia/tools/_helpers.scss */
 .txtleft {
   text-align: left; }
 
-/* line 132, ../scss/manuia/tools/_helpers.scss */
+/* line 131, ../scss/manuia/tools/_helpers.scss */
 .txtright {
   text-align: right; }
 
@@ -651,13 +651,13 @@ body {
   line-height: 1.5em;
   background-size: 1.5em 1.5em;
   color: #f59755;
-  /* &:hover {
-      background-image: -webkit-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
-      background-image: -moz-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
-      background-image: -o-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(0.98, #ffffff), to(#000000));
-      background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
-  } */
+  /* &:hover { */
+  /* background-image: -webkit-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  background-image: -moz-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(0.98, #ffffff), to(#000000));
+  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%); */
+  /* }*/
   /*     background:url(../images/header.jpg) center top fixed;
       @include background-size(cover); */ }
 
@@ -830,155 +830,254 @@ input, textarea, button, select {
 
 /* Fonts */
 /* Layout */
-/* ==|====================
+/* =======================
    Layout/Header
    ======================= */
 /* line 5, ../scss/manuia/layout/_header.scss */
 .l-header {
-  background-color: none; }
-  /* line 8, ../scss/manuia/layout/_header.scss */
-  .l-header .header-logo {
-    padding-left: 1.5em;
-    height: 9em;
-    display: block;
-    float: left; }
+  /* =======================
+     header TOP
+     ======================= */
+  /* =======================
+     header MAIN
+     ======================= */ }
+  /* line 10, ../scss/manuia/layout/_header.scss */
+  .l-header .header-top {
+    color: #bdb4b1;
+    font-size: 0.8em;
+    height: 24px; }
     /* line 14, ../scss/manuia/layout/_header.scss */
-    .l-header .header-logo img {
-      border: 2px solid rgba(0, 0, 0, 0);
-      -webkit-transition-duration: 0.3s;
-      -moz-transition-duration: 0.3s;
-      -o-transition-duration: 0.3s;
-      transition-duration: 0.3s;
-      height: 9em; }
-    /* line 20, ../scss/manuia/layout/_header.scss */
-    .l-header .header-logo:hover img {
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-      opacity: 0.8;
-      /* Hack IE6 */ }
-      /* line 48, ../scss/manuia/tools/_mixins.scss */
-      .lt-ie7 .l-header .header-logo:hover img {
-        filter: alpha(opacity=80);
-        zoom: 1; }
-  @media only screen and (max-width: 768px) {
-    /* line 25, ../scss/manuia/layout/_header.scss */
-    .l-header .header-logo {
-      height: 4.5em; }
-      /* line 27, ../scss/manuia/layout/_header.scss */
-      .l-header .header-logo img {
-        border: 1px solid rgba(0, 0, 0, 0);
-        height: 4.5em; } }
-  /* line 34, ../scss/manuia/layout/_header.scss */
-  .l-header .header-menu, .l-header .header-toggle {
-    float: right; }
-    /* line 37, ../scss/manuia/layout/_header.scss */
-    .l-header .header-menu .menu-item, .l-header .header-toggle .menu-item {
-      margin-top: 1.5em;
-      margin-left: 0.5em;
-      padding: 0 1.5em;
-      float: left;
-      -moz-border-radius: 1.5em;
-      border-radius: 1.5em;
-      background-color: #343232;
-      display: block; }
-      /* line 44, ../scss/manuia/layout/_header.scss */
-      .l-header .header-menu .menu-item a, .l-header .header-toggle .menu-item a {
-        color: #bdb4b1; }
-      /* line 49, ../scss/manuia/layout/_header.scss */
-      .l-header .header-menu .menu-item:hover, .l-header .header-toggle .menu-item:hover {
-        -webkit-transition-duration: 0.3s;
-        -moz-transition-duration: 0.3s;
-        -o-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        background-color: #508fb7; }
-      /* line 53, ../scss/manuia/layout/_header.scss */
-      .l-header .header-menu .menu-item:first-child:before, .l-header .header-toggle .menu-item:first-child:before {
-        display: none; }
-      /* line 54, ../scss/manuia/layout/_header.scss */
-      .l-header .header-menu .menu-item.is-active a, .l-header .header-toggle .menu-item.is-active a {
-        -webkit-transition-duration: 0.3s;
-        -moz-transition-duration: 0.3s;
-        -o-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        color: #508fb7; }
-      /* line 58, ../scss/manuia/layout/_header.scss */
-      .l-header .header-menu .menu-item:hover a, .l-header .header-toggle .menu-item:hover a {
-        -webkit-transition-duration: 0.3s;
-        -moz-transition-duration: 0.3s;
-        -o-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        color: #343232; }
+    .l-header .header-top:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #bdb4b1;
+      margin-top: -1px; }
+    /* line 23, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top span {
+      margin: 0 1.5em;
+      text-align: center; }
     @media only screen and (max-width: 768px) {
-      /* line 34, ../scss/manuia/layout/_header.scss */
-      .l-header .header-menu, .l-header .header-toggle {
-        padding: 0; }
-        /* line 67, ../scss/manuia/layout/_header.scss */
-        .l-header .header-menu .menu-item, .l-header .header-toggle .menu-item {
-          margin: 0;
-          padding: 0.7em;
-          height: 3em;
-          float: none;
-          -moz-border-radius: 0;
-          border-radius: 0; }
-        /* line 76, ../scss/manuia/layout/_header.scss */
-        .l-header .header-menu .sub-item, .l-header .header-toggle .sub-item {
-          padding-left: 2.5em; }
-          /* line 78, ../scss/manuia/layout/_header.scss */
-          .l-header .header-menu .sub-item:before, .l-header .header-toggle .sub-item:before {
-            content: '|--';
-            margin-right: 0.5em;
-            font-size: 2em; } }
-  /* line 83, ../scss/manuia/layout/_header.scss */
-  .l-header .header-toggle {
-    padding: 0 0.5em;
-    /* margin-top: 3em; */ }
-    /* line 86, ../scss/manuia/layout/_header.scss */
-    .l-header .header-toggle .navbar-toggle {
-      background-image: none;
-      border: 2px solid #343232;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      float: right;
-      padding: 10px 5px;
+      /* line 10, ../scss/manuia/layout/_header.scss */
+      .l-header .header-top {
+        height: 72px; }
+        /* line 29, ../scss/manuia/layout/_header.scss */
+        .l-header .header-top span {
+          display: block; } }
+    /* line 33, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top .toggle {
       position: relative;
-      outline: none;
-      text-transform: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      -moz-border-radius: 5px;
-      border-radius: 5px; }
-      /* line 99, ../scss/manuia/layout/_header.scss */
-      .l-header .header-toggle .navbar-toggle:focus {
+      text-align: center; }
+      /* line 36, ../scss/manuia/layout/_header.scss */
+      .l-header .header-top .toggle:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #f59755;
+        margin-top: -1px; }
+  /* line 51, ../scss/manuia/layout/_header.scss */
+  .l-header .header-main {
+    margin-bottom: 1.5em;
+    /* =======================
+       header main/LOGO
+       ======================= */
+    /* =======================
+       header main/MENU
+       ======================= */ }
+    /* line 53, ../scss/manuia/layout/_header.scss */
+    .l-header .header-main:after {
+      content: '';
+      background-color: #343232;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      height: 13.5em;
+      -webkit-transform-origin: 0;
+      -moz-transform-origin: 0;
+      -ms-transform-origin: 0;
+      -o-transform-origin: 0;
+      transform-origin: 0;
+      -webkit-transform: skewY(-3deg);
+      -moz-transform: skewY(-3deg);
+      -ms-transform: skewY(-3deg);
+      -o-transform: skewY(-3deg);
+      transform: skewY(-3deg);
+      -webkit-box-shadow: black 0 6px 19px;
+      -moz-box-shadow: black 0 6px 19px;
+      box-shadow: black 0 6px 19px; }
+    /* line 68, ../scss/manuia/layout/_header.scss */
+    .l-header .header-main .header-logo {
+      padding-left: 1.5em;
+      height: 9em;
+      display: block;
+      /* float: left; */ }
+      /* line 73, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-logo img {
+        border: 2px solid rgba(0, 0, 0, 0);
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
-        background-color: #b4b1b1; }
-      /* line 104, ../scss/manuia/layout/_header.scss */
-      .l-header .header-toggle .navbar-toggle .icon-bar {
-        background-color: #343232;
+        height: 9em; }
+      /* line 79, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-logo:hover img {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+        opacity: 0.9;
+        /* Hack IE6 */ }
+        /* line 48, ../scss/manuia/tools/_mixins.scss */
+        .lt-ie7 .l-header .header-main .header-logo:hover img {
+          filter: alpha(opacity=90);
+          zoom: 1; }
+    @media only screen and (max-width: 768px) {
+      /* line 84, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-logo {
+        height: 4.5em;
+        padding-top: 1.5em; }
+        /* line 87, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-logo img {
+          border: 1px solid rgba(0, 0, 0, 0);
+          height: 4.5em; } }
+    /* line 97, ../scss/manuia/layout/_header.scss */
+    .l-header .header-main .header-toggle {
+      float: right; }
+    /* line 100, ../scss/manuia/layout/_header.scss */
+    .l-header .header-main .header-menu {
+      float: right; }
+      /* line 102, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu .menu-item {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        padding: 0 1.5em;
+        float: left;
         display: block;
-        width: 22px;
-        height: 2px;
+        -moz-border-radius: 1.5em;
+        border-radius: 1.5em;
+        background-color: #343232; }
+        /* line 110, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu .menu-item span {
+          color: #bdb4b1; }
+        /* line 113, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu .menu-item:hover {
+          -webkit-transition-duration: 0.3s;
+          -moz-transition-duration: 0.3s;
+          -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          background-color: #508fb7; }
+        /* line 117, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu .menu-item:first-child:before {
+          display: none; }
+        /* line 118, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu .menu-item.is-active span {
+          -webkit-transition-duration: 0.3s;
+          -moz-transition-duration: 0.3s;
+          -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          color: #508fb7; }
+        /* line 122, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu .menu-item:hover span {
+          -webkit-transition-duration: 0.3s;
+          -moz-transition-duration: 0.3s;
+          -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          color: #343232; }
+      @media only screen and (max-width: 768px) {
+        /* line 100, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu {
+          padding: 0; }
+          /* line 130, ../scss/manuia/layout/_header.scss */
+          .l-header .header-main .header-menu .menu-item {
+            background-color: #4e4b4b;
+            margin: 0;
+            padding: 0.7em 1.5em;
+            height: 3em;
+            float: none;
+            -moz-border-radius: 0;
+            border-radius: 0; }
+          /* line 139, ../scss/manuia/layout/_header.scss */
+          .l-header .header-main .header-menu .sub-item {
+            padding-left: 2.5em; }
+            /* line 141, ../scss/manuia/layout/_header.scss */
+            .l-header .header-main .header-menu .sub-item:before {
+              content: '-';
+              margin-right: 0.5em; } }
+    /* line 147, ../scss/manuia/layout/_header.scss */
+    .l-header .header-main .menu-dropdown.visible {
+      -webkit-box-shadow: black 0 6px 6px;
+      -moz-box-shadow: black 0 6px 6px;
+      box-shadow: black 0 6px 6px;
+      position: relative;
+      display: block;
+      padding-top: 3em; }
+      /* line 152, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .menu-dropdown.visible:before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: -3em;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        background-color: #4e4b4b; }
+    /* line 165, ../scss/manuia/layout/_header.scss */
+    .l-header .header-main .header-toggle {
+      padding: 0; }
+      /* line 167, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-toggle .navbar-toggle {
+        background-image: none;
+        border: 2px solid #343232;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        float: right;
+        padding: 6px 5px;
         position: relative;
-        top: -6px;
-        margin: 0 auto;
-        -moz-border-radius: 1px;
-        border-radius: 1px; }
-        /* line 114, ../scss/manuia/layout/_header.scss */
-        .l-header .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-toggle .navbar-toggle .icon-bar:after {
-          content: '';
+        outline: none;
+        text-transform: none;
+        height: 1.5em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+        /* line 181, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-toggle .navbar-toggle:focus {
+          -webkit-transition-duration: 0.3s;
+          -moz-transition-duration: 0.3s;
+          -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          background-color: #b4b1b1; }
+        /* line 186, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-toggle .navbar-toggle .icon-bar {
           background-color: #343232;
           display: block;
-          position: relative;
-          top: 6px;
           width: 22px;
           height: 2px;
+          position: relative;
+          top: -6px;
+          margin: 0 auto;
           -moz-border-radius: 1px;
           border-radius: 1px; }
-        /* line 124, ../scss/manuia/layout/_header.scss */
-        .l-header .header-toggle .navbar-toggle .icon-bar:after {
-          top: 10px; }
+          /* line 195, ../scss/manuia/layout/_header.scss */
+          .l-header .header-main .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-main .header-toggle .navbar-toggle .icon-bar:after {
+            content: '';
+            background-color: #343232;
+            display: block;
+            position: relative;
+            top: 6px;
+            width: 22px;
+            height: 2px;
+            -moz-border-radius: 1px;
+            border-radius: 1px; }
+          /* line 205, ../scss/manuia/layout/_header.scss */
+          .l-header .header-main .header-toggle .navbar-toggle .icon-bar:after {
+            top: 10px; }
 
 /* ==|====================
    Layout/Footer
@@ -1071,7 +1170,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-1 {
   width: 8.3333333333%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1093,7 +1192,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-2 {
   width: 16.6666666667%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1115,7 +1214,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-3 {
   width: 25%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1137,7 +1236,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-4 {
   width: 33.3333333333%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1159,7 +1258,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-5 {
   width: 41.6666666667%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1181,7 +1280,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-6 {
   width: 50%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1203,7 +1302,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-7 {
   width: 58.3333333333%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1225,7 +1324,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-8 {
   width: 66.6666666667%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1247,7 +1346,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-9 {
   width: 75%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1269,7 +1368,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-10 {
   width: 83.3333333333%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1291,7 +1390,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-11 {
   width: 91.6666666667%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1313,7 +1412,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-12 {
   width: 100%;
-  padding: 1.5em 1em; }
+  padding: 1.5em 0; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1373,7 +1472,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-1 {
     width: 8.3333333333%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1395,7 +1494,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-2 {
     width: 16.6666666667%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1417,7 +1516,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-3 {
     width: 25%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1439,7 +1538,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-4 {
     width: 33.3333333333%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1461,7 +1560,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-5 {
     width: 41.6666666667%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1483,7 +1582,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-6 {
     width: 50%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1505,7 +1604,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-7 {
     width: 58.3333333333%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1527,7 +1626,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-8 {
     width: 66.6666666667%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1549,7 +1648,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-9 {
     width: 75%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1571,7 +1670,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-10 {
     width: 83.3333333333%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1593,7 +1692,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-11 {
     width: 91.6666666667%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1615,7 +1714,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-12 {
     width: 100%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1674,7 +1773,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-1 {
     width: 8.3333333333%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1696,7 +1795,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-2 {
     width: 16.6666666667%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1718,7 +1817,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-3 {
     width: 25%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1740,7 +1839,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-4 {
     width: 33.3333333333%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1762,7 +1861,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-5 {
     width: 41.6666666667%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1784,7 +1883,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-6 {
     width: 50%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1806,7 +1905,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-7 {
     width: 58.3333333333%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1828,7 +1927,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-8 {
     width: 66.6666666667%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1850,7 +1949,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-9 {
     width: 75%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1872,7 +1971,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-10 {
     width: 83.3333333333%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1894,7 +1993,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-11 {
     width: 91.6666666667%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1916,7 +2015,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-12 {
     width: 100%;
-    padding: 1.5em 1em; }
+    padding: 1.5em 0; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {

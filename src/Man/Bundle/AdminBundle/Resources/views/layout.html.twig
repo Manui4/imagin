@@ -1,5 +1,5 @@
 {% extends "ManManuiaBundle:Template:layout.html.twig" %}
-
+{% import 'ManManuiaBundle::_helpers.html.twig' as helpers %}
 
 {% block header %}
     {% set manuia_color_logo = 'pink' %}
@@ -8,11 +8,11 @@
 
 {% block content_header_more %}
     {{ parent() }}
-    {% set route = app.request.attributes.get('_route') %}
-    <span class="menu-item{% if 'man_admin_dashboard' == route %} is-active{% endif %} sub-item" ><a href="{{ url('man_admin_dashboard') }}">{{ 'dashboard'|trans|capitalize }}</a></span>
-    <span class="menu-item{% if 'man_admin_post_list' == route %} is-active{% endif %} sub-item" ><a href="{{ url('man_admin_post_list') }}">{{ 'posts'|trans|capitalize }}</a></span>
-    <span class="menu-item{% if 'man_admin_comment_list' == route %} is-active{% endif %} sub-item" ><a href="{{ url('man_admin_comment_list') }}">{{ 'comments'|trans|capitalize }}</a></span>
-    <span class="menu-item"><a class="danger" href="{{ url('admin_logout') }}">Déconnexion</a></span>
+{{ helpers.widget_menu_item('Dashboard', 'man_admin_dashboard') }}
+    {{ helpers.widget_menu_item('Articles', 'man_admin_post_list', '', 'sub-item') }}
+    {{ helpers.widget_menu_item('Commenaires', 'man_manuia_homepage', '', 'sub-item') }}
+    {{ helpers.widget_menu_item('Accueil', 'man_admin_comment_list', '', 'sub-item') }}
+    {{ helpers.widget_menu_item('Déconnexion', 'admin_logout', '','danger') }}
 {% endblock %}
 
 {% block content %}

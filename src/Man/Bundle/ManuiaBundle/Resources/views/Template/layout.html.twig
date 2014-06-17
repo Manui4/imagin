@@ -45,16 +45,18 @@
             {% set manuia_color_logo = 'yellow' %}
             {% block header %}
             <header class="l-header">
-                <div class="l-container">
-                {{ include('ManManuiaBundle:Template:header.html.twig',{
-                    'color':  manuia_color_logo,
-                    'menu_header' : block('menu_header'),
-                    'content_header_more' : block('content_header_more')
-                }) }}
+                <div class="header-top">
+                    {{ include('ManManuiaBundle:Template:header/top.html.twig') }}
+                </div>
+                <div class="header-main">
+	                {{ include('ManManuiaBundle:Template:header/main.html.twig',{
+	                    'color':  manuia_color_logo,
+	                    'menu_header' : block('menu_header'),
+	                    'content_header_more' : block('content_header_more')
+	                }) }}
                 </div>
             </header>
             {% endblock %}
-
 
             <section class="l-content">
                 {% block content %}{% endblock %}
@@ -65,14 +67,14 @@
             {% javascripts
                 '@ManManuiaBundle/Resources/public/js/vendor/jquery-1.11.1.js'
 
-                '@ManManuiaBundle/Resources/public/js/manuia.js'
              %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
+            <script src="/bundles/manmanuia/js/manuia.js"></script>
         {% endblock %}
     </body>
 </html>
-
+{# '@ManManuiaBundle/Resources/public/js/manuia.js'#}
 {#                 '@ManManuiaBundle/Resources/public/js/bootstrap/bootstrap.js'#}
 
 

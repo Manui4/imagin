@@ -12,13 +12,15 @@
                     <div class="alert alert-warning">{{ error.message }}</div>
                 {% endif %}
             </div>
-            <div class="col-s-12 col-m-6 col-m-center">
+            <div class="col-s-12 ">
                 <form action="{{ path('admin_login_check') }}" method="post" class="form">
 
                     <input type="text" class="form-input" placeholder="Username" id="username" name="_username" value="{{ last_username }}" />
                     <input type="password" class="form-input" placeholder="Password" id="password" name="_password" />
 
+                    <p>
                     <button type="submit" class="btn btn-small">{{ 'Login'|trans }}</button>
+                    </p>
                 </form>
             </div>
         </div>

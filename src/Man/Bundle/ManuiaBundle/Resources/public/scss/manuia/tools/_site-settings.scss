@@ -42,16 +42,12 @@ $color-14: #2980b9; // BELIZE HOLE
 $color-15: #7a7a7a; // GRIS
 
 // Background
-$color-bg-container: none; // rgba($color-9, 0.2);
-// $color-bg-grid: rgba($color-1, 0.2);
-// $color-bg-grid: $color-1;
+$color-bg-container: none;                              // rgba($color-9, 0.2);
 $color-bg-grid: none;
-$color-bg-section: rgba($color-1, 0.2);
-$color-bg-section: $color-1;
+$color-bg-section: $color-1;                            // $color-bg-section: rgba($color-1, 0.2);
 
-$color-bg-header: rgba($color-9, 0.2);
-$color-bg-header: $color-9;
-$color-bg-header: none;
+$color-bg-header: $color-1;                             // $color-bg-header: rgba($color-1, 0.2);
+$color-bg-header-menu: lighten($color-bg-header, 10%);   // $color-bg-header-menu: rgba(lighten($color-bg-header, 5%), 0.2);
 
 // Table
 $color-table-bg-header: $color-0;

@@ -1,134 +1,212 @@
-/* ==|====================
+/* =======================
    Layout/Header
    ======================= */
 
 .l-header {
-    background-color: $color-bg-header;
 
-    .header-logo {
-        padding-left: 1.5em;
-        height: 9em;
-        display: block;
-        float: left;
-
-        img { 
-            border: 2px solid rgba(0, 0, 0, 0);
-            @include transition-duration;
-            height: 9em;
-        }
-        &:hover{
-            img{ @include opacity(0.8); }
-        }
-    }
-    
-    @media only screen and (max-width : $width-device-m ) {
-        .header-logo {
-            height: 4.5em;
-            img { 
-                border: 1px solid rgba(0, 0, 0, 0);
-                height: 4.5em;
-            }
-        }
-    }
-
-    .header-menu, .header-toggle {
-        float: right;
-
-        .menu-item {
-            margin-top: 1.5em;
-            margin-left: 0.5em;
-            padding:0 1.5em;
-            float: left;
-            @include border-radius(1.5em);
-            background-color: $color-1;
-            a {
-                color: $color-6;
-            }
-            
+/* =======================
+   header TOP
+   ======================= */
+    .header-top {
+        color: $color-6;
+        font-size: 0.8em;
+        height: 24px;
+        &:after {
+            content: '';
+            position: absolute;
             display: block;
-            &:hover {
-                @include transition-duration;
-                background-color: $color-0;
-            }
-            &:first-child:before{ display: none; }
-            &.is-active a {
-                @include transition-duration;
-                color: $color-0;
-            }
-            &:hover a {
-                @include transition-duration;
-                color: $color-1;
+            height: 1px;
+            width: 100%;
+            background-color: $color-6;
+            margin-top: -1px;
+        }
+        span {
+            margin: 0 1.5em;
+            text-align: center;
+        }
+        @media only screen and (max-width : $width-device-m ) {
+            height: 72px;
+            span {
+                display: block;
             }
         }
-        
-        @media only screen and (max-width : $width-device-m ) {
-            padding: 0;
-
-            .menu-item {
-                margin: 0;
-                padding:0.7em;
-                height: 3em;
-                
-                float: none;
-                @include border-radius(0);
-            }
-
-            .sub-item {
-                padding-left: 2.5em;
-                &:before {content:'|--'; margin-right: 0.5em; font-size: 2em;} 
+        .toggle {
+            position: relative;
+            text-align: center;
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: $color-3;
+                margin-top: -1px;
             }
         }
     }
 
-    .header-toggle {
-        padding: 0 0.5em;
-        /* margin-top: 3em; */
-        .navbar-toggle {
-            background-image: none;
-            border: 2px solid $color-navbar-toggle;
-            @include  border-radius(4px);
-            float: right;
-            padding: 10px 5px;
-            position: relative;
-            outline:none;
-            text-transform: none;
+/* =======================
+   header MAIN
+   ======================= */
+    .header-main {
+        margin-bottom: 1.5em;
+        &:after{
+            content:'';
+            background-color: $color-bg-header;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            height: 13.5em;
+            @include transform-origin(0);
+            @include transform(skewY(-3deg));
+            @include box-shadow(darken($color-bg-header, 90%) 0 6px 19px);
+        }
 
-            @include appearance(none);
-            @include border-radius(5px);
-
-            &:focus {
+        /* =======================
+           header main/LOGO
+           ======================= */
+        .header-logo {
+            padding-left: 1.5em;
+            height: 9em;
+            display: block;
+            /* float: left; */
+            img {
+                border: 2px solid rgba(0, 0, 0, 0);
                 @include transition-duration;
-                background-color: $color-bg-navbar-toggle-focus;
+                height: 9em;
             }
-            
-            .icon-bar {
-                background-color: $color-navbar-toggle;
+            &:hover{
+                img{ @include opacity(0.9); }
+            }
+        }
+
+        @media only screen and (max-width : $width-device-m ) {
+            .header-logo {
+                height: 4.5em;
+                padding-top: 1.5em;
+                img {
+                    border: 1px solid rgba(0, 0, 0, 0);
+                    height: 4.5em;
+                }
+            }
+        }
+
+        /* =======================
+           header main/MENU
+           ======================= */
+        .header-toggle {
+            float: right;
+        }
+        .header-menu {
+            float: right;
+            .menu-item {
+                margin-top: 0.5em;
+                margin-left: 0.5em;
+                padding:0 1.5em;
+                float: left;
                 display: block;
-                width: 22px;
-                height: 2px;
-                
+                @include border-radius(1.5em);
+                background-color: $color-1;
+                span {
+                    color: $color-6;
+                }
+                &:hover {
+                    @include transition-duration;
+                    background-color: $color-0;
+                }
+                &:first-child:before{ display: none; }
+                &.is-active span {
+                    @include transition-duration;
+                    color: $color-0;
+                }
+                &:hover span {
+                    @include transition-duration;
+                    color: $color-1;
+                }
+            }
+
+            @media only screen and (max-width : $width-device-m ) {
+                padding: 0;
+                .menu-item {
+                    background-color: $color-bg-header-menu;
+                    margin: 0;
+                    padding: 0.7em 1.5em;
+                    height: 3em;
+                    float: none;
+                    @include border-radius(0);
+                }
+
+                .sub-item {
+                    padding-left: 2.5em;
+                    &:before {content:'-'; margin-right: 0.5em;}
+                }
+            }
+        }
+
+        .menu-dropdown {
+            &.visible {
+                @include box-shadow(darken($color-bg-header, 90%) 0 6px 6px);
                 position: relative;
-                top: -6px;
-                margin: 0 auto;
-                @include  border-radius(1px);
-                &:before, &:after {
+                display: block;
+                padding-top: 3em;
+                &:before {
+                    z-index: -1;
                     content:'';
+                    position: absolute;
+                    top:-3em;
+                    bottom: 0;
+                    right: 0; left: 0;
+                    display:block;
+                    background-color: $color-bg-header-menu;
+                }
+            }
+        }
+
+        .header-toggle {
+            padding: 0;
+            .navbar-toggle {
+                background-image: none;
+                border: 2px solid $color-navbar-toggle;
+                @include  border-radius(4px);
+                float: right;
+                padding: 6px 5px;
+                position: relative;
+                outline:none;
+                text-transform: none;
+                height: 1.5em;
+
+                @include appearance(none);
+                @include border-radius(5px);
+
+                &:focus {
+                    @include transition-duration;
+                    background-color: $color-bg-navbar-toggle-focus;
+                }
+
+                .icon-bar {
                     background-color: $color-navbar-toggle;
                     display: block;
-                    position: relative;
-                    top: 6px;
                     width: 22px;
                     height: 2px;
+                    position: relative;
+                    top: -6px;
+                    margin: 0 auto;
                     @include  border-radius(1px);
-                }
-                &:after {
-                    top: 10px;
+                    &:before, &:after {
+                        content:'';
+                        background-color: $color-navbar-toggle;
+                        display: block;
+                        position: relative;
+                        top: 6px;
+                        width: 22px;
+                        height: 2px;
+                        @include  border-radius(1px);
+                    }
+                    &:after {
+                        top: 10px;
+                    }
                 }
             }
         }
     }
 }
-
-
-
-

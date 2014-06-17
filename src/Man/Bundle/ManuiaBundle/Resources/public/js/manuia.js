@@ -18,24 +18,26 @@ $(document).ready(function() {
             || e.preventDefault()
             || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') //strip for ie7
 
+        var $row = $('#menu-dropdown')
         var $target = null;
-        if( $('#menu-dropdown ' + target).length ) {
-            $target = $('#menu-dropdown ' + target)
+        if( $row.find(target).length ) {
+            $target = $row.find(target)
         } else {
             $target = $this.parent().next(target)
-            var $clone = $target.clone();
-            $row = $clone.wrap("<div id='menu-dropdown' class='row menu-dropdown'></div>").parent();
-            $target = $row.find(target);
+            $target = $target.clone();
+            $row = $target.wrap("<div id='menu-dropdown' class='row menu-dropdown'></div>").parent();
             $container.append($row);
         }
-
-        $this.attr('data-toggle', '');
-        if( $target.is( ":hidden" ) ){
-            $target.slideDown();
-            $this.attr('data-toggle', 'collapse');
-        } else {
-            $target.slideUp();
-            $this.attr('data-toggle', 'collapsed');
-        }
+        $row.addClass('visible');
+        /*$row.show();*/
+        $this.attr('data-toggle', 'collapse');
+        $target.slideToggle(400, function(){
+            if(! $target.is(':visible') ){
+                $row.removeClass('visible');
+                $this.attr('data-toggle', 'collapsed');
+                /*$row.hide();*/
+            }
+        });
+        
     });
 });
