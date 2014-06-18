@@ -1,5 +1,5 @@
 {# ~~~~~~~~~~~~~~ Logo #}
-{% import 'ManManuiaBundle::_helpers.html.twig' as helpers %}
+{% import 'ManManuiaBundle:Template:helpers/_menu.html.twig' as menu %}
 <div class="l-container">
     <div class="row header-wrapper">
         <div class="col-s-3">
@@ -27,9 +27,9 @@
             </div>
             <nav class="header-menu s-hide-only col-s-12" role="navigation">
                 {% block content_header_more %}
-                    {{ helpers.widget_menu_item('Accueil', 'man_manuia_homepage') }}
-                    {{ helpers.widget_menu_item('Blog', 'man_blog') }}
-                    {{ helpers.widget_menu_item('Admin', 'man_admin_dashboard') }}
+                    {{ menu.widget_menu_item('Accueil', 'man_manuia_homepage') }}
+                    {{ menu.widget_menu_item('Blog', 'man_blog') }}
+                    {{ menu.widget_menu_item('Admin', 'man_admin_dashboard') }}
                     {{ content_header_more | raw }}
                 {% endblock %}
             </nav>

@@ -15,9 +15,9 @@
                     <a href="{{ url('man_blog_post', {slug: post.slug}) }}"><h2>{{ post.title|capitalize }}</h2></a>
                 <hr />
                 </div>
-                <p class="description">
+                <div class="description">
                     {% autoescape false %}{{ post.description|markdown }}{% endautoescape %}
-                </p>
+                </div>
           </div>
           {% endfor %}
           <div class="clearfix"></div>

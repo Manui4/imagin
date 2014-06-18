@@ -4,82 +4,119 @@
 input, textarea, button, select {
     outline:none;
     text-transform: none;
-    
     @include appearance(none);
     @include border-radius(0);
 }
 
-.form-input {
+.wrapper-checkbox, 
+.wrapper-checkbox,
+.wrapper-textarea, 
+.wrapper-input {margin: 0 0 10px 0; }
+
+%input {
     display: block;
     width: 100%;
-    height: 45px;
-    margin: 0 0 10px 0;
-    padding: 0 30px;
-
-    font-size: 15px;
-    line-height: 1.75;
-    font-family: "Open Sans", sans-serif;
+    padding: 1em 1.5em;
+    line-height: 1.5em;
+    height: 3em;
     color:#737373;
-
     border: 2px solid #d9d9d9;
     @include transition-duration;
     &:focus{ border-color:$color-3; }
 }
-.form-textarea {
-    @extend .form-input;
-    height: 150px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+
+
+
+.wrapper-input {
+    .form-input {
+        @extend %input;
+    }
 }
 
-.form-select {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 45px;
-    margin: 0 0 10px 0;
-
-    font-size: 15px;
-    line-height: 1.75;
-    font-family: "Open Sans", sans-serif;
-    color:#737373;
-
-    .form-control {
-        background-color: #fff;
-        background-image: none;
-        margin: 0 0 10px 0;
-        padding: 10px 0 10px 30px;
+.wrapper-textarea {
+    .form-textarea {
+        @extend %input;
+        height: 9em;
         
-        width: 100%;
-        border: 2px solid #d9d9d9;
-        height: 45px;
-        @include transition-duration;
-        &:focus{ border-color:$color-3; }
+    }
+}
+
+.wrapper-checkbox {
+    .form-checkbox[type="checkbox"] {
+        border: 0 none;
+        clip: rect(0px, 0px, 0px, 0px);
+        height: 0;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
     
-        option {
-            font-size: 15px;
-            line-height: 1.75;
-            font-family: "Open Sans", sans-serif;
-            color:#737373;
+    label.checkbox {
+        background-image: url("/bundles/manmanuia/images/checkbox.png");
+        width: 20px;
+        height: 20px;
+        display: block;
+        cursor: pointer;
+    }
+    
+    input.form-checkbox[type="checkbox"]+label.checkbox.required:after {
+        content: '';
+    }
+    
+    input.form-checkbox[type="checkbox"]:checked+label.checkbox {
+        background-position: 0 -20px;
+    }
+    
+    input.form-checkbox[type="checkbox"]+label.checkbox {
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 1.5em;
+        padding: 0 1.5em;
+        vertical-align: middle;
+    }
+}
+
+.wrapper-select {
+    .form-select {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        line-height: 1.5em;
+        color: #737373;
+        .form-control {
+            background-color: #fff;
+            background-image: none;
+            padding: 10px 0 10px 30px;
+            width: 100%;
+            border: 2px solid #d9d9d9;
+            @include transition-duration;
             &:focus{ border-color:$color-3; }
+            option {
+                line-height: 1.5em;
+                font-family: "Open Sans", sans-serif;
+                color:#737373;
+                &:focus{ border-color:$color-3; }
+            }
+        }
+        &:after {
+            background: none repeat scroll 0 0 #ffffff;
+            border-bottom: 2px solid #d9d9d9;
+            border-right: 2px solid #d9d9d9;
+            border-left: 2px dotted #d9d9d9;
+            border-top: 2px solid #d9d9d9; color : #737373;
+            content: "▼";
+            font-size: 1.5em;
+            line-height: 1.5em;
+            padding: 5px 10px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            color: #737373;
         }
     }
-    
-    &:after {
-        content: "▼";
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        bottom: 2px;
-        
-        padding: 5px 10px;
-        background: #fff;
-        
-        font-size: 15px;
-        line-height: 1.75;
-        font-family: "Open Sans", sans-serif;
-        color:#737373;
-    }
-
 }
-

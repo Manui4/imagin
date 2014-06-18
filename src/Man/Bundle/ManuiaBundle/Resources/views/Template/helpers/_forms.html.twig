@@ -1,0 +1,50 @@
+
+{% macro form_select(item, style) %}
+    {% spaceless %}
+    <div class="wrapper-select">
+        <div class="form-select" style="{{ style }}">
+           {{ form_widget(item, { 'attr' : { 'class' : 'form-control' } }) }}
+        </div>
+    </div>
+    {% endspaceless %}
+{% endmacro %}
+
+{% macro form_checkbox(item, class) %}
+    {% spaceless %}
+    <div class="wrapper-checkbox">
+        {{ form_widget(item, { 'attr' : { 'class' : 'form-checkbox' } }) }}
+        {{ form_label(item, '', {'label_attr': {'class': 'checkbox'}}) }}
+    </div>
+    {% endspaceless %}
+{% endmacro %}
+
+{% macro form_textarea(item, class, showLabel=false) %}
+    {% spaceless %}
+    <div class="wrapper-textarea">
+        {% if showLabel %}{{ form_label(item) }}{% endif %}
+        {{ form_widget(item, {'attr' : {
+           'rows': 7,
+           'class' : 'form-textarea',
+           'placeholder': item.vars.label
+        } }) }}
+    </div>
+    <div class="message warning">
+        {{ form_errors(item) }}
+    </div>
+    {% endspaceless %}
+{% endmacro %}
+
+{% macro form_input(item, class, showLabel=false) %}
+    {% spaceless %}
+    <div class="wrapper-input">
+        {% if showLabel %}{{ form_label(item) }}{% endif %}
+        {{ form_widget(item, {'attr' : {
+           'class' : 'form-input',
+           'placeholder': item.vars.label
+        } }) }}
+    </div>
+    <div class="message warning">
+        {{ form_errors(item) }}
+    </div>
+    {% endspaceless %}
+{% endmacro %}

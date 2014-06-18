@@ -32,6 +32,11 @@
     {% endspaceless %}
 {% endmacro %}
 
+{% macro conditional_label(success, contentSuccess, contentFail) %}
+    <span class="label label-{{ success|default(false) ? 'success' : 'warning' }}">{{ success|default(false) ? contentSuccess : contentFail }}</span>
+{% endmacro %}
+
+
 {% macro label(success, content) %}
-    <span class="label label-{{ success|default(false) ? 'success' : 'warning' }}">{{ content }}</span>
+    <span class="label">{{ content }}</span>
 {% endmacro %}

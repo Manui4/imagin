@@ -33,8 +33,14 @@
     </head>
     <body class="{% block body_class %}{% endblock body_class %}">
         {% for flashMessage in app.session.flashbag.get('notice') %}
-        <div class="flash-message">
-            <em>Notice</em>: {{ flashMessage }}
+        <div class="l-container">
+            <div class="row">
+                <div class="col-s-12">
+                    <div class="flash-message">
+                        <em>Notice</em>: {{ flashMessage }}
+                    </div>
+                </div>
+            </div>
         </div>
         {% endfor %}
 

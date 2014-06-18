@@ -1,5 +1,5 @@
 {% extends "ManManuiaBundle:Template:layout.html.twig" %}
-{% import 'ManManuiaBundle::_helpers.html.twig' as helpers %}
+{% import 'ManManuiaBundle:Template:helpers/_menu.html.twig' as menu %}
 
 {% block header %}
     {% set manuia_color_logo = 'pink' %}
@@ -8,24 +8,22 @@
 
 {% block content_header_more %}
     {{ parent() }}
-{{ helpers.widget_menu_item('Dashboard', 'man_admin_dashboard') }}
-    {{ helpers.widget_menu_item('Articles', 'man_admin_post_list', '', 'sub-item') }}
-    {{ helpers.widget_menu_item('Commentaires', 'man_admin_comment_list', '', 'sub-item') }}
-    {{ helpers.widget_menu_item('Déconnexion', 'admin_logout', '','danger') }}
+    {{ menu.widget_menu_item('Dashboard', 'man_admin_dashboard') }}
+    {{ menu.widget_menu_item('Articles', 'man_admin_post_list', '', 'sub-item') }}
+    {{ menu.widget_menu_item('Commentaires', 'man_admin_comment_list', '', 'sub-item') }}
+    {{ menu.widget_menu_item('Déconnexion', 'admin_logout', '','danger') }}
 {% endblock %}
 
 {% block content %}
-{#         {% block manuia_color %}pink{% endblock %}#}
-        {% set manuia_color_logo = 'pink' %}
         {% for flashMessage in app.session.flashbag.get('admin') %}
         <div class="l-container">
-	        <div class="row">
-	            <div class="col-s-12">
-	                <div class="alert alert-info">
-	                    {{ flashMessage }}
-	                </div>
-	            </div>
-	        </div>
+            <div class="row">
+                <div class="col-s-12">
+                    <div class="flash-message">
+                        <em>Admin</em>: {{ flashMessage }}
+                    </div>
+                </div>
+            </div>
         </div>
         {% endfor %}
 

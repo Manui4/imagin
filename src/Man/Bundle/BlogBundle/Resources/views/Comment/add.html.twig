@@ -1,46 +1,18 @@
-<div class="zone-add-comment">
-    <h2>Ajouter un commentaire</h2>
+{% import 'ManManuiaBundle:Template:helpers/_forms.html.twig' as man_forms %}
 
+<div class="zone-add-comment">
     {{ form_start(form) }}
 
-        <span class="add-on"><i class="icon-gravatar"></i></span>
-        {{ form_widget(form.username, {'attr': {
-            'class': 'form-input',
-            'placeholder': form.username.vars.label
-        }}) }}
-        <div class="message warning">
-            {{ form_errors(form.username) }}
-        </div>
 
-        <span class="add-on"><i class="icon-envelope"></i></span>
-        {{ form_widget(form.email, {'attr': {
-            'class': 'form-input',
-            'placeholder': form.email.vars.label
-        }}) }}
-        <div class="message warning">
-            {{ form_errors(form.email) }}
-        </div>
-
-        <span class="add-on"><i class="icon-html5"></i></span>
-        {{ form_widget(form.website, {'attr': {
-            'class': 'form-input',
-            'placeholder': form.website.vars.label
-        }}) }}
-        <div class="message warning">
-            {{ form_errors(form.website) }}
-        </div>
-
-        {{ form_widget(form.content, {'attr': {
-            'rows': 10,
-            'class': 'form-textarea',
-            'placeholder': form.content.vars.label
-        }}) }}
-        <div class="message warning">
-            {{ form_errors(form.content) }}
-        </div>
-
+    {{ man_forms.form_input(form.username) }}
+    {{ man_forms.form_input(form.email) }}
+    {{ man_forms.form_input(form.website) }}
+    {{ man_forms.form_textarea(form.content) }}
+    <p>
         {{ form_row(form.save, {'attr': {
             'class': 'btn btn-small'
         }}) }}
+    </p>
+
     {{ form_end(form) }}
 </div>

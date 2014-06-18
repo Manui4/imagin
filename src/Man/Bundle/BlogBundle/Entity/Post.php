@@ -1,9 +1,7 @@
 <?php
-
 namespace Man\Bundle\BlogBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-
 use Man\Bundle\BlogBundle\Entity\Comment;
 
 /**
@@ -12,56 +10,66 @@ use Man\Bundle\BlogBundle\Entity\Comment;
 class Post
 {
     /**
+     *
      * @var string
      */
     private $title;
 
     /**
+     *
      * @var string
      */
     private $description;
 
     /**
+     *
      * @var string
      */
     private $content;
 
     /**
+     *
      * @var \DateTime
      */
     private $createdAt;
 
     /**
+     *
      * @var \DateTime
      */
     private $modifiedAt;
 
     /**
+     *
      * @var boolean
      */
     private $published;
 
     /**
+     *
      * @var string
      */
     private $slug;
 
     /**
+     *
      * @var array
      */
     private $tags;
 
     /**
+     *
      * @var array
      */
     private $comments;
 
     /**
+     *
      * @var integer
      */
     private $id;
 
-    public function __construct() 
+    public function __construct()
     {
         $this->tags = new ArrayCollection();
         $this->comments = new ArrayCollection();
@@ -79,16 +87,16 @@ class Post
     public function setTitle($title)
     {
         $this->title = $title;
-        
+
         $this->modifiedAt = new \DateTime();
-    
+
         return $this;
     }
 
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -104,16 +112,16 @@ class Post
     public function setDescription($description)
     {
         $this->description = $description;
-        
+
         $this->modifiedAt = new \DateTime();
-    
+
         return $this;
     }
 
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -129,16 +137,16 @@ class Post
     public function setContent($content)
     {
         $this->content = $content;
-        
+
         $this->modifiedAt = new \DateTime();
-    
+
         return $this;
     }
 
     /**
      * Get content
      *
-     * @return string 
+     * @return string
      */
     public function getContent()
     {
@@ -154,16 +162,16 @@ class Post
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-        
+
         $this->modifiedAt = new \DateTime();
-    
+
         return $this;
     }
 
     /**
      * Get createdAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -179,14 +187,14 @@ class Post
     public function setModifiedAt($modifiedAt)
     {
         $this->modifiedAt = $modifiedAt;
-    
+
         return $this;
     }
 
     /**
      * Get modifiedAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getModifiedAt()
     {
@@ -202,16 +210,16 @@ class Post
     public function setPublished($published)
     {
         $this->published = $published;
-        
+
         $this->modifiedAt = new \DateTime();
-    
+
         return $this;
     }
 
     /**
      * Get published
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getPublished()
     {
@@ -227,16 +235,16 @@ class Post
     public function setSlug($slug)
     {
         $this->slug = $slug;
-        
+
         $this->modifiedAt = new \DateTime();
-    
+
         return $this;
     }
 
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
@@ -252,16 +260,16 @@ class Post
     public function setTags($tags)
     {
         $this->tags = $tags;
-        
+
         $this->modifiedAt = new \DateTime();
-    
+
         return $this;
     }
 
     /**
      * Get tags
      *
-     * @return array 
+     * @return array
      */
     public function getTags()
     {
@@ -277,31 +285,31 @@ class Post
     public function setComments($comments)
     {
         $this->comments = $comments;
-        
+
         return $this;
     }
 
     /**
      * Get comments
      *
-     * @return array 
+     * @return array
      */
     public function getComments()
     {
         return $this->comments;
     }
-    
+
     public function addComment(Comment $comment)
     {
         $this->comments->add($comment);
-        
+
         return $this;
     }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {

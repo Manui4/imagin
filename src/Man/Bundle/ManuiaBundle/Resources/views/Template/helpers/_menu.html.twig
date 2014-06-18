@@ -1,6 +1,5 @@
 {% macro widget_menu_item(label, routeKey, linkClass='', spanClass='') %}
     {% spaceless %}
-    {% import _self as helpers %}
     {% set route = app.request.attributes.get('_route') %}
        <a href="{{ path(routeKey) }}" class="menu-item{{ linkClass }}{% if routeKey == route %} is-active{% endif %} " ><span class="{{ spanClass }}">{{ label }}</span></a>
     {% endspaceless %}

@@ -45,13 +45,16 @@
 .section h1 {
     padding: 1em;
     height: 3em;
-    background-color: darken($color-7, 5%);
-    text-align: right;
+    background-color: darken($color-0, 5%);
 }
 
 .section hr {
-    padding: 0;
-    height: 3em;
-    margin: 0;
-    margin-top: -1px;
+    border: 0;
+    height: 0;
+    @include box-shadow($color-0 0 0 2px 1px);
+
+    &:after {
+        content: "\00a0";
+    }
+
 }

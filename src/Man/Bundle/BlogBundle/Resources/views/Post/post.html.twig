@@ -15,11 +15,13 @@
             <div class="zone-post">
                 {{ post_content|markdown }}
             </div>
-
+            <hr>
             {% if config('blog.comment.enabled') %}
                 <div class="row">
-                    <div class="col-s-12 col-m-6 col-s-center col-m-center">
+                    <div class="col-s-12 col-m-8">
                         {{ render(controller('ManBlogBundle:Comment:list', {'slug': post.slug})) }}
+                    </div>
+                    <div class="col-s-12 col-m-4">
                         {{ render(controller('ManBlogBundle:Comment:add', {'slug': post.slug})) }}
                     </div>
                 </div>

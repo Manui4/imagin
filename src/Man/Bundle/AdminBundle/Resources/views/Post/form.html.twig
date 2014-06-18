@@ -1,57 +1,12 @@
+{% import 'ManManuiaBundle:Template:helpers/_forms.html.twig' as man_forms %}
+
 {{ form_start(form) }}
 
-{{ form_widget(form.title, {'attr': {
-    'class': 'form-input',
-    'placeholder': form.title.vars.label
-}}) }}
-<div class="message warning">
-    {{ form_errors(form.title) }}
-</div>
-
-{{ form_widget(form.slug, {'attr': {
-    'class': 'form-input',
-    'placeholder': form.slug.vars.label
-}}) }}
-<div class="message warning">
-    {{ form_errors(form.slug) }}
-</div>
-
-{{ form_widget(form.description, {'attr': {
-    'rows': 7,
-    'class': 'form-textarea',
-    'placeholder': form.description.vars.label
-}}) }}
-<div class="message warning">
-    {{ form_errors(form.description) }}
-</div>
-
-{{ form_widget(form.content, {'attr': {
-    'rows': 15,
-    'class': 'form-textarea',
-    'placeholder': form.content.vars.label
-}}) }}
-<div class="message warning">
-    {{ form_errors(form.content) }}
-</div>
-
-<div class="checkbox">
-    <label>
-      {{ form_widget(form.published) }} {{ form.published.vars.label }}
-    </label>
-</div>
-<div class="message warning">
-    {{ form_errors(form.published) }}
-</div>
-
-{{ form.published.vars.label }}
-{{ form_widget(form.published, {'attr': {
-    'class': 'form-input',
-    'placeholder': form.published.vars.label
-}}) }}
-
-<div class="message warning">
-    {{ form_errors(form.published) }}
-</div>
+{{ man_forms.form_input(form.title) }}
+{{ man_forms.form_textarea(form.description) }}
+{{ man_forms.form_input(form.slug) }}
+{{ man_forms.form_textarea(form.content) }}
+{{ man_forms.form_checkbox(form.published) }}
 
 <p>
 {{ form_row(form.save, {'attr': {
