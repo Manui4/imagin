@@ -14,12 +14,15 @@
             </div>
             <div class="col-s-12 ">
                 <form action="{{ path('admin_login_check') }}" method="post" class="form">
-
-                    <input type="text" class="form-input" placeholder="Username" id="username" name="_username" value="{{ last_username }}" />
-                    <input type="password" class="form-input" placeholder="Password" id="password" name="_password" />
+                    <div class="wrapper-input">
+                        <input type="text" class="form-input" placeholder="Username" id="username" name="_username" value="{{ last_username }}" />
+                    </div>
+                    <div class="wrapper-input">
+                        <input type="password" class="form-input" placeholder="Password" id="password" name="_password" />
+                    </div>
 
                     <p>
-                    <button type="submit" class="btn btn-small">{{ 'Login'|trans }}</button>
+                        <button type="submit" class="btn btn-small">{{ 'Login'|trans }}</button>
                     </p>
                 </form>
             </div>

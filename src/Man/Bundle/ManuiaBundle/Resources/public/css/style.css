@@ -734,7 +734,7 @@ input, textarea, button, select {
   border-radius: 0; }
 
 /* line 14, ../scss/manuia/base/_form.scss */
-.wrapper-checkbox,
+.wrapper-select,
 .wrapper-checkbox,
 .wrapper-textarea,
 .wrapper-input {
