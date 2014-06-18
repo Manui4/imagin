@@ -46,6 +46,7 @@ $color-bg-container: none;                              // rgba($color-9, 0.2);
 $color-bg-grid: none;
 $color-bg-section: $color-1;                            // $color-bg-section: rgba($color-1, 0.2);
 
+$color-bg-header-top: $color-1;
 $color-bg-header: $color-1;                             // $color-bg-header: rgba($color-1, 0.2);
 $color-bg-header-menu: lighten($color-bg-header, 10%);   // $color-bg-header-menu: rgba(lighten($color-bg-header, 5%), 0.2);
 

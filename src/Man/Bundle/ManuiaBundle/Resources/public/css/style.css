@@ -883,6 +883,7 @@ input, textarea, button, select {
    ======================= */
 /* line 5, ../scss/manuia/layout/_header.scss */
 .l-header {
+  display: block;
   /* =======================
      header TOP
      ======================= */
@@ -893,8 +894,10 @@ input, textarea, button, select {
   .l-header .header-top {
     color: #bdb4b1;
     font-size: 0.8em;
-    height: 24px; }
-    /* line 14, ../scss/manuia/layout/_header.scss */
+    /* height: 24px; */
+    display: block;
+    background-color: #343232; }
+    /* line 16, ../scss/manuia/layout/_header.scss */
     .l-header .header-top:after {
       content: '';
       position: absolute;
@@ -903,22 +906,32 @@ input, textarea, button, select {
       width: 100%;
       background-color: #bdb4b1;
       margin-top: -1px; }
-    /* line 23, ../scss/manuia/layout/_header.scss */
+    /* line 25, ../scss/manuia/layout/_header.scss */
     .l-header .header-top span {
       margin: 0 1.5em;
       text-align: center; }
+    /* line 29, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top .wrapper-is-active {
+      display: block; }
     @media only screen and (max-width: 768px) {
       /* line 10, ../scss/manuia/layout/_header.scss */
       .l-header .header-top {
-        height: 72px; }
-        /* line 29, ../scss/manuia/layout/_header.scss */
+        /* height: 72px; */ }
+        /* line 34, ../scss/manuia/layout/_header.scss */
         .l-header .header-top span {
-          display: block; } }
-    /* line 33, ../scss/manuia/layout/_header.scss */
+          display: block;
+          height: 24px; } }
+    /* line 39, ../scss/manuia/layout/_header.scss */
     .l-header .header-top .toggle {
+      cursor: pointer;
       position: relative;
-      text-align: center; }
-      /* line 36, ../scss/manuia/layout/_header.scss */
+      display: block;
+      width: 100%;
+      /* height: 100%; */
+      background-position: center 5px;
+      background-repeat: no-repeat;
+      background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="11.006,3.491 5.504,9.228 0,3.544 1.523,2 5.504,5.989 9.491,2 "/></svg>'); }
+      /* line 48, ../scss/manuia/layout/_header.scss */
       .l-header .header-top .toggle:before {
         content: '';
         position: absolute;
@@ -927,8 +940,13 @@ input, textarea, button, select {
         width: 100%;
         background-color: #f59755;
         margin-top: -1px; }
-  /* line 51, ../scss/manuia/layout/_header.scss */
+    /* line 58, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top .toggle.visible {
+      background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="0,7.736 5.501,2 11.006,7.684 9.482,9.228 5.501,5.239 1.515,9.228 "/></svg>'); }
+  /* line 66, ../scss/manuia/layout/_header.scss */
   .l-header .header-main {
+    position: relative;
+    display: block;
     margin-bottom: 1.5em;
     /* =======================
        header main/LOGO
@@ -936,37 +954,47 @@ input, textarea, button, select {
     /* =======================
        header main/MENU
        ======================= */ }
-    /* line 53, ../scss/manuia/layout/_header.scss */
-    .l-header .header-main:after {
-      content: '';
-      background-color: #343232;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      height: 13.5em;
-      -webkit-transform-origin: 0;
-      -moz-transform-origin: 0;
-      -ms-transform-origin: 0;
-      -o-transform-origin: 0;
-      transform-origin: 0;
-      -webkit-transform: skewY(-3deg);
-      -moz-transform: skewY(-3deg);
-      -ms-transform: skewY(-3deg);
-      -o-transform: skewY(-3deg);
-      transform: skewY(-3deg);
-      -webkit-box-shadow: black 0 6px 19px;
-      -moz-box-shadow: black 0 6px 19px;
-      box-shadow: black 0 6px 19px; }
-    /* line 68, ../scss/manuia/layout/_header.scss */
+    /* line 71, ../scss/manuia/layout/_header.scss */
+    .l-header .header-main .header-wrapper {
+      position: relative;
+      display: block;
+      overflow: visible;
+      width: 100%;
+      height: 100%;
+      /* background-color: $color-bg-section; */ }
+      /* line 79, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-wrapper:before, .l-header .header-main .header-wrapper:after {
+        content: '';
+        background-color: #343232;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        -webkit-transform-origin: 0;
+        -moz-transform-origin: 0;
+        -ms-transform-origin: 0;
+        -o-transform-origin: 0;
+        transform-origin: 0;
+        -webkit-transform: skewY(-3deg);
+        -moz-transform: skewY(-3deg);
+        -ms-transform: skewY(-3deg);
+        -o-transform: skewY(-3deg);
+        transform: skewY(-3deg); }
+      /* line 89, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-wrapper:after {
+        -webkit-box-shadow: black 0 6px 19px;
+        -moz-box-shadow: black 0 6px 19px;
+        box-shadow: black 0 6px 19px; }
+    /* line 97, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .header-logo {
       padding-left: 1.5em;
       height: 9em;
       display: block;
       /* float: left; */ }
-      /* line 73, ../scss/manuia/layout/_header.scss */
+      /* line 102, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-logo img {
         border: 2px solid rgba(0, 0, 0, 0);
         -webkit-transition-duration: 0.3s;
@@ -974,7 +1002,7 @@ input, textarea, button, select {
         -o-transition-duration: 0.3s;
         transition-duration: 0.3s;
         height: 9em; }
-      /* line 79, ../scss/manuia/layout/_header.scss */
+      /* line 108, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-logo:hover img {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
         opacity: 0.9;
@@ -984,21 +1012,20 @@ input, textarea, button, select {
           filter: alpha(opacity=90);
           zoom: 1; }
     @media only screen and (max-width: 768px) {
-      /* line 84, ../scss/manuia/layout/_header.scss */
+      /* line 113, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-logo {
-        height: 4.5em;
-        padding-top: 1.5em; }
-        /* line 87, ../scss/manuia/layout/_header.scss */
+        height: 4.5em; }
+        /* line 115, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-logo img {
           border: 1px solid rgba(0, 0, 0, 0);
           height: 4.5em; } }
-    /* line 97, ../scss/manuia/layout/_header.scss */
+    /* line 125, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .header-toggle {
       float: right; }
-    /* line 100, ../scss/manuia/layout/_header.scss */
+    /* line 128, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .header-menu {
       float: right; }
-      /* line 102, ../scss/manuia/layout/_header.scss */
+      /* line 130, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-menu .menu-item {
         margin-top: 0.5em;
         margin-left: 0.5em;
@@ -1008,27 +1035,27 @@ input, textarea, button, select {
         -moz-border-radius: 1.5em;
         border-radius: 1.5em;
         background-color: #343232; }
-        /* line 110, ../scss/manuia/layout/_header.scss */
+        /* line 138, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-menu .menu-item span {
           color: #bdb4b1; }
-        /* line 113, ../scss/manuia/layout/_header.scss */
+        /* line 141, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-menu .menu-item:hover {
           -webkit-transition-duration: 0.3s;
           -moz-transition-duration: 0.3s;
           -o-transition-duration: 0.3s;
           transition-duration: 0.3s;
           background-color: #508fb7; }
-        /* line 117, ../scss/manuia/layout/_header.scss */
+        /* line 145, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-menu .menu-item:first-child:before {
           display: none; }
-        /* line 118, ../scss/manuia/layout/_header.scss */
+        /* line 146, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-menu .menu-item.is-active span {
           -webkit-transition-duration: 0.3s;
           -moz-transition-duration: 0.3s;
           -o-transition-duration: 0.3s;
           transition-duration: 0.3s;
           color: #508fb7; }
-        /* line 122, ../scss/manuia/layout/_header.scss */
+        /* line 150, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-menu .menu-item:hover span {
           -webkit-transition-duration: 0.3s;
           -moz-transition-duration: 0.3s;
@@ -1036,10 +1063,10 @@ input, textarea, button, select {
           transition-duration: 0.3s;
           color: #343232; }
       @media only screen and (max-width: 768px) {
-        /* line 100, ../scss/manuia/layout/_header.scss */
+        /* line 128, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-menu {
           padding: 0; }
-          /* line 130, ../scss/manuia/layout/_header.scss */
+          /* line 158, ../scss/manuia/layout/_header.scss */
           .l-header .header-main .header-menu .menu-item {
             background-color: #4e4b4b;
             margin: 0;
@@ -1048,24 +1075,24 @@ input, textarea, button, select {
             float: none;
             -moz-border-radius: 0;
             border-radius: 0; }
-          /* line 139, ../scss/manuia/layout/_header.scss */
+          /* line 167, ../scss/manuia/layout/_header.scss */
           .l-header .header-main .header-menu .sub-item {
             padding-left: 2.5em; }
-            /* line 141, ../scss/manuia/layout/_header.scss */
+            /* line 169, ../scss/manuia/layout/_header.scss */
             .l-header .header-main .header-menu .sub-item:before {
               content: '-';
               margin-right: 0.5em; } }
-    /* line 147, ../scss/manuia/layout/_header.scss */
+    /* line 175, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .menu-dropdown.visible {
       -webkit-box-shadow: black 0 6px 6px;
       -moz-box-shadow: black 0 6px 6px;
       box-shadow: black 0 6px 6px;
       position: relative;
       display: block;
-      padding-top: 3em; }
-      /* line 152, ../scss/manuia/layout/_header.scss */
+      padding-top: 1.5em; }
+      /* line 180, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .menu-dropdown.visible:before {
-        z-index: -1;
+        z-index: -2;
         content: '';
         position: absolute;
         top: -3em;
@@ -1074,10 +1101,10 @@ input, textarea, button, select {
         left: 0;
         display: block;
         background-color: #4e4b4b; }
-    /* line 165, ../scss/manuia/layout/_header.scss */
+    /* line 193, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .header-toggle {
       padding: 0; }
-      /* line 167, ../scss/manuia/layout/_header.scss */
+      /* line 195, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-toggle .navbar-toggle {
         background-image: none;
         border: 2px solid #343232;
@@ -1094,14 +1121,14 @@ input, textarea, button, select {
         appearance: none;
         -moz-border-radius: 5px;
         border-radius: 5px; }
-        /* line 181, ../scss/manuia/layout/_header.scss */
+        /* line 209, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-toggle .navbar-toggle:focus {
           -webkit-transition-duration: 0.3s;
           -moz-transition-duration: 0.3s;
           -o-transition-duration: 0.3s;
           transition-duration: 0.3s;
           background-color: #b4b1b1; }
-        /* line 186, ../scss/manuia/layout/_header.scss */
+        /* line 214, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-toggle .navbar-toggle .icon-bar {
           background-color: #343232;
           display: block;
@@ -1112,7 +1139,7 @@ input, textarea, button, select {
           margin: 0 auto;
           -moz-border-radius: 1px;
           border-radius: 1px; }
-          /* line 195, ../scss/manuia/layout/_header.scss */
+          /* line 223, ../scss/manuia/layout/_header.scss */
           .l-header .header-main .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-main .header-toggle .navbar-toggle .icon-bar:after {
             content: '';
             background-color: #343232;
@@ -1123,7 +1150,7 @@ input, textarea, button, select {
             height: 2px;
             -moz-border-radius: 1px;
             border-radius: 1px; }
-          /* line 205, ../scss/manuia/layout/_header.scss */
+          /* line 233, ../scss/manuia/layout/_header.scss */
           .l-header .header-main .header-toggle .navbar-toggle .icon-bar:after {
             top: 10px; }
 

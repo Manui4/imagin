@@ -3,14 +3,16 @@
    ======================= */
 
 .l-header {
-
+    display: block;
 /* =======================
    header TOP
    ======================= */
     .header-top {
         color: $color-6;
         font-size: 0.8em;
-        height: 24px;
+        /* height: 24px; */
+        display: block;
+        background-color: $color-bg-header-top;
         &:after {
             content: '';
             position: absolute;
@@ -24,15 +26,25 @@
             margin: 0 1.5em;
             text-align: center;
         }
+        .wrapper-is-active {
+            display: block;
+        }
         @media only screen and (max-width : $width-device-m ) {
-            height: 72px;
+            /* height: 72px; */
             span {
                 display: block;
+                height: 24px;
             }
         }
         .toggle {
+            cursor: pointer;
             position: relative;
-            text-align: center;
+            display: block;
+            width: 100%;
+            /* height: 100%; */
+            background-position: center 5px;
+            background-repeat: no-repeat;
+            background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="11.006,3.491 5.504,9.228 0,3.544 1.523,2 5.504,5.989 9.491,2 "/></svg>');
             &:before {
                 content: '';
                 position: absolute;
@@ -43,23 +55,40 @@
                 margin-top: -1px;
             }
         }
+        .toggle.visible {
+            background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="0,7.736 5.501,2 11.006,7.684 9.482,9.228 5.501,5.239 1.515,9.228 "/></svg>');
+        }
     }
 
 /* =======================
    header MAIN
    ======================= */
     .header-main {
+        position: relative;
+        display: block;
         margin-bottom: 1.5em;
-        &:after{
-            content:'';
-            background-color: $color-bg-header;
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: -1;
-            height: 13.5em;
-            @include transform-origin(0);
-            @include transform(skewY(-3deg));
-            @include box-shadow(darken($color-bg-header, 90%) 0 6px 19px);
+        
+        .header-wrapper {
+            position : relative;
+            display: block;
+            overflow: visible;
+            width: 100%;
+            height: 100%;
+            /* background-color: $color-bg-section; */
+            
+            &:before, &:after{
+                content:'';
+                background-color: $color-bg-section;
+                position: absolute;
+                width: 100%;
+                top: 0; left: 0; right: 0; bottom: 0;
+                z-index: -1;
+                @include transform-origin(0);
+                @include transform(skewY(-3deg));
+            }
+            &:after{
+                @include box-shadow(darken($color-bg-header, 90%) 0 6px 19px);
+            }
         }
 
         /* =======================
@@ -83,7 +112,6 @@
         @media only screen and (max-width : $width-device-m ) {
             .header-logo {
                 height: 4.5em;
-                padding-top: 1.5em;
                 img {
                     border: 1px solid rgba(0, 0, 0, 0);
                     height: 4.5em;
@@ -148,9 +176,9 @@
                 @include box-shadow(darken($color-bg-header, 90%) 0 6px 6px);
                 position: relative;
                 display: block;
-                padding-top: 3em;
+                padding-top: 1.5em;
                 &:before {
-                    z-index: -1;
+                    z-index: -2;
                     content:'';
                     position: absolute;
                     top:-3em;

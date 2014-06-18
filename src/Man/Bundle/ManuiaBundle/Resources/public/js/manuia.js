@@ -10,9 +10,20 @@ $(document).ready(function() {
         }
     });
 
+    $('#header-top-toggle').click(function(){
+        var $this   = $(this), href
+        var $target = $('#header-top-data');
+        $this.addClass('visible');
+        $target.slideToggle(400, function(){
+            if(! $target.is(':visible') ){
+                $this.removeClass('visible');
+            }
+        });
+    });
+    
     $('.navbar-toggle').click(function(){
         var $this   = $(this), href
-        var $container = $this.closest('.l-container');
+        var $container = $this.closest('.header-main');
         // get class of target menu
         var target  = $this.attr('data-target')
             || e.preventDefault()
