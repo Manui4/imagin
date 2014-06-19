@@ -4,24 +4,21 @@
 
 {% block content %}
     <section class="section">
-    <div class="l-container">
-
-        <h1>Articles</h1>
-
-        <div class="zone-articles">
-            {% for post in posts %}
-            <div class="article">
-                <div class="title">
-                    <a href="{{ url('man_blog_post', {slug: post.slug}) }}"><h2>{{ post.title|capitalize }}</h2></a>
-                <hr />
+        <div class="l-container">
+            <div class="list-articles">
+                {% for post in posts %}
+                <div class="col-s-12 col-m-4">
+	                <article class="article">
+	                    <div class="title">
+	                        <a href="{{ url('man_blog_post', {slug: post.slug}) }}"><h2>{{ post.title|capitalize }}</h2></a>
+	                    </div>
+	                    <div class="description">
+	                        {% autoescape false %}{{ post.description|markdown }}{% endautoescape %}
+	                    </div>
+	                </article>
                 </div>
-                <div class="description">
-                    {% autoescape false %}{{ post.description|markdown }}{% endautoescape %}
-                </div>
-          </div>
-          {% endfor %}
-          <div class="clearfix"></div>
+                {% endfor %}
+            </div>
         </div>
-    </div>
     </section>
 {% endblock content %}

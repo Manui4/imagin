@@ -20,11 +20,11 @@ body {
     
     
     /* &:hover { */
-        background-image: -webkit-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+        /* background-image: -webkit-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
         background-image: -moz-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
         background-image: -o-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
         background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(0.98, #ffffff), to(#000000));
-        background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+        background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%); */
     /* }*/
     
 /*     background:url(../images/header.jpg) center top fixed;
@@ -53,7 +53,7 @@ a {
 }
 
 p, ul, blockquote, hr { display: block; line-height: 1.5em; }
-h1, h2, h3, h4, h5, h6 { @extend %headline; text-transform: capitalize;}
+h1, h2, h3, h4, h5, h6 { @extend %headline;}
 h1 { font-size: 1.5em;}
 h2 { font-size: 1.375em;}
 h3 { font-size: 1.25em;}

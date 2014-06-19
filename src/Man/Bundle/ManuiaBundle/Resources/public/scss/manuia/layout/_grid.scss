@@ -7,7 +7,7 @@
         @if $i != 0 {
             .col#{$suffix}-#{$i} { 
                 width:$i / $columns * 100%;
-                padding: 1.5em 0.5em;
+                padding: 1.5em;
             }
         }
         .col#{$suffix}-center { margin: 0 auto; float: none ;}

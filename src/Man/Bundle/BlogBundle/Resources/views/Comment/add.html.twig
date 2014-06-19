@@ -8,11 +8,9 @@
     {{ man_forms.form_input(form.email) }}
     {{ man_forms.form_input(form.website) }}
     {{ man_forms.form_textarea(form.content) }}
-    <p>
-        {{ form_row(form.save, {'attr': {
-            'class': 'btn btn-small'
-        }}) }}
-    </p>
 
+    {{ form_row(form.save, {'attr': {
+            'class': 'btn btn-small'
+    }}) }}
     {{ form_end(form) }}
 </div>

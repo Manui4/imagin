@@ -1,0 +1,20 @@
+/* ==|====================
+   Module/Post
+   ======================= */
+
+.list-articles {
+    .article {
+        .title {
+            padding-left: 1.5em;
+            height: 1.5em;
+            background-color: darken($color-0, 5%);
+        }
+        
+        .description {
+            border: 2px solid darken($color-0, 5%);
+            display: block;
+            height: 9em;
+            padding: 0 0.5em;
+        }
+    }
+}

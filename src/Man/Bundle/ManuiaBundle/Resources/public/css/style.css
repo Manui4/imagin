@@ -652,11 +652,11 @@ body {
   background-size: 1.5em 1.5em;
   color: #f59755;
   /* &:hover { */
-  background-image: -webkit-linear-gradient(white, white 98%, black 100%);
-  background-image: -moz-linear-gradient(white, white 98%, black 100%);
-  background-image: -o-linear-gradient(white, white 98%, black 100%);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.98, white), to(black));
-  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  /* background-image: -webkit-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  background-image: -moz-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(0.98, #ffffff), to(#000000));
+  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%); */
   /* }*/
   /*     background:url(../images/header.jpg) center top fixed;
       @include background-size(cover); */ }
@@ -685,10 +685,6 @@ h1, h2, h3, h4, h5, h6 {
 p, ul, blockquote, hr {
   display: block;
   line-height: 1.5em; }
-
-/* line 56, ../scss/manuia/base/_base.scss */
-h1, h2, h3, h4, h5, h6 {
-  text-transform: capitalize; }
 
 /* line 57, ../scss/manuia/base/_base.scss */
 h1 {
@@ -738,7 +734,7 @@ input, textarea, button, select {
 .wrapper-checkbox,
 .wrapper-textarea,
 .wrapper-input {
-  margin: 0 0 10px 0; }
+  margin: 0 0 1.5em 0; }
 
 /* line 16, ../scss/manuia/base/_form.scss */
 .wrapper-input .form-input, .wrapper-textarea .form-textarea {
@@ -954,13 +950,14 @@ input, textarea, button, select {
     /* =======================
        header main/MENU
        ======================= */ }
-    /* line 71, ../scss/manuia/layout/_header.scss */
+    /* line 70, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .header-wrapper {
       position: relative;
       display: block;
       overflow: visible;
       width: 100%;
       height: 100%;
+      /* padding: 1.5em 0; */
       /* background-color: $color-bg-section; */ }
       /* line 79, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-wrapper:before, .l-header .header-main .header-wrapper:after {
@@ -1103,8 +1100,9 @@ input, textarea, button, select {
         background-color: #4e4b4b; }
     /* line 193, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .header-toggle {
-      padding: 0; }
-      /* line 195, ../scss/manuia/layout/_header.scss */
+      padding: 0;
+      /* margin-top: -1.5em; */ }
+      /* line 196, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-toggle .navbar-toggle {
         background-image: none;
         border: 2px solid #343232;
@@ -1121,14 +1119,14 @@ input, textarea, button, select {
         appearance: none;
         -moz-border-radius: 5px;
         border-radius: 5px; }
-        /* line 209, ../scss/manuia/layout/_header.scss */
+        /* line 210, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-toggle .navbar-toggle:focus {
           -webkit-transition-duration: 0.3s;
           -moz-transition-duration: 0.3s;
           -o-transition-duration: 0.3s;
           transition-duration: 0.3s;
           background-color: #b4b1b1; }
-        /* line 214, ../scss/manuia/layout/_header.scss */
+        /* line 215, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-toggle .navbar-toggle .icon-bar {
           background-color: #343232;
           display: block;
@@ -1139,7 +1137,7 @@ input, textarea, button, select {
           margin: 0 auto;
           -moz-border-radius: 1px;
           border-radius: 1px; }
-          /* line 223, ../scss/manuia/layout/_header.scss */
+          /* line 224, ../scss/manuia/layout/_header.scss */
           .l-header .header-main .header-toggle .navbar-toggle .icon-bar:before, .l-header .header-main .header-toggle .navbar-toggle .icon-bar:after {
             content: '';
             background-color: #343232;
@@ -1150,7 +1148,7 @@ input, textarea, button, select {
             height: 2px;
             -moz-border-radius: 1px;
             border-radius: 1px; }
-          /* line 233, ../scss/manuia/layout/_header.scss */
+          /* line 234, ../scss/manuia/layout/_header.scss */
           .l-header .header-main .header-toggle .navbar-toggle .icon-bar:after {
             top: 10px; }
 
@@ -1245,7 +1243,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-1 {
   width: 8.3333333333%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1267,7 +1265,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-2 {
   width: 16.6666666667%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1289,7 +1287,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-3 {
   width: 25%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1311,7 +1309,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-4 {
   width: 33.3333333333%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1333,7 +1331,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-5 {
   width: 41.6666666667%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1355,7 +1353,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-6 {
   width: 50%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1377,7 +1375,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-7 {
   width: 58.3333333333%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1399,7 +1397,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-8 {
   width: 66.6666666667%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1421,7 +1419,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-9 {
   width: 75%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1443,7 +1441,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-10 {
   width: 83.3333333333%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1465,7 +1463,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-11 {
   width: 91.6666666667%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1487,7 +1485,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-12 {
   width: 100%;
-  padding: 1.5em 0.5em; }
+  padding: 1.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1547,7 +1545,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-1 {
     width: 8.3333333333%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1569,7 +1567,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-2 {
     width: 16.6666666667%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1591,7 +1589,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-3 {
     width: 25%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1613,7 +1611,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-4 {
     width: 33.3333333333%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1635,7 +1633,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-5 {
     width: 41.6666666667%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1657,7 +1655,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-6 {
     width: 50%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1679,7 +1677,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-7 {
     width: 58.3333333333%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1701,7 +1699,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-8 {
     width: 66.6666666667%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1723,7 +1721,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-9 {
     width: 75%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1745,7 +1743,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-10 {
     width: 83.3333333333%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1767,7 +1765,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-11 {
     width: 91.6666666667%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1789,7 +1787,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-12 {
     width: 100%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1848,7 +1846,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-1 {
     width: 8.3333333333%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1870,7 +1868,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-2 {
     width: 16.6666666667%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1892,7 +1890,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-3 {
     width: 25%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1914,7 +1912,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-4 {
     width: 33.3333333333%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1936,7 +1934,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-5 {
     width: 41.6666666667%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1958,7 +1956,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-6 {
     width: 50%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1980,7 +1978,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-7 {
     width: 58.3333333333%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2002,7 +2000,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-8 {
     width: 66.6666666667%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2024,7 +2022,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-9 {
     width: 75%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2046,7 +2044,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-10 {
     width: 83.3333333333%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2068,7 +2066,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-11 {
     width: 91.6666666667%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2090,7 +2088,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-12 {
     width: 100%;
-    padding: 1.5em 0.5em; }
+    padding: 1.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2133,68 +2131,52 @@ input, textarea, button, select {
    ======================= */
 /* line 5, ../scss/manuia/layout/_section.scss */
 .section {
-  background-color: #343232;
+  /* background-color: $color-bg-section; */
   color: #7a7a7a;
   position: relative;
   display: block;
-  margin-top: 1.5em;
-  margin-bottom: 7.5em;
-  padding: 1.5em 0; }
-  /* line 15, ../scss/manuia/layout/_section.scss */
-  .section:before, .section:after {
-    content: '';
-    background-color: #343232;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    -webkit-transform-origin: 0;
-    -moz-transform-origin: 0;
-    -ms-transform-origin: 0;
-    -o-transform-origin: 0;
-    transform-origin: 0;
-    -webkit-transform: skewY(-3deg);
-    -moz-transform: skewY(-3deg);
-    -ms-transform: skewY(-3deg);
-    -o-transform: skewY(-3deg);
-    transform: skewY(-3deg); }
-  /* line 26, ../scss/manuia/layout/_section.scss */
-  .section:after {
-    background-color: #343232;
-    -webkit-transform-origin: 100%;
-    -moz-transform-origin: 100%;
-    -ms-transform-origin: 100%;
-    -o-transform-origin: 100%;
-    transform-origin: 100%; }
+  /* margin-top: 1.5em; */
+  /* margin-bottom: 7.5em; */
+  /* padding: 1.5em 0; */
+  /*     &:before, &:after{
+          content:'';
+          background-color: $color-bg-section;
+  
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          z-index: -1;
+  
+          @include transform-origin(0);
+          @include transform(skewY(-3deg));
+      }
+      &:after{
+          background-color: $color-bg-section;
+          @include transform-origin(100%);
+      } */ }
+  /* line 29, ../scss/manuia/layout/_section.scss */
+  .section hr {
+    border: 0;
+    height: 0;
+    /* @include box-shadow($color-0 2px 1px); */
+    /* @include box-shadow($color-0 0 6px 6px); */
+    /* &:after {
+        content: "\00a0";
+    } */ }
+  /* line 39, ../scss/manuia/layout/_section.scss */
+  .section h1 {
+    padding: 1em;
+    height: 3em;
+    background-color: #4582a8; }
 
 @media (max-width: 368px) {
-  /* line 33, ../scss/manuia/layout/_section.scss */
+  /* line 52, ../scss/manuia/layout/_section.scss */
   .section {
     margin: 3em 0; } }
 @media (max-width: 768px) {
-  /* line 39, ../scss/manuia/layout/_section.scss */
+  /* line 58, ../scss/manuia/layout/_section.scss */
   .section {
-    margin-top: 1.5em;
-    margin-bottom: 3.5em; } }
-/* line 45, ../scss/manuia/layout/_section.scss */
-.section h1 {
-  padding: 1em;
-  height: 3em;
-  background-color: #4582a8; }
-
-/* line 51, ../scss/manuia/layout/_section.scss */
-.section hr {
-  border: 0;
-  height: 0;
-  -webkit-box-shadow: #508fb7 0 0 2px 1px;
-  -moz-box-shadow: #508fb7 0 0 2px 1px;
-  box-shadow: #508fb7 0 0 2px 1px; }
-  /* line 56, ../scss/manuia/layout/_section.scss */
-  .section hr:after {
-    content: "\00a0"; }
-
+    /* margin-top: 1.5em;
+    margin-bottom: 3.5em; */ } }
 /* Modules */
 /* ==|====================
    Module/Button
@@ -2492,3 +2474,28 @@ th {
     left: 0;
     width: 100%;
     height: 100%; }
+
+/* ==|====================
+   Module/Post
+   ======================= */
+/* line 7, ../scss/manuia/modules/_post.scss */
+.list-articles .article .title {
+  padding-left: 1.5em;
+  height: 1.5em;
+  background-color: #4582a8; }
+/* line 13, ../scss/manuia/modules/_post.scss */
+.list-articles .article .description {
+  border: 2px solid #4582a8;
+  display: block;
+  height: 9em;
+  padding: 0 0.5em; }
+
+/* ==|====================
+   Module/Post
+   ======================= */
+/* line 7, ../scss/manuia/modules/_comment.scss */
+.list-comments .comment img {
+  display: block;
+  height: 3em;
+  margin: 0;
+  padding: 0; }

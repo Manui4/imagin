@@ -3,16 +3,15 @@
    ======================= */
 
 .section {
-    background-color: $color-bg-section;
+    /* background-color: $color-bg-section; */
     color: $color-text-section;
     position: relative;
     display: block;
 
-    margin-top: 1.5em;
-    margin-bottom: 7.5em;
-    padding: 1.5em 0;
-
-    &:before, &:after{
+    /* margin-top: 1.5em; */
+    /* margin-bottom: 7.5em; */
+    /* padding: 1.5em 0; */
+/*     &:before, &:after{
         content:'';
         background-color: $color-bg-section;
 
@@ -26,7 +25,27 @@
     &:after{
         background-color: $color-bg-section;
         @include transform-origin(100%);
+    } */
+    hr {
+        border: 0;
+        height: 0;
+        /* @include box-shadow($color-0 2px 1px); */
+        /* @include box-shadow($color-0 0 6px 6px); */
+        /* &:after {
+            content: "\00a0";
+        } */
     }
+
+    h1 {
+        padding: 1em;
+        height: 3em;
+        background-color: darken($color-0, 5%);
+    }
+    h2 { }
+    h3 { }
+    h4 { }
+    h5 { }
+    h6 { }
 }
 
 @media ( max-width : $width-device-s) {
@@ -37,24 +56,7 @@
 
 @media ( max-width : $width-device-m) {
     .section {
-        margin-top: 1.5em;
-        margin-bottom: 3.5em;
+        /* margin-top: 1.5em;
+        margin-bottom: 3.5em; */
     }
-}
-
-.section h1 {
-    padding: 1em;
-    height: 3em;
-    background-color: darken($color-0, 5%);
-}
-
-.section hr {
-    border: 0;
-    height: 0;
-    @include box-shadow($color-0 0 0 2px 1px);
-
-    &:after {
-        content: "\00a0";
-    }
-
 }

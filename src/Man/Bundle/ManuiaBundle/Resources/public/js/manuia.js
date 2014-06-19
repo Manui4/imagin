@@ -3,6 +3,7 @@
  */
 
 $(document).ready(function() {
+	var delay = 200;
     
     $( window ).resize(function() {
         if( $('#menu-dropdown').length ) {
@@ -14,7 +15,7 @@ $(document).ready(function() {
         var $this   = $(this), href
         var $target = $('#header-top-data');
         $this.addClass('visible');
-        $target.slideToggle(400, function(){
+        $target.slideToggle(delay, function(){
             if(! $target.is(':visible') ){
                 $this.removeClass('visible');
             }
@@ -42,7 +43,7 @@ $(document).ready(function() {
         $row.addClass('visible');
         /*$row.show();*/
         $this.attr('data-toggle', 'collapse');
-        $target.slideToggle(400, function(){
+        $target.slideToggle(delay, function(){
             if(! $target.is(':visible') ){
                 $row.removeClass('visible');
                 $this.attr('data-toggle', 'collapsed');

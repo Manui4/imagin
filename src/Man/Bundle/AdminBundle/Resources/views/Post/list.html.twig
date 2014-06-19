@@ -11,9 +11,9 @@
             <div class="col-s-12">
                 <h2>Gestion des Articles</h2>
                 <div class="alignright">
-                    {% set content_post_create %}Ajouter un article{% endset %}
+                    {% set content_post_create %}Ajouter{% endset %}
                     {% set url_post_create = url('man_admin_post_create') %}
-                    {{ admin_helpers.link_small(
+                    {{ admin_helpers.link_large(
                         content_post_create,
                         url_post_create
                     ) }}
@@ -40,14 +40,14 @@
                   <td data-title="Actions" >
                     {% set content_post_edit %}<span class="glyphicon glyphicon-edit">Editer</span>{% endset %}
                     {% set url_post_edit = url('man_admin_post_edit', {'slug': post.slug}) %}
-                    {{ admin_helpers.link_xsmall(
+                    {{ admin_helpers.link_small(
                       content_post_edit,
                       url_post_edit
                     ) }}
 
                     {% set content_post_edit %}<span class="glyphicon glyphicon-remove">Supprimer</span>{% endset %}
                     {% set url_post_edit = url('man_admin_post_remove', {'slug': post.slug}) %}
-                    {{ admin_helpers.link_xsmall(
+                    {{ admin_helpers.link_small(
                       content_post_edit,
                       url_post_edit,
                       'danger',

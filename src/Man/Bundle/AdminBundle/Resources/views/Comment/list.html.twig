@@ -31,12 +31,12 @@
                   <td data-title="Publié" >{{ admin_helpers.conditional_label(comment.published, 'Publié', 'Non publié') }}</td>
                   <td data-title="Actions" >
                     <a href="{{ url('man_admin_comment_edit', {'id': comment.id}) }}">
-                      <button type="button" class="btn btn-xsmall">
+                      <button type="button" class="btn btn-small">
                         <span class="glyphicon glyphicon-edit">Editer</span>
                       </button>
                     </a>
                     <a href="{{ url('man_admin_comment_remove', {'id': comment.id}) }}">
-                      <button type="button" class="btn btn-xsmall">
+                      <button type="button" class="btn btn-small">
                         <span class="glyphicon glyphicon-remove">Supprimer</span>
                       </button>
                     </a>
