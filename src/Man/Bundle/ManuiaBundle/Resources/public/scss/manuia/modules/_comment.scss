@@ -1,17 +1,58 @@
 /* ==|====================
    Module/Post
    ======================= */
+$color-main: $color-7;
+$border-radius: 10px;
 
-.list-comments {
-    .comment {
-        img {
-            display: block;
-            height: 3em;
-            margin: 0;
-            padding: 0;
+.block-comments {
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1px; right: 0; left: 0; bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $color-main;
+    }
+    
+    .comments {
+        .comment {
+            @include border-radius($border-radius);
+            background-color: $color-main;
+            margin-bottom: 1.5em;
+            img {
+                display: block;
+                height: 3em;
+                margin: 0;
+                padding: 0;
+            }
+            &:last-child {
+            margin-bottom: 0;
+            }
+            .comment-id {
+                
+            }
+            .comment-author {
+                
+            }
+            .comment-avatar {
+                
+            }
+            .comment-content {
+                padding: 1.5em;
+                background-color: lighten($color-main, 20%);
+            }
         }
-        .content {
+    }
+    
+    .new {
+        padding: 1.5em;
+        @include border-radius($border-radius);
+        background-color: $color-main;
+        @media only screen and (min-width : $width-device-m ) {
             
         }
     }
 }
+

@@ -13,7 +13,3 @@
 @function emtopx($target, $context){
     @return ($target*$context)+0px;
 }
-
-@function emtopx($target, $context, $add){
-    @return ($target*$context)+ $add +0px ;
-}

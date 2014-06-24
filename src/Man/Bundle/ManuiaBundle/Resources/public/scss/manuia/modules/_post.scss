@@ -1,20 +1,57 @@
 /* ==|====================
    Module/Post
    ======================= */
+$color-main: $color-7;
+$border-radius: 10px;
 
-.list-articles {
-    .article {
+%article {
+        overflow: hidden;
+        @include border-radius($border-radius);
+        
         .title {
             padding-left: 1.5em;
-            height: 1.5em;
-            background-color: darken($color-0, 5%);
+            line-height: 3em;
+            background-color: $color-main;
+            h2 {
+                margin: 0;
+            }
         }
         
         .description {
-            border: 2px solid darken($color-0, 5%);
+            border: 1px solid $color-main;
+            @include border-radius(0 0 $border-radius $border-radius);
             display: block;
-            height: 9em;
-            padding: 0 0.5em;
+            height: 10.5em;
+            padding: 0;
         }
     }
+
+%headline {
+    @include border-radius($border-radius);
+    margin: 0;
+    padding-left: 1.5em;
+    background-color: $color-main;
+}
+
+.block-article .article {
+    @extend %article;
+    h1 {
+        @extend %headline;
+        background-color: darken($color-main, 30%);
+    }
+    
+    h2 {
+        @extend %headline;
+        padding-left: 3em;
+        background-color: darken($color-main, 20%);
+    }
+    h3 {
+        @extend %headline;
+        padding-left: 4.5em;
+        background-color: darken($color-main, 10%);
+    }
+}
+    
+.list-articles .article {
+    @extend %article;
 }
