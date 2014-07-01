@@ -1,8 +1,9 @@
 /* ==|====================
    Module/Post
    ======================= */
-$color-main: $color-7;
+$color-main: rgba($color-7, 0.2);
 $border-radius: 10px;
+$img-size: 6em;
 
 .block-comments {
     position: relative;
@@ -23,7 +24,8 @@ $border-radius: 10px;
             margin-bottom: 1.5em;
             img {
                 display: block;
-                height: 3em;
+                height: $img-size;
+                width: $img-size;
                 margin: 0;
                 padding: 0;
             }
@@ -31,12 +33,19 @@ $border-radius: 10px;
             margin-bottom: 0;
             }
             .comment-id {
-                
+                padding-left: 3em;
             }
             .comment-author {
                 
             }
             .comment-avatar {
+                position: absolute;
+                left: -2em;top:-1em; 
+                overflow: hidden;
+                border: 3px solid darken($color-main, 30%);
+                width: $img-size;
+                height: $img-size;
+                @include border-radius($img-size);
                 
             }
             .comment-content {

@@ -2,6 +2,13 @@ parameters:
 #    man_manuia.example.class: Man\Bundle\ManuiaBundle\Example
 
 services:
-#    man_manuia.example:
-#        class: %man_manuia.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    twig.extension.timeago:
+        class: Man\Bundle\ManuiaBundle\Twig\Extension\TimeAgoExtension
+        arguments: ["@translator"]
+        tags:
+            - { name: twig.extension }
+
+    twig.extension.gravatar:
+        class: Man\Bundle\ManuiaBundle\Twig\Extension\GravatarExtension
+        tags:
+            - { name: twig.extension }

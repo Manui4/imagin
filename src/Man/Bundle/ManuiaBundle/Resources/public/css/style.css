@@ -790,14 +790,77 @@ input, textarea, button, select {
   padding: 0 1.5em;
   vertical-align: middle; }
 
-/* line 84, ../scss/manuia/base/_form.scss */
+/*
+
+.switch{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -20px;
+    width: 79px;
+    height: 28px;
+    overflow: hidden;
+    @include border-radius(28px);
+    -webkit-mask:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAcCAAAAAAFRb0DAAAAyklEQVRIx62WvQ2DMBhEr3JFOiQGwBsQN5BsBUwDa1hJFTyFqZgE+0tBEKFMfK9x9+TfO0M+RNc3hcLvqKLpXNw12IYwaqSgx/DtWwxSMcvhe+VIJ3e776nAQD0233wBh2wWgawGLMwqkBE8BkHURJ+OmMBkQk/19bhRfXcUVF8BRfUpuo+9XvZ5dOT7wr7P3PcWIAM3D2S90nTVKhDxGStP/Zb3lpT3du8jy5hhZo++9FX63vlzn5dJtvLc5yISXFv/+d+oWxd2zRuKUqiKGXpVaQAAAABJRU5ErkJggg==") left top;
+    .switch-container{
+        display: inline-block;
+        width: 130px;
+        height: 28px;
+        margin-left: -51px;
+        @include transition-duration;
+    }
+    .on, .off{
+        display: inline-block;
+        float: left;
+        background-color: #27ae60;
+        width: 50%;
+        height: 20px;
+        padding: 4px 0;
+        text-align: center;
+        color: #FFF;
+        font-size: 15px;
+        position: relative;
+        z-index: 1;
+    }
+    .on{
+        @include border-left-radius(28px);
+    }
+    .off{
+        background-color: #e74c3c;
+        @include border-right-radius(28px);
+    }
+    .mid{
+        display: inline-block;
+        float: left;
+        width: 20px; height: 20px;
+        @include border-radius(28px);
+        background-color: #fff;
+        margin-left: -14px;
+        margin-right: -14px;
+        position: relative;
+        z-index: 2;
+        border: 4px solid #e74c3c;
+        @include transition-duration;
+    }
+    
+    input {
+        display: none;
+    }
+    input:checked + .switch-container{
+        margin: 0;
+        .mid{
+            border-color: #27ae60;
+        }
+    }
+}
+*/
+/* line 149, ../scss/manuia/base/_form.scss */
 .wrapper-select .form-select {
   position: relative;
   display: inline-block;
   width: 100%;
   line-height: 1.5em;
   color: #737373; }
-  /* line 90, ../scss/manuia/base/_form.scss */
+  /* line 155, ../scss/manuia/base/_form.scss */
   .wrapper-select .form-select .form-control {
     background-color: #fff;
     background-image: none;
@@ -808,18 +871,18 @@ input, textarea, button, select {
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
     transition-duration: 0.3s; }
-    /* line 97, ../scss/manuia/base/_form.scss */
+    /* line 162, ../scss/manuia/base/_form.scss */
     .wrapper-select .form-select .form-control:focus {
       border-color: #f59755; }
-    /* line 98, ../scss/manuia/base/_form.scss */
+    /* line 163, ../scss/manuia/base/_form.scss */
     .wrapper-select .form-select .form-control option {
       line-height: 1.5em;
       font-family: "Open Sans", sans-serif;
       color: #737373; }
-      /* line 102, ../scss/manuia/base/_form.scss */
+      /* line 167, ../scss/manuia/base/_form.scss */
       .wrapper-select .form-select .form-control option:focus {
         border-color: #f59755; }
-  /* line 105, ../scss/manuia/base/_form.scss */
+  /* line 170, ../scss/manuia/base/_form.scss */
   .wrapper-select .form-select:after {
     background: none repeat scroll 0 0 #ffffff;
     border-bottom: 2px solid #d9d9d9;
@@ -2167,16 +2230,18 @@ input, textarea, button, select {
     } */ }
   /* line 39, ../scss/manuia/layout/_section.scss */
   .section h1 {
+    line-height: 3em;
+    vertical-align: middle;
     /* padding: 1em;
     height: 3em;
     background-color: darken($color-0, 5%); */ }
 
 @media (max-width: 368px) {
-  /* line 52, ../scss/manuia/layout/_section.scss */
+  /* line 55, ../scss/manuia/layout/_section.scss */
   .section {
     margin: 3em 0; } }
 @media (max-width: 768px) {
-  /* line 58, ../scss/manuia/layout/_section.scss */
+  /* line 61, ../scss/manuia/layout/_section.scss */
   .section {
     /* margin-top: 1.5em;
     margin-bottom: 3.5em; */ } }
@@ -2526,10 +2591,10 @@ h1, h2, h3, h4, h5, h6, .block-article .article h1, .block-article .article h2, 
 /* ==|====================
    Module/Post
    ======================= */
-/* line 7, ../scss/manuia/modules/_comment.scss */
+/* line 8, ../scss/manuia/modules/_comment.scss */
 .block-comments {
   position: relative; }
-  /* line 9, ../scss/manuia/modules/_comment.scss */
+  /* line 10, ../scss/manuia/modules/_comment.scss */
   .block-comments:before {
     content: '';
     display: block;
@@ -2540,29 +2605,44 @@ h1, h2, h3, h4, h5, h6, .block-article .article h1, .block-article .article h2, 
     bottom: 0;
     height: 1px;
     width: 100%;
-    background-color: #508f4d; }
-  /* line 20, ../scss/manuia/modules/_comment.scss */
+    background-color: rgba(80, 143, 77, 0.2); }
+  /* line 21, ../scss/manuia/modules/_comment.scss */
   .block-comments .comments .comment {
     -moz-border-radius: 10px;
     border-radius: 10px;
-    background-color: #508f4d;
+    background-color: rgba(80, 143, 77, 0.2);
     margin-bottom: 1.5em; }
-    /* line 24, ../scss/manuia/modules/_comment.scss */
+    /* line 25, ../scss/manuia/modules/_comment.scss */
     .block-comments .comments .comment img {
       display: block;
-      height: 3em;
+      height: 6em;
+      width: 6em;
       margin: 0;
       padding: 0; }
-    /* line 30, ../scss/manuia/modules/_comment.scss */
+    /* line 32, ../scss/manuia/modules/_comment.scss */
     .block-comments .comments .comment:last-child {
       margin-bottom: 0; }
-    /* line 42, ../scss/manuia/modules/_comment.scss */
+    /* line 35, ../scss/manuia/modules/_comment.scss */
+    .block-comments .comments .comment .comment-id {
+      padding-left: 3em; }
+    /* line 41, ../scss/manuia/modules/_comment.scss */
+    .block-comments .comments .comment .comment-avatar {
+      position: absolute;
+      left: -2em;
+      top: -1em;
+      overflow: hidden;
+      border: 3px solid rgba(24, 44, 23, 0.2);
+      width: 6em;
+      height: 6em;
+      -moz-border-radius: 6em;
+      border-radius: 6em; }
+    /* line 51, ../scss/manuia/modules/_comment.scss */
     .block-comments .comments .comment .comment-content {
       padding: 1.5em;
-      background-color: #87bd85; }
-  /* line 49, ../scss/manuia/modules/_comment.scss */
+      background-color: rgba(135, 189, 133, 0.2); }
+  /* line 58, ../scss/manuia/modules/_comment.scss */
   .block-comments .new {
     padding: 1.5em;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    background-color: #508f4d; }
+    background-color: rgba(80, 143, 77, 0.2); }
