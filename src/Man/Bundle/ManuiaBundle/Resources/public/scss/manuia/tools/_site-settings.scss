@@ -25,7 +25,7 @@ $margin-bottom-headline: 1.5rem;
 // Graphic chart
 $color-0: #508fb7; // bleu
 $color-1: #343232; // noir
-$color-2: #23c48f; // vert
+$color-2: #23c48f; // vert LIGHT
 $color-3: #f59755; // orange
 $color-4: #f5ebe4; // gris - orange
 $color-5: #ffffff; // blanc
@@ -40,6 +40,16 @@ $color-12: #d35400; // PUMPKIN
 $color-13: #34495e; // WET ASPHALT
 $color-14: #2980b9; // BELIZE HOLE
 $color-15: #7a7a7a; // GRIS
+
+$colors: (
+    blue: $color-0,
+    orange: $color-3,
+    pink: $color-9,
+    yellow: $color-8,
+    green: $color-7,
+    lgreen: $color-2,
+    white: $color-5,
+);
 
 // Background
 $color-bg-container: none;                              // rgba($color-9, 0.2);
@@ -57,7 +67,7 @@ $color-table-row-striped: lighten($color-7, 50%);
 $color-table-lborder-hover: $color-3;
 
 // Text
-$color-text-base: $color-3;
+$color-text-base: $color-1;
 $color-text-strong: $color-13;
 $color-text-section: $color-15;
 $color-text-grid: $color-15;

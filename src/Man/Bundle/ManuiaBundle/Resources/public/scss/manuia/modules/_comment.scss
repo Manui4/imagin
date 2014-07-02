@@ -33,14 +33,14 @@ $img-size: 6em;
             margin-bottom: 0;
             }
             .comment-id {
-                padding-left: 3em;
+                padding-left: 4em;
             }
             .comment-author {
                 
             }
             .comment-avatar {
                 position: absolute;
-                left: -2em;top:-1em; 
+                left: -1.5em;top:-1em; 
                 overflow: hidden;
                 border: 3px solid darken($color-main, 30%);
                 width: $img-size;

@@ -2,6 +2,30 @@
    Layout/Header
    ======================= */
 
+@mixin colorize-header-top() {
+    @each $key, $value in $colors {
+        &.#{$key}:after, .toggle.#{$key}:before {
+            background-color: #{$value};
+        }
+    }
+}
+
+@mixin colorize-header-menu-item() {
+    @each $key, $value in $colors {
+        
+        &.#{$key} .menu-item.is-active span {
+            color: #{$value};
+        }
+        &.#{$key} .menu-item:hover {
+            background-color: #{$value};
+            &.is-active span {
+                color: $color-text-base;
+            }
+        }
+    }
+}
+
+
 .l-header {
     display: block;
 /* =======================
@@ -10,7 +34,6 @@
     .header-top {
         color: $color-6;
         font-size: 0.8em;
-        /* height: 24px; */
         display: block;
         background-color: $color-bg-header-top;
         &:after {
@@ -30,7 +53,6 @@
             display: block;
         }
         @media only screen and (max-width : $width-device-m ) {
-            /* height: 72px; */
             span {
                 display: block;
                 height: 24px;
@@ -41,7 +63,6 @@
             position: relative;
             display: block;
             width: 100%;
-            /* height: 100%; */
             background-position: center 5px;
             background-repeat: no-repeat;
             background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="11.006,3.491 5.504,9.228 0,3.544 1.523,2 5.504,5.989 9.491,2 "/></svg>');
@@ -51,10 +72,11 @@
                 display: block;
                 height: 1px;
                 width: 100%;
-                background-color: $color-3;
+                background-color: $color-0;
                 margin-top: -1px;
             }
         }
+        @include colorize-header-top();
         .toggle.visible {
             background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="0,7.736 5.501,2 11.006,7.684 9.482,9.228 5.501,5.239 1.515,9.228 "/></svg>');
         }
@@ -133,6 +155,11 @@
         }
         .header-menu {
             float: right;
+            .share, .more {
+                display: block;
+                width: 100%;
+                min-height: 3em;
+            }
             .menu-item {
                 margin-top: 0.5em;
                 margin-left: 0.5em;
@@ -158,6 +185,8 @@
                     color: $color-1;
                 }
             }
+
+            @include colorize-header-menu-item();
 
             @media only screen and (max-width : $width-device-m ) {
                 padding: 0;

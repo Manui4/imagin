@@ -1,0 +1,7 @@
+parameters:
+#    man_photography.example.class: Man\Bundle\PhotographyBundle\Example
+
+services:
+#    man_photography.example:
+#        class: %man_photography.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

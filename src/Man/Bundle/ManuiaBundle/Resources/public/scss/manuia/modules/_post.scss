@@ -30,6 +30,7 @@ $border-radius: 10px;
     @include border-radius($border-radius);
     margin: 0;
     padding-left: 1.5em;
+    line-height: 1.5em;
     background-color: $color-main;
 }
 
@@ -37,7 +38,7 @@ $border-radius: 10px;
     @extend %article;
     h1 {
         @extend %headline;
-        background-color: darken($color-main, 30%);
+        background-color: darken($color-main, 35%);
     }
     
     h2 {

@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Man\Bundle\ManuiaBundle\ManManuiaBundle(),
             new Man\Bundle\BlogBundle\ManBlogBundle(),
             new Man\Bundle\AdminBundle\ManAdminBundle(),
+            new Man\Bundle\PhotographyBundle\ManPhotographyBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

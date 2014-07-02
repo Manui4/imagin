@@ -1,0 +1,3 @@
+man_photography_homepage:
+    pattern:  /
+    defaults: { _controller: "ManPhotographyBundle:Default:index" }

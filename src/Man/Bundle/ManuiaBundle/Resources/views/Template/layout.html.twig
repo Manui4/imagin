@@ -44,15 +44,14 @@
         </div>
         {% endfor %}
 
-        <div id="log"></div>
-
         {% block body %}
-
-            {% set manuia_color_logo = 'dark' %}
+            {% set manuia_color_logo = 'blue' %}
             {% block header %}
             <header class="l-header">
-                <div class="header-top">
-                    {{ include('ManManuiaBundle:Template:header/top.html.twig') }}
+                <div class="header-top {{ manuia_color_logo }}">
+                    {{ include('ManManuiaBundle:Template:header/top.html.twig',{
+	                    'color':  manuia_color_logo,
+	                }) }}
                 </div>
                 <div class="header-main">
 	                {{ include('ManManuiaBundle:Template:header/main.html.twig',{

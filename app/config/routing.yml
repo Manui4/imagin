@@ -1,6 +1,6 @@
-man_manuia:
-    resource: "@ManManuiaBundle/Resources/config/routing.yml"
-    prefix:   /
+man_photography:
+    resource: "@ManPhotographyBundle/Resources/config/routing.yml"
+    prefix:   /photography
 
 man_admin:
     resource: "@ManAdminBundle/Controller/"
@@ -12,3 +12,8 @@ man_blog:
 
 admin_logout:
     pattern:   /admin/logout
+
+man_manuia:
+    resource: "@ManManuiaBundle/Resources/config/routing.yml"
+    prefix:   /
+

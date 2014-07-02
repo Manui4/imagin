@@ -2,16 +2,13 @@
 {% import 'ManManuiaBundle:Template:helpers/_menu.html.twig' as menu %}
 
 {% block header %}
-    {% set manuia_color_logo = 'pink' %}
+    {% set manuia_color_logo = 'orange' %}
     {{ parent() }}
 {% endblock %}
 
 {% block content_header_more %}
     {{ parent() }}
-    {{ menu.widget_menu_item('Dashboard', 'man_admin_dashboard') }}
-    {{ menu.widget_menu_item('Articles', 'man_admin_post_list', '', 'sub-item') }}
-    {{ menu.widget_menu_item('Commentaires', 'man_admin_comment_list', '', 'sub-item') }}
-    {{ menu.widget_menu_item('Déconnexion', 'admin_logout', '','') }}
+
 {% endblock %}
 
 {% block content %}
@@ -26,6 +23,10 @@
             </div>
         </div>
         {% endfor %}
+
+
         {% block admin_content %}{% endblock %}
+
+
 {% endblock %}
 

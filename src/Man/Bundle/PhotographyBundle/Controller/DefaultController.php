@@ -1,6 +1,6 @@
 <?php
 
-namespace Man\Bundle\ManuiaBundle\Controller;
+namespace Man\Bundle\PhotographyBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ManManuiaBundle:Default:index.html.twig');
+        return $this->render('ManPhotographyBundle:Default:index.html.twig', []);
     }
 }
