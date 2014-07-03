@@ -2473,14 +2473,14 @@ input, textarea, button, select {
   line-height: 1em;
   height: 1.2em;
   font-size: 1em;
-  padding: 0 0.5em;
+  padding: 0.1em 0.5em;
   border: 1px solid #d5d57f; }
 
 /* line 44, ../scss/manuia/modules/_btn.scss */
 .btn-xsmall {
-  line-height: 0.7em;
+  line-height: 0.8em;
   height: 1em;
-  font-size: 0.7em;
+  font-size: 0.8em;
   padding: 0 0.5em;
   border: 1px solid #d5d57f; }
 
@@ -2520,7 +2520,7 @@ th {
 /* line 27, ../scss/manuia/modules/_table.scss */
 .table > thead > tr > th {
   vertical-align: bottom;
-  background-color: #4582a8;
+  background-color: #477e44;
   color: #f5ebe4;
   font: bold; }
 
@@ -2545,16 +2545,14 @@ th {
 
 /* line 53, ../scss/manuia/modules/_table.scss */
 .table-hover > tbody > tr:hover {
-  /* border-left: 4px solid $color-table-lborder-hover;
-  border-right: 4px solid $color-table-lborder-hover; */
   color: #f59755; }
 
 @media (max-width: 768px) {
-  /* line 60, ../scss/manuia/modules/_table.scss */
+  /* line 58, ../scss/manuia/modules/_table.scss */
   .responsive-table-line td:before {
     content: attr(data-title); }
 
-  /* line 63, ../scss/manuia/modules/_table.scss */
+  /* line 61, ../scss/manuia/modules/_table.scss */
   .responsive-table-line table,
   .responsive-table-line thead,
   .responsive-table-line tbody,
@@ -2564,11 +2562,11 @@ th {
     /* box-sizing: border-box; */
     display: block; }
 
-  /* line 72, ../scss/manuia/modules/_table.scss */
+  /* line 70, ../scss/manuia/modules/_table.scss */
   .responsive-table-line thead tr {
     display: none; }
 
-  /* line 75, ../scss/manuia/modules/_table.scss */
+  /* line 73, ../scss/manuia/modules/_table.scss */
   .responsive-table-line td {
     position: relative;
     border: 0px solid transparent;
@@ -2576,11 +2574,11 @@ th {
     white-space: normal;
     text-align: right;
     height: 3em; }
-    /* line 82, ../scss/manuia/modules/_table.scss */
+    /* line 80, ../scss/manuia/modules/_table.scss */
     .responsive-table-line td:last-child {
       border-bottom: 1px dotted; }
 
-  /* line 86, ../scss/manuia/modules/_table.scss */
+  /* line 84, ../scss/manuia/modules/_table.scss */
   .responsive-table-line td:before {
     position: absolute;
     top: 0px;
@@ -2593,7 +2591,7 @@ th {
     overflow: hidden !important;
     text-align: left;
     padding: 2px;
-    background-color: #4582a8;
+    background-color: #477e44;
     color: #f5ebe4;
     font: bold; } }
 /* ==|====================

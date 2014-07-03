@@ -61,8 +61,8 @@ $color-bg-header: $color-1;                             // $color-bg-header: rgb
 $color-bg-header-menu: lighten($color-bg-header, 10%);   // $color-bg-header-menu: rgba(lighten($color-bg-header, 5%), 0.2);
 
 // Table
-$color-table-bg-header: darken($color-0, 5%);
-$color-table-row-hover: lighten($color-0, 45%);
+$color-table-bg-header: darken($color-7, 5%);
+$color-table-row-hover: lighten($color-7, 45%);
 $color-table-row-striped: lighten($color-7, 50%);
 $color-table-lborder-hover: $color-3;
 

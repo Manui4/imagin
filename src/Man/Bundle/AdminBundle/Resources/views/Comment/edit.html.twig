@@ -1,15 +1,15 @@
 {% extends 'ManAdminBundle::layout.html.twig' %}
 
-{% block title %}{{ 'Comment edition'|trans }}{% endblock %}
+{% block title %}{{ 'Mettre à jour un commentaire' }}{% endblock %}
 
 {% block admin_content %}
 <section class="section">
     <div class="l-container">
         <div class="col-s-12">
-            <h1>{{ 'Comment edition'|trans }}</h1>
-        </div>
-        <div class="col-s-12">
-            {{ include('ManAdminBundle:Comment:form.html.twig', {'form': form}) }}
+            {{ include('ManAdminBundle:Comment:form.html.twig', {
+                'form': form,
+                'submit_label': 'Mettre à jour',
+            }) }}
         </div>
     </div>
 </section>

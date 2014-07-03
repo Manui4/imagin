@@ -2,16 +2,16 @@
 
 {% form_theme form '::form_theme.html.twig' %}
 
-{% block title %}{{ 'Post creation'|trans }}{% endblock %}
+{% block title %}{{ 'Ajouter un article'|trans }}{% endblock %}
 
 {% block admin_content %}
 <section class="section">
     <div class="l-container">
         <div class="col-s-12">
-            <h1>{{ 'Post creation'|trans }}</h1>
-        </div>
-        <div class="col-s-12">
-            {{ include('ManAdminBundle:Post:form.html.twig', {'form': form}) }}
+            {{ include('ManAdminBundle:Post:form.html.twig', {
+                'form': form,
+                'submit_label': 'Ajouter'
+            }) }}
         </div>
     </div>
 </section>

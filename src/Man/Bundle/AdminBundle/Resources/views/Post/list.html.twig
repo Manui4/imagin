@@ -10,14 +10,6 @@
         <div class="row">
             <div class="col-s-12">
                 <h2>Gestion des Articles</h2>
-                <div class="alignright">
-                    {% set content_post_create %}Ajouter{% endset %}
-                    {% set url_post_create = url('man_admin_post_create') %}
-                    {{ admin_helpers.link_large(
-                        content_post_create,
-                        url_post_create
-                    ) }}
-                </div>
             </div>
         </div>
 
@@ -38,20 +30,12 @@
                   <td data-title="Créé le" >{{ post.createdAt|date('d/m/Y') }}</td>
                   <td data-title="Publié" >{{ admin_helpers.conditional_label(post.published, 'Publié', 'Non publié') }}</td>
                   <td data-title="Actions" >
-                    {% set content_post_edit %}<span class="glyphicon glyphicon-edit">Editer</span>{% endset %}
+                    {% set content_post_edit %}<span>Editer</span>{% endset %}
                     {% set url_post_edit = url('man_admin_post_edit', {'slug': post.slug}) %}
-                    {{ admin_helpers.link_small(
-                      content_post_edit,
-                      url_post_edit
-                    ) }}
-
-                    {% set content_post_edit %}<span class="glyphicon glyphicon-remove">Supprimer</span>{% endset %}
+                    {{ admin_helpers.link_xsmall( content_post_edit, url_post_edit ) }}
+                    {% set content_post_edit %}<span>Supprimer</span>{% endset %}
                     {% set url_post_edit = url('man_admin_post_remove', {'slug': post.slug}) %}
-                    {{ admin_helpers.link_small(
-                      content_post_edit,
-                      url_post_edit,
-                      'danger',
-                      {
+                    {{ admin_helpers.link_xsmall( content_post_edit, url_post_edit, 'danger', {
                         'data-method': 'DELETE',
                         'data-confirm': 'You will delete a post, are you sure ?'}
                     ) }}
@@ -60,6 +44,14 @@
                 {% endfor %}
               </tbody>
             </table>
+        </div>
+        <div class="alignright">
+            {% set content_post_create %}Ajouter{% endset %}
+            {% set url_post_create = url('man_admin_post_create') %}
+            {{ admin_helpers.link_large(
+                content_post_create,
+                url_post_create
+            ) }}
         </div>
     </div>
 </section>

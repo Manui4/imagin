@@ -7,11 +7,10 @@
 {{ man_forms.form_input(form.slug) }}
 {{ man_forms.form_textarea(form.content) }}
 {{ man_forms.form_checkbox(form.published) }}
-
-<p>
-{{ form_row(form.save, {'attr': {
-    'class': 'btn btn-small'
-}}) }}
-</p>
-
+{{ form_row(form.save, {
+    'label' : submit_label,
+    'attr': {
+        'class': 'btn btn-small'
+    }
+}) }}
 {{ form_end(form) }}

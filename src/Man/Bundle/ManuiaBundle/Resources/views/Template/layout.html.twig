@@ -21,13 +21,9 @@
     <title>{% block title %}{% endblock %} >> Manuia</title>
 
     {% block stylesheets %}
-        {% stylesheets '@ManManuiaBundle/Resources/public/css/*' %}
-{#             <link rel="stylesheet" type="text/css" href="{{ asset_url }}">#}
-        {% endstylesheets %}
         <link rel="apple-touch-icon" sizes="130×130" href="/apple-touch-icon.png" />
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Kreon'>
         <link rel="stylesheet" type="text/css" href="{{ asset("/bundles/manmanuia/css/style.css") }}">
-{#         <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Kreon'>#}
-{#         <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">#}
     {% endblock %}
 
     </head>
@@ -69,17 +65,10 @@
         {% endblock %} <!-- block body -->
 
         {% block javascripts %}
-            {% javascripts
-                '@ManManuiaBundle/Resources/public/js/vendor/jquery-1.11.1.js'
-
-             %}
+            {% javascripts '@ManManuiaBundle/Resources/public/js/vendor/jquery-1.11.1.js'  %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
             <script src="/bundles/manmanuia/js/manuia.js"></script>
         {% endblock %}
     </body>
 </html>
-{# '@ManManuiaBundle/Resources/public/js/manuia.js'#}
-{#                 '@ManManuiaBundle/Resources/public/js/bootstrap/bootstrap.js'#}
-
-

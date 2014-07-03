@@ -1,6 +1,6 @@
 {% extends 'ManAdminBundle::layout.html.twig' %}
 
-{% block title %}{{ 'Post edition'|trans }}{% endblock %}
+{% block title %}{{ 'Mettre à jour' }}{% endblock %}
 
 {% block admin_content %}
 <section class="section">
@@ -9,7 +9,10 @@
             <h1>Créer un article</h1>
         </div>
         <div class="col-s-12">
-            {{ include('ManAdminBundle:Post:form.html.twig', {'form': form}) }}
+            {{ include('ManAdminBundle:Post:form.html.twig', {
+                'form': form,
+                'submit_label' : 'Mettre à jour'
+            }) }}
         </div>
     </div>
 </section>
