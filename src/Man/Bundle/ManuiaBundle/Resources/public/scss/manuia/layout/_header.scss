@@ -102,11 +102,11 @@
                 width: 100%;
                 top: 0; left: 0; right: 0; bottom: 0;
                 z-index: -1;
-                @include transform-origin(0);
-                @include transform(skewY(-3deg));
+                /* @include transform-origin(0);
+                @include transform(skewY(-3deg)); */
             }
             &:after{
-                @include box-shadow(darken($color-bg-header, 90%) 0 6px 19px);
+                /* @include box-shadow(darken($color-bg-header, 90%) 0 6px 19px); */
             }
         }
         @media only screen and (min-width : $width-device-l ) {
@@ -208,7 +208,7 @@
 
         .menu-dropdown {
             &.visible {
-                @include box-shadow(darken($color-bg-header, 90%) 0 6px 6px);
+                /* @include box-shadow(darken($color-bg-header, 90%) 0 6px 6px); */
                 position: relative;
                 display: block;
                 padding-top: 1.5em;

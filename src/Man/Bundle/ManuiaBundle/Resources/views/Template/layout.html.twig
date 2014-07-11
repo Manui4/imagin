@@ -65,7 +65,11 @@
         {% endblock %} <!-- block body -->
 
         {% block javascripts %}
-            {% javascripts '@ManManuiaBundle/Resources/public/js/vendor/jquery-1.11.1.js'  %}
+            {% javascripts
+                '@ManManuiaBundle/Resources/public/js/vendor/jquery-1.11.1.js'
+                '@ManManuiaBundle/Resources/public/js/vendor/jquery.easing.js'
+                '@ManManuiaBundle/Resources/public/js/vendor/jquery.velocity.min.js'
+                '@ManManuiaBundle/Resources/public/js/vendor/velocity.ui.js'  %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
             <script src="/bundles/manmanuia/js/manuia.js"></script>

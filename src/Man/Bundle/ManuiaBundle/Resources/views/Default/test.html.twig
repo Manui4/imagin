@@ -1,0 +1,28 @@
+{% extends "ManManuiaBundle:Template:layout.html.twig" %}
+
+{% block content_header_more %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+<div class="headshots">
+    <div class="list-headshots-top">
+        <div class="list-items">
+	        {% for key, image in images %}
+	        <div class="item"  style="left:{{ key * 125 }}px">
+	            <img alt="" src="{{ image }}"/>
+	        </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="list-headshots-bottom">
+        <div class="list-items">
+	        {% for key, image in images %}
+	        <div class="item" style="left:{{ key * 125 }}px">
+	            <img alt="" src="{{ image }}"/>
+	        </div>
+	        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

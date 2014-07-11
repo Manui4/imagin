@@ -1,0 +1,54 @@
+/* ==|====================
+   Module/HEADSHOTS
+   ======================= */
+
+.headshots {
+    position: relative;
+    @include border-radius(125px);
+    width: 125px;
+    height: 125px;
+    display: block;
+    overflow: hidden;
+    
+    .list-headshots-top, .list-headshots-bottom {
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        height: 63px;
+        width: 125px;
+    
+        
+        .list-items {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            .item {
+                position: absolute;
+                display: block;
+            }
+        }
+    }
+    
+    .list-headshots-top {
+    
+    }
+
+    .list-headshots-bottom {
+        top: 63px;
+        .list-items {
+            top: -63px;
+        }
+    }
+    
+  /* &:after {
+        @include border-radius(125px);
+        overflow: hidden;
+        display: block;
+        content: 'michael';
+        position: absolute;
+        width: 125px;
+        background-color: green;
+        height: 125px;
+        top:0;
+    } */
+}

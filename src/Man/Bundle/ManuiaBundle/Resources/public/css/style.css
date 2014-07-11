@@ -652,11 +652,11 @@ body {
   background-size: 1.5em 1.5em;
   color: #343232;
   /* &:hover { */
-  background-image: -webkit-linear-gradient(white, white 98%, black 100%);
-  background-image: -moz-linear-gradient(white, white 98%, black 100%);
-  background-image: -o-linear-gradient(white, white 98%, black 100%);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.98, white), to(black));
-  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  /* background-image: -webkit-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  background-image: -moz-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(0.98, #ffffff), to(#000000));
+  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%); */
   /* }*/
   /*     background:url(../images/header.jpg) center top fixed;
       @include background-size(cover); */ }
@@ -1044,21 +1044,11 @@ input, textarea, button, select {
         right: 0;
         bottom: 0;
         z-index: -1;
-        -webkit-transform-origin: 0;
-        -moz-transform-origin: 0;
-        -ms-transform-origin: 0;
-        -o-transform-origin: 0;
-        transform-origin: 0;
-        -webkit-transform: skewY(-3deg);
-        -moz-transform: skewY(-3deg);
-        -ms-transform: skewY(-3deg);
-        -o-transform: skewY(-3deg);
-        transform: skewY(-3deg); }
+        /* @include transform-origin(0);
+        @include transform(skewY(-3deg)); */ }
       /* line 108, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-wrapper:after {
-        -moz-box-shadow: black 0 6px 19px;
-        -webkit-box-shadow: black 0 6px 19px;
-        box-shadow: black 0 6px 19px; }
+        /* @include box-shadow(darken($color-bg-header, 90%) 0 6px 19px); */ }
     @media only screen and (min-width: 1200px) {
       /* line 114, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-wrapper:before, .l-header .header-main .header-wrapper:after {
@@ -1224,9 +1214,7 @@ input, textarea, button, select {
               margin-right: 0.5em; } }
     /* line 210, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .menu-dropdown.visible {
-      -moz-box-shadow: black 0 6px 6px;
-      -webkit-box-shadow: black 0 6px 6px;
-      box-shadow: black 0 6px 6px;
+      /* @include box-shadow(darken($color-bg-header, 90%) 0 6px 6px); */
       position: relative;
       display: block;
       padding-top: 1.5em; }
@@ -2716,3 +2704,49 @@ h1, h2, h3, h4, h5, h6, .block-article .article h1, .block-article .article h2, 
     -moz-border-radius: 10px;
     border-radius: 10px;
     background-color: rgba(80, 143, 77, 0.2); }
+
+/* ==|====================
+   Module/HEADSHOTS
+   ======================= */
+/* line 5, ../scss/manuia/modules/_headshots.scss */
+.headshots {
+  position: relative;
+  -moz-border-radius: 125px;
+  border-radius: 125px;
+  width: 125px;
+  height: 125px;
+  display: block;
+  overflow: hidden;
+  /* &:after {
+        @include border-radius(125px);
+        overflow: hidden;
+        display: block;
+        content: 'michael';
+        position: absolute;
+        width: 125px;
+        background-color: green;
+        height: 125px;
+        top:0;
+    } */ }
+  /* line 13, ../scss/manuia/modules/_headshots.scss */
+  .headshots .list-headshots-top, .headshots .list-headshots-bottom {
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    height: 63px;
+    width: 125px; }
+    /* line 21, ../scss/manuia/modules/_headshots.scss */
+    .headshots .list-headshots-top .list-items, .headshots .list-headshots-bottom .list-items {
+      position: relative;
+      top: 0px;
+      left: 0px; }
+      /* line 25, ../scss/manuia/modules/_headshots.scss */
+      .headshots .list-headshots-top .list-items .item, .headshots .list-headshots-bottom .list-items .item {
+        position: absolute;
+        display: block; }
+  /* line 36, ../scss/manuia/modules/_headshots.scss */
+  .headshots .list-headshots-bottom {
+    top: 63px; }
+    /* line 38, ../scss/manuia/modules/_headshots.scss */
+    .headshots .list-headshots-bottom .list-items {
+      top: -63px; }

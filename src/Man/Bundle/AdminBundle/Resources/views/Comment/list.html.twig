@@ -33,7 +33,6 @@
                         {% set comment_edit %}<span>Editer</span>{% endset %}
                         {% set url_comment_edit = url('man_admin_comment_edit', {'id': comment.id}) %}
                         {{ admin_helpers.link_xsmall( comment_edit, url_comment_edit ) }}
-
                         {% set comment_remove %}<span>Supprimer</span>{% endset %}
                         {% set url_comment_remove = url('man_admin_comment_remove', {'id': comment.id}) %}
                         {{ admin_helpers.link_xsmall( comment_remove, url_comment_remove, 'danger', {
