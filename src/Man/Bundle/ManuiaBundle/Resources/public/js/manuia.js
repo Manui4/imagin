@@ -1,18 +1,58 @@
 /**
- *
+ * Manuia javascript
  */
 
+/**
+ * Get a random integer between min en max values
+ * 
+ * @param min
+ * @param max
+ */
 function manuia_getRandomInt(min, max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+/**
+ *  Create animate headshot sliers
+ * @param $element
+ */
 function manuia_animateHeadShotTop($element){
-	var index =  manuia_getRandomInt(0, 10) * 125;
-	var duration = manuia_getRandomInt(300, 500);
-	$element.animate({ left: '-' + index + 'px' }, duration, 'easeOutBounce', function () {});
+    var index =  manuia_getRandomInt(0, 10) * 125;
+    var duration = manuia_getRandomInt(300, 500);
+    $element.animate({ left: '-' + index + 'px' }, duration, 'easeOutBounce', function () {});
 }
 
-function manuia_adjustWindow(){
+/**
+ * Resize margin-top of content depending of header
+ */
+function manuia_adjustHeaderContent(){
+    var $header = $('.l-header');
+    var $content = $('.l-content');
+    if($header.length && $content.length ) {
+        headerHeight = $header.height();
+        $content.css("margin-top", headerHeight );
+    }
+}
+
+/**
+ * 
+ */
+function manuia_headshot(){
+    var $headshotTop = $('.headshots .list-headshots-top .list-items');
+    var $headshotBottom = $('.headshots .list-headshots-bottom .list-items');
+    setInterval(function(){
+       manuia_animateHeadShotTop($headshotTop);
+    }, 2000);
+
+    setInterval(function(){
+        manuia_animateHeadShotTop($headshotBottom);
+    }, 2500);
+}
+
+/**
+ * 
+ */
+function manuia_adjustSkrollr(){
 /*    // Init Skrollr
     var s = skrollr.init({
         render: function(data){
@@ -30,34 +70,19 @@ function manuia_adjustWindow(){
         bgHeight += bgHeight*0.2;
         $sectionBackground.css("height", bgHeight );
     });*/
-    $header = $('.l-header');
-    $content = $('.l-content');
-    headerHeight = $header.height();
-    $content.css("margin-top", headerHeight );
-
 }
 
 $(document).ready(function() {
-	var delay = 200;
-    var $headshotTop = $('.headshots .list-headshots-top .list-items');
-    var $headshotBottom = $('.headshots .list-headshots-bottom .list-items');
-    var headshotLenght = $('.headshots .list-headshots-bottom .list-items items').lenght;
+    var delay = 200;
+    // Adjust header and content if fixed header
+    manuia_adjustHeaderContent();
+    
+    // runs headshot animation
+    manuia_headshot();
 
-    manuia_adjustWindow();
-    setInterval(function() {
-        // Resize sections
-        manuia_adjustWindow();
-    }, 100);
-
-    setInterval(function(){
-       manuia_animateHeadShotTop($headshotTop);
-    }, 2000);
-
-    setInterval(function(){
-        manuia_animateHeadShotTop($headshotBottom);
-     }, 2500);
-
+    // listen on viewport resize
     $( window ).resize(function() {
+    	manuia_adjustHeaderContent();
         if( $('#menu-dropdown').length ) {
             $('#menu-dropdown').remove()
         }
@@ -67,9 +92,16 @@ $(document).ready(function() {
         var $this   = $(this), href
         var $target = $('#header-top-data');
         $this.addClass('visible');
-        $target.slideToggle(delay, function(){
-            if(! $target.is(':visible') ){
-                $this.removeClass('visible');
+        $target.slideToggle({
+            duration: delay,
+            step: function(){
+                manuia_adjustHeaderContent();
+            },
+            complete: function(){
+                manuia_adjustHeaderContent();
+                if(! $target.is(':visible') ){
+                    $this.removeClass('visible');
+                }
             }
         });
     });
