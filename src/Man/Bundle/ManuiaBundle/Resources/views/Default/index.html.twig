@@ -5,19 +5,25 @@
 {% endblock %}
 
 {% block content %}
+{% set section_url_bg_whoami = asset("/bundles/manmanuia/images/parallax/bg_slide-1.jpg") %}
+{% set section_url_bg_twitter = asset("/bundles/manmanuia/images/parallax/bg_slide-2.jpg") %}
+{% set section_url_bg_projects = asset("/bundles/manmanuia/images/parallax/bg_slide-3.jpg") %}
+{% set section_url_bg_linkedin = asset("/bundles/manmanuia/images/parallax/bg_slide-4.jpg") %}
+{% set section_url_bg_viadeo = asset("/bundles/manmanuia/images/parallax/bg_slide-5.jpg") %}
+{% set section_url_bg_wetalkaboutme = asset("/bundles/manmanuia/images/parallax/bg_slide-6.jpg") %}
 <div class="parallax-preload-images">
-    <img src="{{ asset("/bundles/manmanuia/images/parallax/bg_slide-1.jpg") }}">
-    <img src="{{ asset("/bundles/manmanuia/images/parallax/bg_slide-7.jpg") }}">
-    <img src="{{ asset("/bundles/manmanuia/images/parallax/bg_slide-8.jpg") }}">
-    <img src="{{ asset("/bundles/manmanuia/images/parallax/bg_slide-9.jpg") }}">
-    <img src="{{ asset("/bundles/manmanuia/images/parallax/bg_slide-10.jpg") }}">
-    <img src="{{ asset("/bundles/manmanuia/images/parallax/bg_slide-11.jpg") }}">
+    <img src="{{ section_url_bg_whoami }}">
+    <img src="{{ section_url_bg_twitter }}">
+    <img src="{{ section_url_bg_projects }}">
+    <img src="{{ section_url_bg_linkedin }}">
+    <img src="{{ section_url_bg_viadeo }}">
+    <img src="{{ section_url_bg_wetalkaboutme }}">
 </div>
 
 <div id="skrollr-body" class="parallax-sections">
 
     <section id="hash-whoiam" class="parallax-section" >
-        <div class="parallax-section-bg" style="background-image:url({{ asset("/bundles/manmanuia/images/parallax/bg_slide-7.jpg") }});"
+        <div class="parallax-section-bg" style="background-image:url({{ section_url_bg_whoami }});"
             data-start="transform:translate3d(0px, 0%, 0px);"
             data-end="transform:translate3d(0px, 200%, 0px);"
             data-anchor-target="#hash-whoiam">
@@ -26,7 +32,7 @@
     </section>
 
     <section id="hash-twitter" class="parallax-section" >
-        <div class="parallax-section-bg" style="top:0px; background-image:url({{ asset("/bundles/manmanuia/images/parallax/bg_slide-8.jpg") }});"
+        <div class="parallax-section-bg" style="background-image:url({{ section_url_bg_twitter }});"
             data-bottom-top="transform:translate3d(0px, -100%, 0px);"
             data--100-bottom="transform:translate3d(0px, 0%, 0px);"
             data-anchor-target="#hash-twitter">
@@ -35,7 +41,7 @@
     </section>
 
     <section id="hash-projects" class="parallax-section">
-        <div class="parallax-section-bg" style="background-image:url({{ asset("/bundles/manmanuia/images/parallax/bg_slide-1.jpg") }});"
+        <div class="parallax-section-bg" style="background-image:url({{ section_url_bg_projects }});"
             data-bottom-top="transform:translate3d(0px, -50%, 0px);"
             data-center="transform:translate3d(0px, 0%, 0px);"
             data-anchor-target="#hash-projects">
@@ -44,7 +50,7 @@
     </section>
 
     <section id="hash-linkedin" class="parallax-section">
-        <div class="parallax-section-bg" style="background-image:url({{ asset("/bundles/manmanuia/images/parallax/bg_slide-9.jpg") }});"
+        <div class="parallax-section-bg" style="background-image:url({{ section_url_bg_linkedin }});"
             data--100-bottom-top="transform:translate3d(0px, -50%, 0px);"
             data-center="transform:translate3d(0px, 0%, 0px);"
             data-anchor-target="#hash-linkedin">
@@ -52,8 +58,8 @@
         {{ include('ManManuiaBundle:Default:sections/_linkedin.html.twig') }}
     </section>
 
-    <section id="hash-viadeo" class="section" >
-        <div class="parallax-section-bg" style="background-image:url({{ asset("/bundles/manmanuia/images/parallax/bg_slide-10.jpg") }});"
+    <section id="hash-viadeo" class="parallax-section" >
+        <div class="parallax-section-bg" style="background-image:url({{ section_url_bg_viadeo }});"
             data--100-bottom-top="transform:translate3d(0px, -50%, 0px);"
             data-center="transform:translate3d(0px, 0%, 0px);"
             data-anchor-target="#hash-viadeo">
@@ -62,7 +68,7 @@
     </section>
 
     <section id="hash-wetalkaboutme" class="parallax-section" >
-        <div class="parallax-section-bg" style="background-image:url({{ asset("/bundles/manmanuia/images/parallax/bg_slide-11.jpg") }});"
+        <div class="parallax-section-bg" style="background-image:url({{ section_url_bg_wetalkaboutme }});"
             data--100-bottom-top="transform:translate3d(0px, -20%, 0px);"
             data-end="transform:translate3d(0px, 0%, 0px);"
             data-anchor-target="#hash-wetalkaboutme">
@@ -71,4 +77,15 @@
     </section>
 </div>
 
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts
+        '@ManManuiaBundle/Resources/public/js/images/imagesloaded.js'
+        '@ManManuiaBundle/Resources/public/js/scrollr/skrollr.min.js'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script src="/bundles/manmanuia/js/parallax.js"></script>
 {% endblock %}

@@ -35,7 +35,7 @@ function manuia_adjustHeaderContent(){
 }
 
 /**
- * 
+ *
  */
 function manuia_headshot(){
     var $headshotTop = $('.headshots .list-headshots-top .list-items');
@@ -47,29 +47,6 @@ function manuia_headshot(){
     setInterval(function(){
         manuia_animateHeadShotTop($headshotBottom);
     }, 2500);
-}
-
-/**
- * 
- */
-function manuia_adjustSkrollr(){
-/*    // Init Skrollr
-    var s = skrollr.init({
-        render: function(data){
-            $(".debug span").text(data.curTop);
-            console.debug(data);
-        },
-        smoothScrolling: false,
-        mobileDeceleration: 0.004
-    });*/
-
-    /*$sections.each(function(){
-        var $this = $(this);
-        var $sectionBackground = $this.find('.section-bg');
-        var bgHeight = $this.height() + parseInt($this.css('padding-bottom'));
-        bgHeight += bgHeight*0.2;
-        $sectionBackground.css("height", bgHeight );
-    });*/
 }
 
 $(document).ready(function() {
@@ -132,8 +109,5 @@ $(document).ready(function() {
                 $this.attr('data-toggle', 'collapsed');
             }
         });
-
     });
-
-
 });
