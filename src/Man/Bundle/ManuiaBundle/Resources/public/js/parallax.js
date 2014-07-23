@@ -1,55 +1,4 @@
 /**
- * Manuia javascript
- */
-
-/**
- * Get a random integer between min en max values
- * 
- * @param min
- * @param max
- */
-function manuia_getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-/**
- *  Create animate headshot sliers
- * @param $element
- */
-function manuia_animateHeadShotTop($element){
-    var index =  manuia_getRandomInt(0, 10) * 125;
-    var duration = manuia_getRandomInt(300, 500);
-    $element.animate({ left: '-' + index + 'px' }, duration, 'easeOutBounce', function () {});
-}
-
-/**
- * Resize margin-top of content depending of header
- */
-function manuia_adjustHeaderContent(){
-    var $header = $('.l-header');
-    var $content = $('.l-content');
-    if($header.length && $content.length ) {
-        headerHeight = $header.height();
-        $content.css("margin-top", headerHeight );
-    }
-}
-
-/**
- *
- */
-function manuia_headshot(){
-    var $headshotTop = $('.headshots .list-headshots-top .list-items');
-    var $headshotBottom = $('.headshots .list-headshots-bottom .list-items');
-    setInterval(function(){
-       manuia_animateHeadShotTop($headshotTop);
-    }, 2000);
-
-    setInterval(function(){
-        manuia_animateHeadShotTop($headshotBottom);
-    }, 2500);
-}
-
-/**
  *
  */
 function manuia_adjustSkrollr(){
@@ -69,6 +18,17 @@ function manuia_adjustSkrollr(){
     });
 }
 
+function manuia_adjustBodyHeight(){
+	var $header = $('.l-header');
+    var $content = $('.l-content');
+    if($header.length && $content.length ) {
+        headerHeight = $header.height();
+        $body.css("height", $body.height() - headerHeight);
+    }
+}
+
+
+
 $(document).ready(function() {
     // Setup variables
     $window = $(window);
@@ -82,7 +42,14 @@ $(document).ready(function() {
             manuia_adjustSkrollr();
             // Fade in sections
             $body.removeClass('loading').addClass('loaded');
+            manuia_adjustBodyHeight();
         }, 200);
+    });
+    
+    // listen on viewport resize
+    $( window ).resize(function() {
+        manuia_adjustSkrollr();
+        manuia_adjustBodyHeight();
     });
 
     

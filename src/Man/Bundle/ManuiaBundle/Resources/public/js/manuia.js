@@ -1,32 +1,9 @@
-/**
- * Manuia javascript
- */
-
-/**
- * Get a random integer between min en max values
- * 
- * @param min
- * @param max
- */
-function manuia_getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-/**
- *  Create animate headshot sliers
- * @param $element
- */
-function manuia_animateHeadShotTop($element){
-    var index =  manuia_getRandomInt(0, 10) * 125;
-    var duration = manuia_getRandomInt(300, 500);
-    $element.animate({ left: '-' + index + 'px' }, duration, 'easeOutBounce', function () {});
-}
 
 /**
  * Resize margin-top of content depending of header
  */
 function manuia_adjustHeaderContent(){
-    var $header = $('.l-header');
+    var $header = $('.l-header.fixed');
     var $content = $('.l-content');
     if($header.length && $content.length ) {
         headerHeight = $header.height();
@@ -34,28 +11,10 @@ function manuia_adjustHeaderContent(){
     }
 }
 
-/**
- *
- */
-function manuia_headshot(){
-    var $headshotTop = $('.headshots .list-headshots-top .list-items');
-    var $headshotBottom = $('.headshots .list-headshots-bottom .list-items');
-    setInterval(function(){
-       manuia_animateHeadShotTop($headshotTop);
-    }, 2000);
-
-    setInterval(function(){
-        manuia_animateHeadShotTop($headshotBottom);
-    }, 2500);
-}
-
 $(document).ready(function() {
     var delay = 200;
     // Adjust header and content if fixed header
     manuia_adjustHeaderContent();
-    
-    // runs headshot animation
-    manuia_headshot();
 
     // listen on viewport resize
     $( window ).resize(function() {
