@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
             // MY OWN BUNDLE
             new Man\Bundle\ManuiaBundle\ManManuiaBundle(),

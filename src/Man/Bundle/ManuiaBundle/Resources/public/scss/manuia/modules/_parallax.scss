@@ -1,0 +1,54 @@
+/* ==|====================
+   Module/Parallaw
+   ======================= */
+.parallax-preload-images {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.parallax-sections {
+    
+    .parallax-section {
+        position: relative;
+        overflow: hidden;
+        /* min-height: 500px; */
+        padding-bottom: 50px;
+        
+        .parallax-section-bg {
+            position:absolute;
+            bottom:0;
+            left:0px;
+            top:0px;
+            height:100%;
+            width:100%;
+            background-repeat:no-repeat;
+            background-position:center 0%;
+            @include background-size(cover);
+        }
+        
+        span {
+            background-color: $color-clouds;
+        }
+        .parallax-img-twitter {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            
+        }
+    }
+}
+
+iframe.twitter-timeline {
+    width: 100% !important;
+}
+
+#skrollr-body {
+    height:100%;
+    overflow:visible;
+    position:relative;
+}
+

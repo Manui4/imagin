@@ -11,6 +11,8 @@ security:
             memory:
                 users:
                     mantoine: { password: '%admin_password%', roles: [ 'ROLE_ADMIN' ] }
+        hwi:
+            id: hwi_oauth.user.provider
 
     firewalls:
         admin:
@@ -22,7 +24,21 @@ security:
             form_login:
                 login_path:  /admin/login
                 check_path:  /admin/login_check
+        secured_area:
+            anonymous: ~
+            oauth:
+                resource_owners:
+                    linkedin:           "/login/check-linkedin"
+                    flickr:           "/login/check-flickr"
+                login_path:        /login
+                use_forward:       true
+                failure_path:      /login
+
+                oauth_user_provider:
+                    service:  hwi_oauth.user.provider
+#                    service:  hwi_oauth.user.provider.entity
 
     access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, roles: ROLE_ADMIN }

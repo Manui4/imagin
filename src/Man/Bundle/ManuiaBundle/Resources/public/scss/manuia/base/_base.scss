@@ -45,15 +45,15 @@ a {
     }
 }
 
-%headline {
+%base-headline {
     margin: 0;
     margin-bottom: $margin-bottom-headline;
-    color: $color-headline;
+    color: $color-carrot;
     font-family: $font2;
 }
 
 p, ul, blockquote, hr { display: block; line-height: 1.5em; }
-h1, h2, h3, h4, h5, h6 { @extend %headline;}
+h1, h2, h3, h4, h5, h6 { @extend %base-headline;}
 h1 { font-size: 1.5em;}
 h2 { font-size: 1.375em;}
 h3 { font-size: 1.25em;}

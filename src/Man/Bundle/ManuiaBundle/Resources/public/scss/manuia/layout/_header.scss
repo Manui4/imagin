@@ -26,8 +26,16 @@
 }
 
 
+
 .l-header {
     display: block;
+    &.fixed {
+        position: fixed;
+        top:0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1;
+    }
 /* =======================
    header TOP
    ======================= */
@@ -88,7 +96,7 @@
     .header-main {
         position: relative;
         display: block;
-        margin-bottom: 1.5em;
+        /* margin-bottom: 1.5em; */
         .header-wrapper {
             position : relative;
             display: block;
@@ -109,13 +117,6 @@
                 /* @include box-shadow(darken($color-bg-header, 90%) 0 6px 19px); */
             }
         }
-        @media only screen and (min-width : $width-device-l ) {
-            .header-wrapper {
-                &:before, &:after{
-                    bottom: -1.5em;
-                }
-            }
-        }
 
         /* =======================
            header main/LOGO
@@ -129,7 +130,6 @@
                 @include transition-duration;
                 height: 9em;
                 width: 9em;
-            
             }
             &:hover{
                 img{ @include opacity(0.9); }

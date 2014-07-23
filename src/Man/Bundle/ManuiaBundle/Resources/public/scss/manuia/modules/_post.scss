@@ -34,22 +34,24 @@ $border-radius: 10px;
     background-color: $color-main;
 }
 
-.block-article .article {
-    @extend %article;
-    h1 {
-        @extend %headline;
-        background-color: darken($color-main, 35%);
-    }
-    
-    h2 {
-        @extend %headline;
-        padding-left: 3em;
-        background-color: darken($color-main, 20%);
-    }
-    h3 {
-        @extend %headline;
-        padding-left: 4.5em;
-        background-color: darken($color-main, 10%);
+.block-article { 
+    .article {
+        @extend %article;
+        h1 {
+            @extend %headline;
+            background-color: darken($color-main, 35%);
+        }
+        
+        h2 {
+            @extend %headline;
+            padding-left: 3em;
+            background-color: darken($color-main, 20%);
+        }
+        h3 {
+            @extend %headline;
+            padding-left: 4.5em;
+            background-color: darken($color-main, 10%);
+        }
     }
 }
     

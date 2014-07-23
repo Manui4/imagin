@@ -4,20 +4,19 @@
 
 .headshots {
     position: relative;
-    @include border-radius(125px);
     width: 125px;
     height: 125px;
     display: block;
+
+    @include border-radius(125px);
     overflow: hidden;
     
     .list-headshots-top, .list-headshots-bottom {
-        overflow: hidden;
+    /*     overflow: hidden; */
         position: absolute;
         top: 0px;
         height: 63px;
         width: 125px;
-    
-        
         .list-items {
             position: relative;
             top: 0px;
@@ -30,25 +29,16 @@
     }
     
     .list-headshots-top {
-    
+        /* @include border-radius(125px 125px 0px 0px); */
+        overflow: hidden;
     }
 
     .list-headshots-bottom {
+        /* @include border-radius( 0px 0px 125px 125px); */
+        overflow: hidden;
         top: 63px;
         .list-items {
             top: -63px;
         }
     }
-    
-  /* &:after {
-        @include border-radius(125px);
-        overflow: hidden;
-        display: block;
-        content: 'michael';
-        position: absolute;
-        width: 125px;
-        background-color: green;
-        height: 125px;
-        top:0;
-    } */
 }

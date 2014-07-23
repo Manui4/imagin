@@ -652,11 +652,11 @@ body {
   background-size: 1.5em 1.5em;
   color: #343232;
   /* &:hover { */
-  /* background-image: -webkit-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
-  background-image: -moz-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
-  background-image: -o-linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(0.98, #ffffff), to(#000000));
-  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%); */
+  background-image: -webkit-linear-gradient(white, white 98%, black 100%);
+  background-image: -moz-linear-gradient(white, white 98%, black 100%);
+  background-image: -o-linear-gradient(white, white 98%, black 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.98, white), to(black));
+  background-image: linear-gradient(#ffffff, #ffffff 98%, #000000 100%);
   /* }*/
   /*     background:url(../images/header.jpg) center top fixed;
       @include background-size(cover); */ }
@@ -675,10 +675,10 @@ a {
     color: #1b996f; }
 
 /* line 48, ../scss/manuia/base/_base.scss */
-h1, h2, h3, h4, h5, h6, .block-article .article h1, .block-article .article h2, .block-article .article h3 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   margin-bottom: 1.5rem;
-  color: white;
+  color: #e67e22;
   font-family: "Kreon", serif; }
 
 /* line 55, ../scss/manuia/base/_base.scss */
@@ -937,7 +937,7 @@ input, textarea, button, select {
 /* =======================
    Layout/Header
    ======================= */
-/* line 29, ../scss/manuia/layout/_header.scss */
+/* line 30, ../scss/manuia/layout/_header.scss */
 .l-header {
   display: block;
   /* =======================
@@ -946,13 +946,20 @@ input, textarea, button, select {
   /* =======================
      header MAIN
      ======================= */ }
-  /* line 34, ../scss/manuia/layout/_header.scss */
+  /* line 32, ../scss/manuia/layout/_header.scss */
+  .l-header.fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1; }
+  /* line 42, ../scss/manuia/layout/_header.scss */
   .l-header .header-top {
     color: #bdb4b1;
     font-size: 0.8em;
     display: block;
     background-color: #343232; }
-    /* line 39, ../scss/manuia/layout/_header.scss */
+    /* line 47, ../scss/manuia/layout/_header.scss */
     .l-header .header-top:after {
       content: '';
       position: absolute;
@@ -961,19 +968,19 @@ input, textarea, button, select {
       width: 100%;
       background-color: #bdb4b1;
       margin-top: -1px; }
-    /* line 48, ../scss/manuia/layout/_header.scss */
+    /* line 56, ../scss/manuia/layout/_header.scss */
     .l-header .header-top span {
       margin: 0 1.5em;
       text-align: center; }
-    /* line 52, ../scss/manuia/layout/_header.scss */
+    /* line 60, ../scss/manuia/layout/_header.scss */
     .l-header .header-top .wrapper-is-active {
       display: block; }
     @media only screen and (max-width: 768px) {
-      /* line 56, ../scss/manuia/layout/_header.scss */
+      /* line 64, ../scss/manuia/layout/_header.scss */
       .l-header .header-top span {
         display: block;
         height: 24px; } }
-    /* line 61, ../scss/manuia/layout/_header.scss */
+    /* line 69, ../scss/manuia/layout/_header.scss */
     .l-header .header-top .toggle {
       cursor: pointer;
       position: relative;
@@ -982,7 +989,7 @@ input, textarea, button, select {
       background-position: center 5px;
       background-repeat: no-repeat;
       background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="11.006,3.491 5.504,9.228 0,3.544 1.523,2 5.504,5.989 9.491,2 "/></svg>'); }
-      /* line 69, ../scss/manuia/layout/_header.scss */
+      /* line 77, ../scss/manuia/layout/_header.scss */
       .l-header .header-top .toggle:before {
         content: '';
         position: absolute;
@@ -1012,28 +1019,97 @@ input, textarea, button, select {
     /* line 7, ../scss/manuia/layout/_header.scss */
     .l-header .header-top.white:after, .l-header .header-top .toggle.white:before {
       background-color: white; }
-    /* line 80, ../scss/manuia/layout/_header.scss */
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.turquoise:after, .l-header .header-top .toggle.turquoise:before {
+      background-color: #1abc9c; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.emerald:after, .l-header .header-top .toggle.emerald:before {
+      background-color: #2ecc71; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.peter-river:after, .l-header .header-top .toggle.peter-river:before {
+      background-color: #3498db; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.amethyst:after, .l-header .header-top .toggle.amethyst:before {
+      background-color: #9b59b6; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.wet-asphalt:after, .l-header .header-top .toggle.wet-asphalt:before {
+      background-color: #34495e; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.green-sea:after, .l-header .header-top .toggle.green-sea:before {
+      background-color: #16a085; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.nephritis:after, .l-header .header-top .toggle.nephritis:before {
+      background-color: #27ae60; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.belize-hole:after, .l-header .header-top .toggle.belize-hole:before {
+      background-color: #2980b9; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.wisteria:after, .l-header .header-top .toggle.wisteria:before {
+      background-color: #8e44ad; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.midnight-blue:after, .l-header .header-top .toggle.midnight-blue:before {
+      background-color: #2c3e50; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.sun-flower:after, .l-header .header-top .toggle.sun-flower:before {
+      background-color: #f1c40f; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.carrot:after, .l-header .header-top .toggle.carrot:before {
+      background-color: #e67e22; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.alizarin:after, .l-header .header-top .toggle.alizarin:before {
+      background-color: #e74c3c; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.clouds:after, .l-header .header-top .toggle.clouds:before {
+      background-color: #ecf0f1; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.concrete:after, .l-header .header-top .toggle.concrete:before {
+      background-color: #95a5a6; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.flat-orange:after, .l-header .header-top .toggle.flat-orange:before {
+      background-color: #f39c12; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.pumpkin:after, .l-header .header-top .toggle.pumpkin:before {
+      background-color: #d35400; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.pomegranate:after, .l-header .header-top .toggle.pomegranate:before {
+      background-color: #c0392b; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.silver:after, .l-header .header-top .toggle.silver:before {
+      background-color: #bdc3c7; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.asbestos:after, .l-header .header-top .toggle.asbestos:before {
+      background-color: #7f8c8d; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.gray:after, .l-header .header-top .toggle.gray:before {
+      background-color: #7a7a7a; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.bg-twitter:after, .l-header .header-top .toggle.bg-twitter:before {
+      background-color: #333333; }
+    /* line 7, ../scss/manuia/layout/_header.scss */
+    .l-header .header-top.broken-white:after, .l-header .header-top .toggle.broken-white:before {
+      background-color: #e1e1e1; }
+    /* line 88, ../scss/manuia/layout/_header.scss */
     .l-header .header-top .toggle.visible {
       background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="0,7.736 5.501,2 11.006,7.684 9.482,9.228 5.501,5.239 1.515,9.228 "/></svg>'); }
-  /* line 88, ../scss/manuia/layout/_header.scss */
+  /* line 96, ../scss/manuia/layout/_header.scss */
   .l-header .header-main {
     position: relative;
     display: block;
-    margin-bottom: 1.5em;
+    /* margin-bottom: 1.5em; */
     /* =======================
        header main/LOGO
        ======================= */
     /* =======================
        header main/MENU
        ======================= */ }
-    /* line 92, ../scss/manuia/layout/_header.scss */
+    /* line 100, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .header-wrapper {
       position: relative;
       display: block;
       overflow: visible;
       width: 100%;
       height: 100%; }
-      /* line 98, ../scss/manuia/layout/_header.scss */
+      /* line 106, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-wrapper:before, .l-header .header-main .header-wrapper:after {
         content: '';
         background-color: #343232;
@@ -1046,19 +1122,15 @@ input, textarea, button, select {
         z-index: -1;
         /* @include transform-origin(0);
         @include transform(skewY(-3deg)); */ }
-      /* line 108, ../scss/manuia/layout/_header.scss */
+      /* line 116, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-wrapper:after {
         /* @include box-shadow(darken($color-bg-header, 90%) 0 6px 19px); */ }
-    @media only screen and (min-width: 1200px) {
-      /* line 114, ../scss/manuia/layout/_header.scss */
-      .l-header .header-main .header-wrapper:before, .l-header .header-main .header-wrapper:after {
-        bottom: -1.5em; } }
-    /* line 123, ../scss/manuia/layout/_header.scss */
+    /* line 124, ../scss/manuia/layout/_header.scss */
     .l-header .header-main .header-logo {
       padding-left: 1.5em;
       height: 9em;
       display: block; }
-      /* line 127, ../scss/manuia/layout/_header.scss */
+      /* line 128, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-logo img {
         border: 2px solid transparent;
         -moz-transition-duration: 0.3s;
@@ -1191,6 +1263,213 @@ input, textarea, button, select {
         background-color: white; }
         /* line 21, ../scss/manuia/layout/_header.scss */
         .l-header .header-main .header-menu.white .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.turquoise .menu-item.is-active span {
+        color: #1abc9c; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.turquoise .menu-item:hover {
+        background-color: #1abc9c; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.turquoise .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.emerald .menu-item.is-active span {
+        color: #2ecc71; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.emerald .menu-item:hover {
+        background-color: #2ecc71; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.emerald .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.peter-river .menu-item.is-active span {
+        color: #3498db; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.peter-river .menu-item:hover {
+        background-color: #3498db; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.peter-river .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.amethyst .menu-item.is-active span {
+        color: #9b59b6; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.amethyst .menu-item:hover {
+        background-color: #9b59b6; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.amethyst .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.wet-asphalt .menu-item.is-active span {
+        color: #34495e; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.wet-asphalt .menu-item:hover {
+        background-color: #34495e; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.wet-asphalt .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.green-sea .menu-item.is-active span {
+        color: #16a085; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.green-sea .menu-item:hover {
+        background-color: #16a085; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.green-sea .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.nephritis .menu-item.is-active span {
+        color: #27ae60; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.nephritis .menu-item:hover {
+        background-color: #27ae60; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.nephritis .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.belize-hole .menu-item.is-active span {
+        color: #2980b9; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.belize-hole .menu-item:hover {
+        background-color: #2980b9; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.belize-hole .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.wisteria .menu-item.is-active span {
+        color: #8e44ad; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.wisteria .menu-item:hover {
+        background-color: #8e44ad; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.wisteria .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.midnight-blue .menu-item.is-active span {
+        color: #2c3e50; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.midnight-blue .menu-item:hover {
+        background-color: #2c3e50; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.midnight-blue .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.sun-flower .menu-item.is-active span {
+        color: #f1c40f; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.sun-flower .menu-item:hover {
+        background-color: #f1c40f; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.sun-flower .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.carrot .menu-item.is-active span {
+        color: #e67e22; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.carrot .menu-item:hover {
+        background-color: #e67e22; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.carrot .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.alizarin .menu-item.is-active span {
+        color: #e74c3c; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.alizarin .menu-item:hover {
+        background-color: #e74c3c; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.alizarin .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.clouds .menu-item.is-active span {
+        color: #ecf0f1; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.clouds .menu-item:hover {
+        background-color: #ecf0f1; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.clouds .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.concrete .menu-item.is-active span {
+        color: #95a5a6; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.concrete .menu-item:hover {
+        background-color: #95a5a6; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.concrete .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.flat-orange .menu-item.is-active span {
+        color: #f39c12; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.flat-orange .menu-item:hover {
+        background-color: #f39c12; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.flat-orange .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.pumpkin .menu-item.is-active span {
+        color: #d35400; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.pumpkin .menu-item:hover {
+        background-color: #d35400; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.pumpkin .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.pomegranate .menu-item.is-active span {
+        color: #c0392b; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.pomegranate .menu-item:hover {
+        background-color: #c0392b; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.pomegranate .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.silver .menu-item.is-active span {
+        color: #bdc3c7; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.silver .menu-item:hover {
+        background-color: #bdc3c7; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.silver .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.asbestos .menu-item.is-active span {
+        color: #7f8c8d; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.asbestos .menu-item:hover {
+        background-color: #7f8c8d; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.asbestos .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.gray .menu-item.is-active span {
+        color: #7a7a7a; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.gray .menu-item:hover {
+        background-color: #7a7a7a; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.gray .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.bg-twitter .menu-item.is-active span {
+        color: #333333; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.bg-twitter .menu-item:hover {
+        background-color: #333333; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.bg-twitter .menu-item:hover.is-active span {
+          color: #343232; }
+      /* line 16, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.broken-white .menu-item.is-active span {
+        color: #e1e1e1; }
+      /* line 19, ../scss/manuia/layout/_header.scss */
+      .l-header .header-main .header-menu.broken-white .menu-item:hover {
+        background-color: #e1e1e1; }
+        /* line 21, ../scss/manuia/layout/_header.scss */
+        .l-header .header-main .header-menu.broken-white .menu-item:hover.is-active span {
           color: #343232; }
       @media only screen and (max-width: 768px) {
         /* line 156, ../scss/manuia/layout/_header.scss */
@@ -1368,7 +1647,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-1 {
   width: 8.3333333333%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1390,7 +1669,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-2 {
   width: 16.6666666667%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1412,7 +1691,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-3 {
   width: 25%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1434,7 +1713,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-4 {
   width: 33.3333333333%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1456,7 +1735,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-5 {
   width: 41.6666666667%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1478,7 +1757,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-6 {
   width: 50%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1500,7 +1779,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-7 {
   width: 58.3333333333%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1522,7 +1801,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-8 {
   width: 66.6666666667%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1544,7 +1823,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-9 {
   width: 75%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1566,7 +1845,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-10 {
   width: 83.3333333333%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1588,7 +1867,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-11 {
   width: 91.6666666667%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1610,7 +1889,7 @@ input, textarea, button, select {
 /* line 8, ../scss/manuia/layout/_grid.scss */
 .col-s-12 {
   width: 100%;
-  padding: 1.5em; }
+  padding: 0.5em; }
 
 /* line 13, ../scss/manuia/layout/_grid.scss */
 .col-s-center {
@@ -1670,7 +1949,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-1 {
     width: 8.3333333333%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1692,7 +1971,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-2 {
     width: 16.6666666667%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1714,7 +1993,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-3 {
     width: 25%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1736,7 +2015,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-4 {
     width: 33.3333333333%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1758,7 +2037,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-5 {
     width: 41.6666666667%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1780,7 +2059,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-6 {
     width: 50%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1802,7 +2081,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-7 {
     width: 58.3333333333%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1824,7 +2103,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-8 {
     width: 66.6666666667%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1846,7 +2125,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-9 {
     width: 75%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1868,7 +2147,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-10 {
     width: 83.3333333333%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1890,7 +2169,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-11 {
     width: 91.6666666667%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1912,7 +2191,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-m-12 {
     width: 100%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-m-center {
@@ -1971,7 +2250,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-1 {
     width: 8.3333333333%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -1993,7 +2272,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-2 {
     width: 16.6666666667%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2015,7 +2294,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-3 {
     width: 25%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2037,7 +2316,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-4 {
     width: 33.3333333333%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2059,7 +2338,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-5 {
     width: 41.6666666667%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2081,7 +2360,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-6 {
     width: 50%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2103,7 +2382,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-7 {
     width: 58.3333333333%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2125,7 +2404,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-8 {
     width: 66.6666666667%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2147,7 +2426,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-9 {
     width: 75%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2169,7 +2448,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-10 {
     width: 83.3333333333%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2191,7 +2470,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-11 {
     width: 91.6666666667%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2213,7 +2492,7 @@ input, textarea, button, select {
   /* line 8, ../scss/manuia/layout/_grid.scss */
   .col-l-12 {
     width: 100%;
-    padding: 1.5em; }
+    padding: 0.5em; }
 
   /* line 13, ../scss/manuia/layout/_grid.scss */
   .col-l-center {
@@ -2626,7 +2905,7 @@ th {
     padding: 0; }
 
 /* line 29, ../scss/manuia/modules/_post.scss */
-h1, h2, h3, h4, h5, h6, .block-article .article h1, .block-article .article h2, .block-article .article h3 {
+.block-article .article h1, .block-article .article h2, .block-article .article h3 {
   -moz-border-radius: 10px;
   border-radius: 10px;
   margin: 0;
@@ -2634,14 +2913,14 @@ h1, h2, h3, h4, h5, h6, .block-article .article h1, .block-article .article h2, 
   line-height: 1.5em;
   background-color: #508f4d; }
 
-/* line 39, ../scss/manuia/modules/_post.scss */
+/* line 40, ../scss/manuia/modules/_post.scss */
 .block-article .article h1 {
   background-color: #0f1b0f; }
-/* line 44, ../scss/manuia/modules/_post.scss */
+/* line 45, ../scss/manuia/modules/_post.scss */
 .block-article .article h2 {
   padding-left: 3em;
   background-color: #2b4d29; }
-/* line 49, ../scss/manuia/modules/_post.scss */
+/* line 50, ../scss/manuia/modules/_post.scss */
 .block-article .article h3 {
   padding-left: 4.5em;
   background-color: #3d6e3b; }
@@ -2711,42 +2990,87 @@ h1, h2, h3, h4, h5, h6, .block-article .article h1, .block-article .article h2, 
 /* line 5, ../scss/manuia/modules/_headshots.scss */
 .headshots {
   position: relative;
-  -moz-border-radius: 125px;
-  border-radius: 125px;
   width: 125px;
   height: 125px;
   display: block;
-  overflow: hidden;
-  /* &:after {
-        @include border-radius(125px);
-        overflow: hidden;
-        display: block;
-        content: 'michael';
-        position: absolute;
-        width: 125px;
-        background-color: green;
-        height: 125px;
-        top:0;
-    } */ }
-  /* line 13, ../scss/manuia/modules/_headshots.scss */
+  -moz-border-radius: 125px;
+  border-radius: 125px;
+  overflow: hidden; }
+  /* line 14, ../scss/manuia/modules/_headshots.scss */
   .headshots .list-headshots-top, .headshots .list-headshots-bottom {
-    overflow: hidden;
+    /*     overflow: hidden; */
     position: absolute;
     top: 0px;
     height: 63px;
     width: 125px; }
-    /* line 21, ../scss/manuia/modules/_headshots.scss */
+    /* line 20, ../scss/manuia/modules/_headshots.scss */
     .headshots .list-headshots-top .list-items, .headshots .list-headshots-bottom .list-items {
       position: relative;
       top: 0px;
       left: 0px; }
-      /* line 25, ../scss/manuia/modules/_headshots.scss */
+      /* line 24, ../scss/manuia/modules/_headshots.scss */
       .headshots .list-headshots-top .list-items .item, .headshots .list-headshots-bottom .list-items .item {
         position: absolute;
         display: block; }
+  /* line 31, ../scss/manuia/modules/_headshots.scss */
+  .headshots .list-headshots-top {
+    /* @include border-radius(125px 125px 0px 0px); */
+    overflow: hidden; }
   /* line 36, ../scss/manuia/modules/_headshots.scss */
   .headshots .list-headshots-bottom {
+    /* @include border-radius( 0px 0px 125px 125px); */
+    overflow: hidden;
     top: 63px; }
-    /* line 38, ../scss/manuia/modules/_headshots.scss */
+    /* line 40, ../scss/manuia/modules/_headshots.scss */
     .headshots .list-headshots-bottom .list-items {
       top: -63px; }
+
+/* ==|====================
+   Module/Parallaw
+   ======================= */
+/* line 4, ../scss/manuia/modules/_parallax.scss */
+.parallax-preload-images {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 15, ../scss/manuia/modules/_parallax.scss */
+.parallax-sections .parallax-section {
+  position: relative;
+  overflow: hidden;
+  /* min-height: 500px; */
+  padding-bottom: 50px; }
+  /* line 21, ../scss/manuia/modules/_parallax.scss */
+  .parallax-sections .parallax-section .parallax-section-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center 0%;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  /* line 33, ../scss/manuia/modules/_parallax.scss */
+  .parallax-sections .parallax-section span {
+    background-color: #ecf0f1; }
+  /* line 36, ../scss/manuia/modules/_parallax.scss */
+  .parallax-sections .parallax-section .parallax-img-twitter {
+    height: 100px;
+    width: 100px;
+    position: absolute; }
+
+/* line 45, ../scss/manuia/modules/_parallax.scss */
+iframe.twitter-timeline {
+  width: 100% !important; }
+
+/* line 49, ../scss/manuia/modules/_parallax.scss */
+#skrollr-body {
+  height: 100%;
+  overflow: visible;
+  position: relative; }

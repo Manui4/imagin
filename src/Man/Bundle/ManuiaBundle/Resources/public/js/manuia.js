@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 function manuia_getRandomInt(min, max) {
@@ -8,8 +8,33 @@ function manuia_getRandomInt(min, max) {
 
 function manuia_animateHeadShotTop($element){
 	var index =  manuia_getRandomInt(0, 10) * 125;
-	var duration = manuia_getRandomInt(100, 300);
+	var duration = manuia_getRandomInt(300, 500);
 	$element.animate({ left: '-' + index + 'px' }, duration, 'easeOutBounce', function () {});
+}
+
+function manuia_adjustWindow(){
+/*    // Init Skrollr
+    var s = skrollr.init({
+        render: function(data){
+            $(".debug span").text(data.curTop);
+            console.debug(data);
+        },
+        smoothScrolling: false,
+        mobileDeceleration: 0.004
+    });*/
+
+    /*$sections.each(function(){
+        var $this = $(this);
+        var $sectionBackground = $this.find('.section-bg');
+        var bgHeight = $this.height() + parseInt($this.css('padding-bottom'));
+        bgHeight += bgHeight*0.2;
+        $sectionBackground.css("height", bgHeight );
+    });*/
+    $header = $('.l-header');
+    $content = $('.l-content');
+    headerHeight = $header.height();
+    $content.css("margin-top", headerHeight );
+
 }
 
 $(document).ready(function() {
@@ -17,15 +42,21 @@ $(document).ready(function() {
     var $headshotTop = $('.headshots .list-headshots-top .list-items');
     var $headshotBottom = $('.headshots .list-headshots-bottom .list-items');
     var headshotLenght = $('.headshots .list-headshots-bottom .list-items items').lenght;
-    
+
+    manuia_adjustWindow();
+    setInterval(function() {
+        // Resize sections
+        manuia_adjustWindow();
+    }, 100);
+
     setInterval(function(){
        manuia_animateHeadShotTop($headshotTop);
     }, 2000);
+
     setInterval(function(){
         manuia_animateHeadShotTop($headshotBottom);
      }, 2500);
-    
-    
+
     $( window ).resize(function() {
         if( $('#menu-dropdown').length ) {
             $('#menu-dropdown').remove()
@@ -69,8 +100,8 @@ $(document).ready(function() {
                 $this.attr('data-toggle', 'collapsed');
             }
         });
-        
+
     });
-    
-    
+
+
 });
