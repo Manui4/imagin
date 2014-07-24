@@ -16,9 +16,9 @@ function manuia_getRandomInt(min, max) {
  *  Create animate headshot sliers
  * @param $element
  */
-function manuia_animateHeadShotTop($element){
-    var index =  manuia_getRandomInt(0, 10) * 125;
-    var duration = manuia_getRandomInt(300, 500);
+function manuia_animateHeadShotTop($element, nbItems){
+    var index =  manuia_getRandomInt(0, nbItems) * 125;
+    var duration = 650; // manuia_getRandomInt(500, 700);
     $element.animate({ left: '-' + index + 'px' }, duration, 'easeOutBounce', function () {});
 }
 
@@ -28,12 +28,14 @@ function manuia_animateHeadShotTop($element){
 function manuia_headshot(){
     var $headshotTop = $('.block-selfi-slider .list-selfi-top .list-items');
     var $headshotBottom = $('.block-selfi-slider .list-selfi-bottom .list-items');
+    var itemsLength = $headshotTop.find('.item').length - 1;
+    
     setInterval(function(){
-       manuia_animateHeadShotTop($headshotTop);
+       manuia_animateHeadShotTop($headshotTop, itemsLength);
     }, 2000);
 
     setInterval(function(){
-        manuia_animateHeadShotTop($headshotBottom);
+        manuia_animateHeadShotTop($headshotBottom, itemsLength);
     }, 2500);
 }
 
