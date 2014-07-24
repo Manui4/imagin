@@ -2,21 +2,22 @@
    Module/HEADSHOTS
    ======================= */
 
-.headshots {
+.block-selfi-slider {
     position: relative;
     width: 125px;
     height: 125px;
     display: block;
 
-    @include border-radius(125px);
-    overflow: hidden;
+    /* @include border-radius(125px);
+    overflow: hidden; */
     
-    .list-headshots-top, .list-headshots-bottom {
-    /*     overflow: hidden; */
+    .list-selfi-top, 
+    .list-selfi-bottom {
         position: absolute;
         top: 0px;
         height: 63px;
         width: 125px;
+        overflow: hidden;
         .list-items {
             position: relative;
             top: 0px;
@@ -28,14 +29,12 @@
         }
     }
     
-    .list-headshots-top {
-        /* @include border-radius(125px 125px 0px 0px); */
-        overflow: hidden;
+    .list-selfi-top {
+        @include border-radius(125px 125px 0px 0px);
     }
 
-    .list-headshots-bottom {
-        /* @include border-radius( 0px 0px 125px 125px); */
-        overflow: hidden;
+    .list-selfi-bottom {
+        @include border-radius( 0px 0px 125px 125px);
         top: 63px;
         .list-items {
             top: -63px;

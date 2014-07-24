@@ -17,6 +17,6 @@ parameters:
     admin_password:    "password"
     
     ####################################### Manuia parameters
-    manuia_path_images_headshots: '%kernel.root_dir%/../src/Man/Bundle/ManuiaBundle/Resources/public/images/headshots'
+    manuia_path_images_headshots: '%kernel.root_dir%/../src/Man/Bundle/ManuiaBundle/Resources/public/images/selfi-slider'
     manuia_path_web_bundle: '/bundles/manmanuia/'
-    manuia_path_web_images_headshots: '%manuia_path_web_bundle%images/headshots/'
+    manuia_path_web_images_headshots: '%manuia_path_web_bundle%images/selfi-slider/'

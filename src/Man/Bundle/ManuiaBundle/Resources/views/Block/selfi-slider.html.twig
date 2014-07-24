@@ -1,0 +1,20 @@
+<div class="block-selfi-slider aligncenter">
+    <div class="list-selfi-top">
+        <div class="list-items">
+            {% for key, image in images %}
+            <div class="item"  style="left:{{ key * 125 }}px">
+                <img width="125" height="125" src="{{ image }}"/>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="list-selfi-bottom">
+        <div class="list-items">
+            {% for key, image in images %}
+            <div class="item" style="left:{{ key * 125 }}px">
+                <img width="125" height="125"  src="{{ image }}"/>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

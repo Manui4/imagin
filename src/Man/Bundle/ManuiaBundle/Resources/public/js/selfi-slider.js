@@ -26,8 +26,8 @@ function manuia_animateHeadShotTop($element){
  *
  */
 function manuia_headshot(){
-    var $headshotTop = $('.headshots .list-headshots-top .list-items');
-    var $headshotBottom = $('.headshots .list-headshots-bottom .list-items');
+    var $headshotTop = $('.block-selfi-slider .list-selfi-top .list-items');
+    var $headshotBottom = $('.block-selfi-slider .list-selfi-bottom .list-items');
     setInterval(function(){
        manuia_animateHeadShotTop($headshotTop);
     }, 2000);

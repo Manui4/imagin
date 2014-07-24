@@ -2987,42 +2987,44 @@ th {
 /* ==|====================
    Module/HEADSHOTS
    ======================= */
-/* line 5, ../scss/manuia/modules/_headshots.scss */
-.headshots {
+/* line 5, ../scss/manuia/modules/_selfi-slider.scss */
+.block-selfi-slider {
   position: relative;
   width: 125px;
   height: 125px;
   display: block;
-  -moz-border-radius: 125px;
-  border-radius: 125px;
-  overflow: hidden; }
-  /* line 14, ../scss/manuia/modules/_headshots.scss */
-  .headshots .list-headshots-top, .headshots .list-headshots-bottom {
-    /*     overflow: hidden; */
+  /* @include border-radius(125px);
+  overflow: hidden; */ }
+  /* line 14, ../scss/manuia/modules/_selfi-slider.scss */
+  .block-selfi-slider .list-selfi-top,
+  .block-selfi-slider .list-selfi-bottom {
     position: absolute;
     top: 0px;
     height: 63px;
-    width: 125px; }
-    /* line 20, ../scss/manuia/modules/_headshots.scss */
-    .headshots .list-headshots-top .list-items, .headshots .list-headshots-bottom .list-items {
+    width: 125px;
+    overflow: hidden; }
+    /* line 21, ../scss/manuia/modules/_selfi-slider.scss */
+    .block-selfi-slider .list-selfi-top .list-items,
+    .block-selfi-slider .list-selfi-bottom .list-items {
       position: relative;
       top: 0px;
       left: 0px; }
-      /* line 24, ../scss/manuia/modules/_headshots.scss */
-      .headshots .list-headshots-top .list-items .item, .headshots .list-headshots-bottom .list-items .item {
+      /* line 25, ../scss/manuia/modules/_selfi-slider.scss */
+      .block-selfi-slider .list-selfi-top .list-items .item,
+      .block-selfi-slider .list-selfi-bottom .list-items .item {
         position: absolute;
         display: block; }
-  /* line 31, ../scss/manuia/modules/_headshots.scss */
-  .headshots .list-headshots-top {
-    /* @include border-radius(125px 125px 0px 0px); */
-    overflow: hidden; }
-  /* line 36, ../scss/manuia/modules/_headshots.scss */
-  .headshots .list-headshots-bottom {
-    /* @include border-radius( 0px 0px 125px 125px); */
-    overflow: hidden;
+  /* line 32, ../scss/manuia/modules/_selfi-slider.scss */
+  .block-selfi-slider .list-selfi-top {
+    -moz-border-radius: 125px 125px 0px 0px;
+    border-radius: 125px 125px 0px 0px; }
+  /* line 36, ../scss/manuia/modules/_selfi-slider.scss */
+  .block-selfi-slider .list-selfi-bottom {
+    -moz-border-radius: 0px 0px 125px 125px;
+    border-radius: 0px 0px 125px 125px;
     top: 63px; }
-    /* line 40, ../scss/manuia/modules/_headshots.scss */
-    .headshots .list-headshots-bottom .list-items {
+    /* line 39, ../scss/manuia/modules/_selfi-slider.scss */
+    .block-selfi-slider .list-selfi-bottom .list-items {
       top: -63px; }
 
 /* ==|====================
