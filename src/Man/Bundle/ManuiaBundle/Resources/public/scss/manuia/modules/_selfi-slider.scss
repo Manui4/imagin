@@ -41,3 +41,20 @@
         }
     }
 }
+
+footer.footer .tweet:before {
+    color: #454240;
+    content: "\"";
+    display: block;
+    font-family: "Rokkitt",sans-serif;
+    font-size: 50px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+}
+footer.footer .tweet {
+    border-bottom: 1px dashed #454240;
+    margin-bottom: 10px;
+    padding: 0 0 10px 30px;
+    position: relative;
+}

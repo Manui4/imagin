@@ -1166,7 +1166,7 @@ input, textarea, button, select {
       .l-header .header-main .header-menu .share, .l-header .header-main .header-menu .more {
         display: block;
         width: 100%;
-        min-height: 3em; }
+        min-height: 1.5em; }
       /* line 163, ../scss/manuia/layout/_header.scss */
       .l-header .header-main .header-menu .menu-item {
         margin-top: 0.5em;
@@ -3027,6 +3027,24 @@ th {
     .block-selfi-slider .list-selfi-bottom .list-items {
       top: -63px; }
 
+/* line 45, ../scss/manuia/modules/_selfi-slider.scss */
+footer.footer .tweet:before {
+  color: #454240;
+  content: "\"";
+  display: block;
+  font-family: "Rokkitt",sans-serif;
+  font-size: 50px;
+  left: 0;
+  position: absolute;
+  top: 5px; }
+
+/* line 55, ../scss/manuia/modules/_selfi-slider.scss */
+footer.footer .tweet {
+  border-bottom: 1px dashed #454240;
+  margin-bottom: 10px;
+  padding: 0 0 10px 30px;
+  position: relative; }
+
 /* ==|====================
    Module/Parallaw
    ======================= */
@@ -3039,13 +3057,19 @@ th {
   top: 0;
   left: 0; }
 
-/* line 15, ../scss/manuia/modules/_parallax.scss */
+/* line 13, ../scss/manuia/modules/_parallax.scss */
+#skrollr-body {
+  height: 100%;
+  overflow: visible;
+  position: relative; }
+
+/* line 21, ../scss/manuia/modules/_parallax.scss */
 .parallax-sections .parallax-section {
   position: relative;
   overflow: hidden;
   /* min-height: 500px; */
   padding-bottom: 50px; }
-  /* line 21, ../scss/manuia/modules/_parallax.scss */
+  /* line 27, ../scss/manuia/modules/_parallax.scss */
   .parallax-sections .parallax-section .parallax-section-bg {
     position: absolute;
     bottom: 0;
@@ -3058,21 +3082,40 @@ th {
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover; }
-  /* line 33, ../scss/manuia/modules/_parallax.scss */
+  /* line 39, ../scss/manuia/modules/_parallax.scss */
   .parallax-sections .parallax-section span {
     background-color: #ecf0f1; }
-  /* line 36, ../scss/manuia/modules/_parallax.scss */
+  /* line 43, ../scss/manuia/modules/_parallax.scss */
+  .parallax-sections .parallax-section p {
+    background-color: #ecf0f1;
+    padding: 1.5em; }
+  /* line 48, ../scss/manuia/modules/_parallax.scss */
   .parallax-sections .parallax-section .parallax-img-twitter {
     height: 100px;
     width: 100px;
     position: absolute; }
 
-/* line 45, ../scss/manuia/modules/_parallax.scss */
-iframe.twitter-timeline {
-  width: 100% !important; }
-
-/* line 49, ../scss/manuia/modules/_parallax.scss */
-#skrollr-body {
-  height: 100%;
-  overflow: visible;
-  position: relative; }
+/* ==|====================
+   Module/Tweet
+   ======================= */
+/* line 6, ../scss/manuia/modules/_tweet.scss */
+.block-twitter .tweet {
+  margin-bottom: 3em;
+  padding: 1.5em;
+  position: relative;
+  border-bottom: 1px dashed #ecf0f1; }
+  /* line 12, ../scss/manuia/modules/_tweet.scss */
+  .block-twitter .tweet:before, .block-twitter .tweet:after {
+    color: #ecf0f1;
+    content: "\"";
+    display: block;
+    font-size: 6em;
+    position: absolute; }
+  /* line 19, ../scss/manuia/modules/_tweet.scss */
+  .block-twitter .tweet:before {
+    top: 5px;
+    left: 0px; }
+  /* line 23, ../scss/manuia/modules/_tweet.scss */
+  .block-twitter .tweet:after {
+    right: 0px;
+    bottom: 0px; }

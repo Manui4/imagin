@@ -25,4 +25,11 @@ class BlockController extends Controller
         ]);
     }
 
+    public function lastTweetsAction()
+    {
+        return $this->render('ManManuiaBundle:Block:last-tweets.html.twig', [
+
+        ]);
+    }
+
 }

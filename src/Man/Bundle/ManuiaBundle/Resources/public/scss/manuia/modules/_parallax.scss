@@ -10,6 +10,12 @@
     left: 0;
 }
 
+#skrollr-body {
+    height:100%;
+    overflow:visible;
+    position:relative;
+}
+
 .parallax-sections {
     
     .parallax-section {
@@ -33,22 +39,18 @@
         span {
             background-color: $color-clouds;
         }
+        
+        p {
+            background-color: $color-clouds;
+            padding: 1.5em;
+        }
+        
         .parallax-img-twitter {
             height: 100px;
             width: 100px;
             position: absolute;
             
         }
+        
     }
 }
-
-iframe.twitter-timeline {
-    width: 100% !important;
-}
-
-#skrollr-body {
-    height:100%;
-    overflow:visible;
-    position:relative;
-}
-

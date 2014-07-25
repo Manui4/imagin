@@ -18,9 +18,9 @@ $(document).ready(function() {
 
     // listen on viewport resize
     $( window ).resize(function() {
-    	manuia_adjustHeaderContent();
+        manuia_adjustHeaderContent();
         if( $('#menu-dropdown').length ) {
-            $('#menu-dropdown').remove()
+            $('#menu-dropdown').remove();
         }
     });
 
@@ -40,6 +40,13 @@ $(document).ready(function() {
                 }
             }
         });
+    });
+
+ // Hide the modal dialog when someone clicks outside of it.
+    $("#menu-dropdown").bind( "clickoutside", function(event){
+        if( $('#menu-dropdown').length ) {
+            $(this).remove();
+        }
     });
 
     $('.navbar-toggle').click(function(){
