@@ -7,12 +7,7 @@
 	                <h3><a class="twitter-timeline" href="https://twitter.com/antoine_michael">Tweets de @antoine_michael</a></h3>
                 </hgroup>
             </div>
-            <div class="col-s-6">
-                <div class="center-block">
-                    {{ render(controller('ManManuiaBundle:Block:lastTweets')) }}
-                </div>
-            </div>
-            <div class="col-s-6">
+            <div class="col-s-2">
                 <img src="{{ asset("/bundles/manmanuia/images/parallax/twitter-share.png") }}"
                     style="width: 150px; height: 150px; opacity:1;"
                     data-bottom-top="top: 100px; left:0px;transform:rotate(0deg);"
@@ -37,6 +32,11 @@
                     data-top-bottom="top: 0px; left:0px;"
                     data-anchor-target="#hash-twitter"
                     class="parallax-img-twitter" >
+            </div>
+            <div class="col-s-10">
+                <div class="center-block">
+                    {{ render(controller('ManManuiaBundle:Block:lastTweets')) }}
+                </div>
             </div>
         </div>
     </article>
