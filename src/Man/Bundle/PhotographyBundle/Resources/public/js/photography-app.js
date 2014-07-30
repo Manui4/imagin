@@ -2,7 +2,7 @@
  * Photography photography-app.js
  * @version 2.0.0
  * @author Michael Antoine
- * 
+ *
  * @todo stagePadding calculate wrong active classes
  */
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
         hash("#"+cls);
         e.preventDefault();
     });
-    
+
     $portfolio.find('a.thumb').click(function(e){
         var $this = $(this);
         var cls = $this.attr('href').replace("#", "");
@@ -36,7 +36,7 @@ $(document).ready(function() {
         hash("#"+cls);
         e.preventDefault();
     });
-    
+
     if(location.hash != ""){
         $('.block-flickr h2 a[href='+ location.hash +']').trigger('click');
     };
