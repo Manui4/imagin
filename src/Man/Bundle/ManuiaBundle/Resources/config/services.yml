@@ -12,3 +12,23 @@ services:
         class: Man\Bundle\ManuiaBundle\Twig\Extension\GravatarExtension
         tags:
             - { name: twig.extension }
+
+    twig.extension.camelize:
+        class: Man\Bundle\ManuiaBundle\Twig\Extension\CamelizeExtension
+        tags:
+            - { name: twig.extension }
+
+    twig.extension.decamelize:
+        class: Man\Bundle\ManuiaBundle\Twig\Extension\DecamelizeExtension
+        tags:
+            - { name: twig.extension }
+
+    twig.extension.normalizestring:
+        class: Man\Bundle\ManuiaBundle\Twig\Extension\NormalizeStringExtension
+        tags:
+            - { name: twig.extension }
+
+    twig.extension.flickr_desc:
+        class: Man\Bundle\ManuiaBundle\Twig\Extension\FlickrDescriptionExtension
+        tags:
+            - { name: twig.extension }
