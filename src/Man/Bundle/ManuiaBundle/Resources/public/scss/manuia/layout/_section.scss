@@ -3,46 +3,18 @@
    ======================= */
 
 .section {
-    /* background-color: $color-bg-section; */
     color: $color-text-section;
     position: relative;
     display: block;
-
-    /* margin-top: 1.5em; */
-    /* margin-bottom: 7.5em; */
-    /* padding: 1.5em 0; */
-/*     &:before, &:after{
-        content:'';
-        background-color: $color-bg-section;
-
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        z-index: -1;
-
-        @include transform-origin(0);
-        @include transform(skewY(-3deg));
-    }
-    &:after{
-        background-color: $color-bg-section;
-        @include transform-origin(100%);
-    } */
     hr {
         border: 0;
         height: 0;
-        /* @include box-shadow($color-0 2px 1px); */
-        /* @include box-shadow($color-0 0 6px 6px); */
-        /* &:after {
-            content: "\00a0";
-        } */
     }
 
     h1 {
         
         line-height: 3em;
         vertical-align: middle;
-        /* padding: 1em;
-        height: 3em;
-        background-color: darken($color-0, 5%); */
     }
     h2 { }
     h3 { }

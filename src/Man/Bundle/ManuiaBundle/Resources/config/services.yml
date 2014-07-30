@@ -1,7 +1,27 @@
 parameters:
-#    man_manuia.example.class: Man\Bundle\ManuiaBundle\Example
+    man_manuia.service.manager.class: Man\Bundle\ManuiaBundle\Services\Manager
+    man_manuia.service.twitter.class: Man\Bundle\ManuiaBundle\Services\Twitter
+    man_manuia.service.twitter.api.key: "%service.manuia.twitter.api.key%"
+    man_manuia.service.twitter.secret: "%service.manuia.twitter.secret%"
+    man_manuia.service.twitter.oauth.token: "%service.manuia.twitter.oauth.token%"
+    man_manuia.service.twitter.oauth.token_secret: "%service.manuia.twitter.oauth.token_secret%"
 
 services:
+    man_manuia.service.twitter:
+        class: "%man_manuia.service.twitter.class%"
+        arguments: ["@service_container"]
+        calls:
+            - [setApiKey, ["%man_manuia.service.twitter.api.key%"]]
+            - [setSecret, ["%man_manuia.service.twitter.secret%"]]
+            - [setOAuthToken, ["%man_manuia.service.twitter.oauth.token%"]]
+            - [setOAuthTokenSecret, ["%man_manuia.service.twitter.oauth.token_secret%"]]
+
+    man_manuia.service.manager:
+        class: "%man_manuia.service.manager.class%"
+        arguments: ["@service_container"]
+
+## Twig Extensions
+
     twig.extension.timeago:
         class: Man\Bundle\ManuiaBundle\Twig\Extension\TimeAgoExtension
         arguments: ["@translator"]
@@ -30,5 +50,10 @@ services:
 
     twig.extension.flickr_desc:
         class: Man\Bundle\ManuiaBundle\Twig\Extension\FlickrDescriptionExtension
+        tags:
+            - { name: twig.extension }
+
+    twig.extension.htmlize:
+        class: Man\Bundle\ManuiaBundle\Twig\Extension\HtmlizeExtension
         tags:
             - { name: twig.extension }

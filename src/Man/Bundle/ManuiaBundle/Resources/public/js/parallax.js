@@ -13,8 +13,17 @@ function manuia_adjustSkrollr(){
         var $this = $(this);
         var $sectionBackground = $this.find('.parallax-section-bg');
         var bgHeight = $this.height() + parseInt($this.css('padding-bottom'));
+        var windowHeight = $(window).height();
+        var windowWidth = $(window).width();
+
+       /* if( bgHeight < windowHeight ){
+            bgHeight = windowHeight;
+        }*/
+        
         bgHeight += bgHeight*0.2;
+        
         $sectionBackground.css("height", bgHeight );
+        /*$sectionBackground.css("width", windowWidth );*/
     });
 }
 

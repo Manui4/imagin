@@ -17,12 +17,40 @@
 }
 
 .parallax-sections {
-    
     .parallax-section {
         position: relative;
         overflow: hidden;
-        /* min-height: 500px; */
         padding-bottom: 50px;
+        &.whoami {
+            .article {
+                padding: 0;
+                padding-top: 3em;
+                padding-bottom: 6em;
+            }
+        }
+        &.projects {
+            .article {
+                .text{
+                    background-color: $color-nephritis;
+                    color: $color-clouds;
+                    @include opacity(0.5);
+                    @include border-radius(0.5em);
+                    margin: 1.5em;
+                }
+            }
+        }
+        
+        &.wetalkaboutme {
+            .article {
+                .text{
+                    background-color: $color-pumpkin;
+                    color: $color-1;
+                    @include opacity(0.7);
+                    @include border-radius(0.5em);
+                    margin: 1.5em;
+                }
+            }
+        }
         
         .parallax-section-bg {
             position:absolute;
@@ -39,18 +67,14 @@
         span {
             background-color: $color-clouds;
         }
-        
         p {
             background-color: $color-clouds;
             padding: 1.5em;
         }
-        
         .parallax-img-twitter {
             height: 100px;
             width: 100px;
             position: absolute;
-            
         }
-        
     }
 }

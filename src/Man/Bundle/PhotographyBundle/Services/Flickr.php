@@ -1,8 +1,6 @@
 <?php
 namespace Man\Bundle\PhotographyBundle\Services;
 
-use Ddd\Bundle\AgoraBundle\Service\Exception\NotFoundEntityException;
-
 /**
  *
  * @author mantoine

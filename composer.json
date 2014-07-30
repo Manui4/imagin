@@ -4,7 +4,9 @@
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": {
+            "": "src/"
+        }
     },
     "require": {
         "php": ">=5.3.3",
@@ -28,7 +30,8 @@
         "suin/php-rss-writer": "~1.2",
         "hwi/oauth-bundle": "0.4.*@dev",
         "guzzle/http": "3.7.*@dev",
-        "rezzza/flickr-bundle": "1.0.0"
+        "rezzza/flickr-bundle": "1.0.0",
+        "ruudk/twitter-oauth": "*"
     },
     "scripts": {
         "post-install-cmd": [

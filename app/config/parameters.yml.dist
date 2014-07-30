@@ -28,4 +28,9 @@ parameters:
     service.photography.flickr.oauth.token_secret: b40712a5a8ba34b4
     service.photography.manager.photosets.unset:
         - 72157645505258286
-        - 72157642901318125
+
+    ####################################### Twitter parameters
+    service.manuia.twitter.api.key: RXREQ5IRkBdg83lKmXvuFlcrB
+    service.manuia.twitter.secret: 6IYtMKwlV2B88TDZnGnut1nC1VGc6QwTKT9xImUoagiipP3DvX
+    service.manuia.twitter.oauth.token: 470644634-VBVfXeoQuWi5y5pl96a2o95gpd5oz3QD0Bemhzsa
+    service.manuia.twitter.oauth.token_secret: DQ0mKgrKd3l9LLdH6SkmwYyrBb4F1TcU7KxCGxYQk0zl5

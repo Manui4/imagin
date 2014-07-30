@@ -2535,51 +2535,24 @@ input, textarea, button, select {
    ======================= */
 /* line 5, ../scss/manuia/layout/_section.scss */
 .section {
-  /* background-color: $color-bg-section; */
   color: #7a7a7a;
   position: relative;
-  display: block;
-  /* margin-top: 1.5em; */
-  /* margin-bottom: 7.5em; */
-  /* padding: 1.5em 0; */
-  /*     &:before, &:after{
-          content:'';
-          background-color: $color-bg-section;
-  
-          position: absolute;
-          top: 0; left: 0; right: 0; bottom: 0;
-          z-index: -1;
-  
-          @include transform-origin(0);
-          @include transform(skewY(-3deg));
-      }
-      &:after{
-          background-color: $color-bg-section;
-          @include transform-origin(100%);
-      } */ }
-  /* line 29, ../scss/manuia/layout/_section.scss */
+  display: block; }
+  /* line 9, ../scss/manuia/layout/_section.scss */
   .section hr {
     border: 0;
-    height: 0;
-    /* @include box-shadow($color-0 2px 1px); */
-    /* @include box-shadow($color-0 0 6px 6px); */
-    /* &:after {
-        content: "\00a0";
-    } */ }
-  /* line 39, ../scss/manuia/layout/_section.scss */
+    height: 0; }
+  /* line 14, ../scss/manuia/layout/_section.scss */
   .section h1 {
     line-height: 3em;
-    vertical-align: middle;
-    /* padding: 1em;
-    height: 3em;
-    background-color: darken($color-0, 5%); */ }
+    vertical-align: middle; }
 
 @media (max-width: 368px) {
-  /* line 55, ../scss/manuia/layout/_section.scss */
+  /* line 27, ../scss/manuia/layout/_section.scss */
   .section {
     margin: 3em 0; } }
 @media (max-width: 768px) {
-  /* line 61, ../scss/manuia/layout/_section.scss */
+  /* line 33, ../scss/manuia/layout/_section.scss */
   .section {
     /* margin-top: 1.5em;
     margin-bottom: 3.5em; */ } }
@@ -3063,13 +3036,45 @@ footer.footer .tweet {
   overflow: visible;
   position: relative; }
 
-/* line 21, ../scss/manuia/modules/_parallax.scss */
+/* line 20, ../scss/manuia/modules/_parallax.scss */
 .parallax-sections .parallax-section {
   position: relative;
   overflow: hidden;
-  /* min-height: 500px; */
   padding-bottom: 50px; }
-  /* line 27, ../scss/manuia/modules/_parallax.scss */
+  /* line 25, ../scss/manuia/modules/_parallax.scss */
+  .parallax-sections .parallax-section.whoami .article {
+    padding: 0;
+    padding-top: 3em;
+    padding-bottom: 6em; }
+  /* line 33, ../scss/manuia/modules/_parallax.scss */
+  .parallax-sections .parallax-section.projects .article .text {
+    background-color: #27ae60;
+    color: #ecf0f1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    /* Hack IE6 */
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    margin: 1.5em; }
+    /* line 48, ../scss/manuia/tools/_mixins.scss */
+    .lt-ie7 .parallax-sections .parallax-section.projects .article .text {
+      filter: alpha(opacity=50);
+      zoom: 1; }
+  /* line 45, ../scss/manuia/modules/_parallax.scss */
+  .parallax-sections .parallax-section.wetalkaboutme .article .text {
+    background-color: #d35400;
+    color: #343232;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    /* Hack IE6 */
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    margin: 1.5em; }
+    /* line 48, ../scss/manuia/tools/_mixins.scss */
+    .lt-ie7 .parallax-sections .parallax-section.wetalkaboutme .article .text {
+      filter: alpha(opacity=70);
+      zoom: 1; }
+  /* line 55, ../scss/manuia/modules/_parallax.scss */
   .parallax-sections .parallax-section .parallax-section-bg {
     position: absolute;
     bottom: 0;
@@ -3082,14 +3087,14 @@ footer.footer .tweet {
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover; }
-  /* line 39, ../scss/manuia/modules/_parallax.scss */
+  /* line 67, ../scss/manuia/modules/_parallax.scss */
   .parallax-sections .parallax-section span {
     background-color: #ecf0f1; }
-  /* line 43, ../scss/manuia/modules/_parallax.scss */
+  /* line 70, ../scss/manuia/modules/_parallax.scss */
   .parallax-sections .parallax-section p {
     background-color: #ecf0f1;
     padding: 1.5em; }
-  /* line 48, ../scss/manuia/modules/_parallax.scss */
+  /* line 74, ../scss/manuia/modules/_parallax.scss */
   .parallax-sections .parallax-section .parallax-img-twitter {
     height: 100px;
     width: 100px;
@@ -3119,3 +3124,19 @@ footer.footer .tweet {
   .block-twitter .tweet:after {
     right: 0px;
     bottom: 0px; }
+
+/* ==|====================
+   Module/Parallaw
+   ======================= */
+/* line 7, ../scss/manuia/modules/sections/_whoami.scss */
+section.whoami .presentation .headline hgroup {
+  margin-bottom: 3em; }
+  /* line 9, ../scss/manuia/modules/sections/_whoami.scss */
+  section.whoami .presentation .headline hgroup h2, section.whoami .presentation .headline hgroup h3, section.whoami .presentation .headline hgroup h4, section.whoami .presentation .headline hgroup h5 {
+    margin: 0;
+    display: block;
+    padding: 0 10px;
+    color: #7a7a7a; }
+/* line 20, ../scss/manuia/modules/sections/_whoami.scss */
+section.whoami .description span {
+  padding: 0 10px; }
