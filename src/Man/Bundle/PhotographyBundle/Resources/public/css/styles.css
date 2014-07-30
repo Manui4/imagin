@@ -5,6 +5,7 @@
 .block-flickr .flickr-item{
     float: left;
     margin: 5px;
+    opacity: 0.6;
 }
 
 
@@ -15,6 +16,11 @@
 .block-flickr .flickr-item.unfold .info{
     display: block;
 }
+
+.block-flickr .flickr-item.unfold {
+    opacity: 1;
+}
+
 .block-flickr .flickr-item.unfold .thumb{
     display: none;
 }
