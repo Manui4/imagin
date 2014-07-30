@@ -5,5 +5,48 @@
 {% endblock %}
 
 {% block content %}
-    Welcome to my world
+
+<div class="l-container">
+        <div class="row">
+            <div class="col-s-12">
+                <div class="block-flickr">
+                    <h2> On Flickr..<em>
+                    <span><a href="">All</a> | </span>
+                    {% for photosetId, photoset in photosets %}
+                        {% set photos = photoset['photos'] %}
+                        {% set link = photoset['title'] | normalize_string | camelize %}
+                        {% if photos is not empty %}
+                            <span><a href="#{{ link }}">{{ photoset['title'] }}</a> | </span>
+                        {% endif %}
+                    {% endfor %}
+                    </em></h2>
+                <div id="portfolio">
+                {% for photosetId, photoset in photosets %}
+                    {% set photos = photoset['photos'] %}
+                    {% set hashClass = photoset['title'] | normalize_string | camelize %}
+                    {% if photos is not empty %}
+                        {% for photoId, data in photos %}
+                            {% set photo = data['info']['photo'] %}
+                            {% set sizes = data['sizes']['sizes'] %}
+                            {% set sizeThumb = sizes['size'][1] %}
+                            {% set sizeLarge = sizes['size'][5] %}
+                            {% set sourceThumb = sizeThumb['@attributes']['source'] %}
+                            {% set sourceLarge = sizeLarge['@attributes']['source'] %}
+                            <div class="flickr-item {{ hashClass }}">
+                                <a class="thumb" href="#{{ hashClass }}"><img src="{{ sourceThumb }}" alt=""></a>
+                                <div class="info">
+                                    <img src="{{ sourceLarge }}" alt="">
+                                    <h3>{{ photo['title'] }} | <em>{{ photo['dates']['@attributes']['taken'] | date('d/m/Y') }}</em></h3>
+                                    <pre>{{ photo['description'] | flickr_desc }}</pre>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

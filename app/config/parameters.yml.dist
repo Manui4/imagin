@@ -15,8 +15,17 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     admin_password:    "password"
-    
+
     ####################################### Manuia parameters
     manuia_path_images_headshots: '%kernel.root_dir%/../src/Man/Bundle/ManuiaBundle/Resources/public/images/selfi-slider'
     manuia_path_web_bundle: '/bundles/manmanuia/'
     manuia_path_web_images_headshots: '%manuia_path_web_bundle%images/selfi-slider/'
+
+    ####################################### Flicker parameters
+    service.photography.flickr.api.key: 75df2df60ec2fb5be3d3829ee6de2353
+    service.photography.flickr.secret: 85e6a0c772c98fca
+    service.photography.flickr.oauth.token: 72157645580219698-942c347f07d26143
+    service.photography.flickr.oauth.token_secret: b40712a5a8ba34b4
+    service.photography.manager.photosets.unset:
+        - 72157645505258286
+        - 72157642901318125

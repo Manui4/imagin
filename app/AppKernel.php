@@ -19,6 +19,7 @@ class AppKernel extends Kernel
 
             new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            new Rezzza\FlickrBundle\RezzzaFlickrBundle(),
 
             // MY OWN BUNDLE
             new Man\Bundle\ManuiaBundle\ManManuiaBundle(),

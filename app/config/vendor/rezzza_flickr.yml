@@ -1,0 +1,3 @@
+rezzza_flickr:
+    key: "%service.photography.flickr.api.key%"
+    secret: "%service.photography.flickr.secret%"

@@ -1,3 +1,12 @@
+/**
+ * Manuia manuia-app.js
+ * @version 1.0.0
+ * @author Michael Antoine
+ * 
+ * @todo all ;-)
+ */
+
+
 
 /**
  * Resize margin-top of content depending of header

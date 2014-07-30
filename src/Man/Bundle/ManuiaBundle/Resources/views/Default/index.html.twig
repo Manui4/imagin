@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-{% set section_url_bg_whoami = asset("/bundles/manmanuia/images/parallax/bg_slide-1.jpg") %}
+{% set section_url_bg_whoami = asset("/bundles/manmanuia/images/parallax/bg_slide-12.jpg") %}
 {% set section_url_bg_twitter = asset("/bundles/manmanuia/images/parallax/bg_slide-2.jpg") %}
 {% set section_url_bg_projects = asset("/bundles/manmanuia/images/parallax/bg_slide-3.jpg") %}
 {% set section_url_bg_linkedin = asset("/bundles/manmanuia/images/parallax/bg_slide-4.jpg") %}
@@ -23,7 +23,7 @@
 <div id="skrollr-body" class="parallax-sections">
 
     <section id="hash-whoiam" class="parallax-section" >
-        <div class="parallax-section-bg" style="background-image:url({{ section_url_bg_whoami }});"
+        <div class="parallax-section-bg" style="background-image:url({{ section_url_bg_whoami }}); top:-100px; background-position: center -250px;"
             data-start="transform:translate3d(0px, 0%, 0px);"
             data-end="transform:translate3d(0px, 200%, 0px);"
             data-anchor-target="#hash-whoiam">

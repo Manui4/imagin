@@ -11,22 +11,20 @@
 
 {% endblock %}
 
-{% block content %}
-        {% for flashMessage in app.session.flashbag.get('admin') %}
-        <div class="l-container">
-            <div class="row">
-                <div class="col-s-12">
-                    <div class="flash-message">
-                        <em>Admin</em>: {{ flashMessage }}
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-
-
-        {% block admin_content %}{% endblock %}
-
-
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset("/bundles/manphotography/js/owl/assets/owl.carousel.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset("/bundles/manphotography/css/animate.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset("/bundles/manphotography/css/styles.css") }}">
 {% endblock %}
 
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts
+        '@ManPhotographyBundle/Resources/public/js/owl/owl.carousel.min.js'
+        '@ManPhotographyBundle/Resources/public/js/masonry/jquery.masonry.min.js'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script src="/bundles/manphotography/js/photography-app.js"></script>
+{% endblock %}

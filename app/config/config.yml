@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: vendor/hwi.yml }
+    - { resource: vendor/rezzza_flickr.yml }
 
 framework:
     #esi:             ~

@@ -1,7 +1,23 @@
 parameters:
-#    man_photography.example.class: Man\Bundle\PhotographyBundle\Example
+    man_photography.service.flickr.class: Man\Bundle\PhotographyBundle\Services\Flickr
+    man_photography.service.flickr.api.key: "%service.photography.flickr.api.key%"
+    man_photography.service.flickr.secret: "%service.photography.flickr.secret%"
+    man_photography.service.flickr.oauth.token: "%service.photography.flickr.oauth.token%"
+    man_photography.service.flickr.oauth.token_secret: "%service.photography.flickr.oauth.token_secret%"
+    man_photography.service.manager.class: Man\Bundle\PhotographyBundle\Services\Manager
+    man_photography.service.manager.photosets.unset: "%service.photography.manager.photosets.unset%"
 
 services:
-#    man_photography.example:
-#        class: %man_photography.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    man_photography.service.flickr:
+        class: "%man_photography.service.flickr.class%"
+        arguments: ["@service_container"]
+        calls:
+             - [setOAuthToken, ["%man_photography.service.flickr.oauth.token%"]]
+             - [setOAuthTokenSecret, ["%man_photography.service.flickr.oauth.token_secret%"]]
+
+    man_photography.service.manager:
+        class: "%man_photography.service.manager.class%"
+        arguments: ["@service_container"]
+        calls:
+            - [setPhotosetsIdToUnset, ["%man_photography.service.manager.photosets.unset%"]]
+

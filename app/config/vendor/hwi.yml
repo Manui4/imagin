@@ -26,5 +26,5 @@ hwi_oauth:
             scope: r_basicprofile
         flickr:
             type: flickr
-            client_id: 122ae579f4328a4288978d1fa922be74
-            client_secret: dc6a575702de21cb
+            client_id: "%service.photography.flickr.api.key%"
+            client_secret: "%service.photography.flickr.secret%"
