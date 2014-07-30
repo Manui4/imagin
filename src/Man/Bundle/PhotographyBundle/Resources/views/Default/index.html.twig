@@ -34,8 +34,8 @@
                             {% set sourceLarge = sizeLarge['@attributes']['source'] %}
                             <div class="flickr-item {{ hashClass }}">
                                 <a class="thumb" href="#{{ hashClass }}"><img src="{{ sourceThumb }}" alt=""></a>
-                                <div class="info">
-                                    <img src="{{ sourceLarge }}" alt="">
+                                <div class="info" style="position: relative;">
+                                    <img src="{{ sourceLarge }}" alt="" style="width: 100%;" >
                                     <h3>{{ photo['title'] }} | <em>{{ photo['dates']['@attributes']['taken'] | date('d/m/Y') }}</em></h3>
                                     <pre>{{ photo['description'] | flickr_desc }}</pre>
                                 </div>
