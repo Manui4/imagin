@@ -23,7 +23,7 @@ $(document).ready(function() {
         $portfolio.find(".hidden").fadeIn();
         $portfolio.find("."+cls).show(500);
         $portfolio.find(".flickr-item:not(."+cls+")").hide(500);
-        location.hash = cls;
+        hash("#"+cls);
         e.preventDefault();
     });
     
@@ -33,12 +33,20 @@ $(document).ready(function() {
         $portfolio.find(".unfold").removeClass('unfold');
         $this.parent().addClass('unfold');
         $portfolio.masonry('reload');
-        location.hash = cls;
+        hash("#"+cls);
         e.preventDefault();
     });
     
     if(location.hash != ""){
-        $('a[href=#'+ location.hash +']').trigger('click');
+        $('.block-flickr h2 a[href='+ location.hash +']').trigger('click');
     };
 
 });
+
+hash = function(h) {
+    if (history.pushState) {
+        history.pushState(null, null, h);
+    } else {
+        location.hash = h;
+    }
+}
