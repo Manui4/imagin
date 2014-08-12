@@ -8,180 +8,127 @@ input, textarea, button, select {
     @include border-radius(0);
 }
 
-.wrapper-select, 
-.wrapper-checkbox,
-.wrapper-textarea, 
-.wrapper-input {margin: 0 0 1.5em 0; }
+@mixin formUi($formcolor) {
 
-%input {
-    display: block;
-    width: 100%;
-    padding: 1em 1.5em;
-    line-height: 1.5em;
-    height: 3em;
-    color:#737373;
-    border: 2px solid #d9d9d9;
-    @include transition-duration;
-    &:focus{ border-color:$color-3; }
-}
-
-
-
-.wrapper-input {
-    .form-input {
-        @extend %input;
-    }
-}
-
-.wrapper-textarea {
-    .form-textarea {
-        @extend %input;
-        height: 9em;
-        
-    }
-}
-
-.wrapper-checkbox {
-    .form-checkbox[type="checkbox"] {
-        border: 0 none;
-        clip: rect(0px, 0px, 0px, 0px);
-        height: 0;
-        margin: 0;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
+    .wrapper-select, 
+    .wrapper-checkbox,
+    .wrapper-textarea, 
+    .wrapper-input {margin: 0 0 1.5em 0; }
     
-    label.checkbox {
-        background-image: url("/bundles/manmanuia/images/checkbox.png");
-        width: 20px;
-        height: 20px;
+    %input {
         display: block;
-        cursor: pointer;
-    }
-    
-    input.form-checkbox[type="checkbox"]+label.checkbox.required:after {
-        content: '';
-    }
-    
-    input.form-checkbox[type="checkbox"]:checked+label.checkbox {
-        background-position: 0 -20px;
-    }
-    
-    input.form-checkbox[type="checkbox"]+label.checkbox {
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        display: inline-block;
+        width: 100%;
+        padding: 0.5em 1.5em;
         line-height: 1.5em;
-        padding: 0 1.5em;
-        vertical-align: middle;
-    }
-}
-
-/*
-
-.switch{
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: -20px;
-    width: 79px;
-    height: 28px;
-    overflow: hidden;
-    @include border-radius(28px);
-    -webkit-mask:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAcCAAAAAAFRb0DAAAAyklEQVRIx62WvQ2DMBhEr3JFOiQGwBsQN5BsBUwDa1hJFTyFqZgE+0tBEKFMfK9x9+TfO0M+RNc3hcLvqKLpXNw12IYwaqSgx/DtWwxSMcvhe+VIJ3e776nAQD0233wBh2wWgawGLMwqkBE8BkHURJ+OmMBkQk/19bhRfXcUVF8BRfUpuo+9XvZ5dOT7wr7P3PcWIAM3D2S90nTVKhDxGStP/Zb3lpT3du8jy5hhZo++9FX63vlzn5dJtvLc5yISXFv/+d+oWxd2zRuKUqiKGXpVaQAAAABJRU5ErkJggg==") left top;
-    .switch-container{
-        display: inline-block;
-        width: 130px;
-        height: 28px;
-        margin-left: -51px;
+        height: 3em;
+        color:$color-grey;
+        border: none;
+        border-top: 1px solid $color-grey;
+        
         @include transition-duration;
-    }
-    .on, .off{
-        display: inline-block;
-        float: left;
-        background-color: #27ae60;
-        width: 50%;
-        height: 20px;
-        padding: 4px 0;
-        text-align: center;
-        color: #FFF;
-        font-size: 15px;
-        position: relative;
-        z-index: 1;
-    }
-    .on{
-        @include border-left-radius(28px);
-    }
-    .off{
-        background-color: #e74c3c;
-        @include border-right-radius(28px);
-    }
-    .mid{
-        display: inline-block;
-        float: left;
-        width: 20px; height: 20px;
-        @include border-radius(28px);
-        background-color: #fff;
-        margin-left: -14px;
-        margin-right: -14px;
-        position: relative;
-        z-index: 2;
-        border: 4px solid #e74c3c;
-        @include transition-duration;
+        &:focus{
+            border-top: 5px solid _color($formcolor); 
+        }
+        overflow: hidden;
+        outline: none;
+        @include box-shadow(none);
     }
     
-    input {
-        display: none;
-    }
-    input:checked + .switch-container{
-        margin: 0;
-        .mid{
-            border-color: #27ae60;
+    .wrapper-input {
+        .form-input {
+            @extend %input;
         }
     }
-}
-*/
-
-
-.wrapper-select {
-    .form-select {
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        line-height: 1.5em;
-        color: #737373;
-        .form-control {
-            background-color: #fff;
-            background-image: none;
-            padding: 10px 0 10px 30px;
+    
+    .wrapper-textarea {
+        .form-textarea {
+            @extend %input;
+            height: 9em;
+        }
+    }
+    
+    .wrapper-checkbox {
+        .form-checkbox[type="checkbox"] {
+            border: 0 none;
+            clip: rect(0px, 0px, 0px, 0px);
+            height: 0;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        
+        label.checkbox {
+            background-image: url("/bundles/manmanuia/images/checkbox.png");
             width: 100%;
-            border: 2px solid #d9d9d9;
-            @include transition-duration;
-            &:focus{ border-color:$color-3; }
-            option {
+            height: 20px;
+            display: block;
+            cursor: pointer;
+        }
+        
+        input.form-checkbox[type="checkbox"]+label.checkbox.required:after {
+            content: '';
+        }
+        
+        input.form-checkbox[type="checkbox"]:checked+label.checkbox {
+            background-position: 0 -20px;
+        }
+        
+        input.form-checkbox[type="checkbox"]+label.checkbox {
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            display: inline-block;
+            line-height: 1.5em;
+            padding: 0 1.5em;
+            vertical-align: middle;
+        }
+    }
+    
+    .wrapper-select {
+        .form-select {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            line-height: 1.5em;
+            color: $color-grey;
+            .form-control {
+                background-color: #fff;
+                background-image: none;
+                padding: 10px 0 10px 30px;
+                width: 100%;
+                border: 2px solid #d9d9d9;
+                @include transition-duration;
+                &:focus{ border-color:_color($formcolor); }
+                option {
+                    line-height: 1.5em;
+                    font-family: "Open Sans", sans-serif;
+                    /* color:#737373; */
+                    &:focus{ border-color:_color($formcolor);}
+                }
+            }
+            &:after {
+                background: none repeat scroll 0 0 #ffffff;
+                border-bottom: 2px solid #d9d9d9;
+                border-right: 2px solid #d9d9d9;
+                border-left: 2px dotted #d9d9d9;
+                border-top: 2px solid #d9d9d9; 
+                /* color : #737373; */
+                content: "▼";
+                font-size: 1.5em;
                 line-height: 1.5em;
-                font-family: "Open Sans", sans-serif;
-                color:#737373;
-                &:focus{ border-color:$color-3; }
+                padding: 5px 10px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                top: 0;
+                /* color: #737373; */
             }
         }
-        &:after {
-            background: none repeat scroll 0 0 #ffffff;
-            border-bottom: 2px solid #d9d9d9;
-            border-right: 2px solid #d9d9d9;
-            border-left: 2px dotted #d9d9d9;
-            border-top: 2px solid #d9d9d9; color : #737373;
-            content: "▼";
-            font-size: 1.5em;
-            line-height: 1.5em;
-            padding: 5px 10px;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            top: 0;
-            color: #737373;
-        }
     }
+}
+
+@each $key, $value in $colors {
+    .#{$key} { @include formUi(#{$value});}
 }

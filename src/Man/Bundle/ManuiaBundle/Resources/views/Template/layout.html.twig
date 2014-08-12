@@ -70,10 +70,19 @@
                 '@ManManuiaBundle/Resources/public/js/vendor/jquery.easing.js'
                 '@ManManuiaBundle/Resources/public/js/vendor/jquery.velocity.min.js'
                 '@ManManuiaBundle/Resources/public/js/vendor/velocity.ui.js'
+                '@ManManuiaBundle/Resources/public/js/vendor/jquery.uniform.js'
+                '@ManManuiaBundle/Resources/public/js/vendor/jquery.chosen.js'
                 '@ManManuiaBundle/Resources/public/js/outside/jquery.ba-outside-events.min.js'  %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
             <script src="/bundles/manmanuia/js/manuia-app.js"></script>
+            <script type="text/javascript">
+                (function($){
+                    $('input[type=radio],input[type=checkbox],select.uniform').uniform();
+                    $("select.chosen").chosen();
+                    $('input.checkboxiOs').parents('.checker').addClass('ios');
+                })(jQuery);
+            </script>
         {% endblock %}
     </body>
 </html>

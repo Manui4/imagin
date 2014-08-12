@@ -1,0 +1,252 @@
+@import "compass";
+
+*:focus { outline: none; }
+
+@mixin formUI($formcolor) {
+    /*    Formulaire classique
+        ========================================================================== */
+    input,
+    select,
+    textarea,
+    .chzn-container a,
+    .selector span{
+        display:inline-block;
+        width: 100%;
+        height: 38px;
+        margin-bottom: 20px;
+        background-color: #FFF;
+        border:solid 1px #e7e7e7;
+        color:#a6a6a6;
+        padding-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        @include box-shadow(inset 0px 1px 0px #c9c9c9);
+        @include border-radius(3px);
+    }
+    textarea{
+        width: auto; height: auto; padding: 10px;
+    }
+    input::-webkit-input-placeholder{
+        @include transition-duration;
+    }
+    input:focus::-webkit-input-placeholder{
+        @include opacity(0.4);
+    }
+    label{
+        display: block;
+        font-size: 13px;
+        vertical-align: middle;
+        margin-bottom: 10px;
+    }
+
+    /*    Submit
+        ========================================================================== */
+    .gradient{
+        border:solid 1px darken(_color($formcolor),10%);
+        @include background-image( linear-gradient(top, _color($formcolor), lighten(_color($formcolor),5%)) );
+        @include box-shadow(inset 0px 0px 2px lighten(_color($formcolor),30%));
+        @include text-shadow(0px 1px 1px darken(_color($formcolor),20%));
+        &:hover{
+            @include background-image( linear-gradient(top, lighten(_color($formcolor),5), _color($formcolor)) )
+        }
+    }
+    .button,input[type=submit]{
+        font-weight: bold;
+        color:#FFF;
+        cursor: pointer;
+        width: auto;
+        padding: 0 10px;
+        @extend .gradient;
+    }
+
+    /*    Radio
+        ========================================================================== */
+    .radio{
+        display:block;
+        float:left;
+        margin-right: 10px;
+        width: 8px; height: 8px;
+        padding: 4px;
+        background-color: #FFF;
+        border:solid 1px #dadada;
+        cursor: pointer;
+        @include box-shadow(inset 0px -1px 3px #f0f0f0);
+        @include border-radius(16px);
+        span{
+            display:block;
+            width: 8px; height: 8px;
+            background-color: #e5e5e5;
+            @include box-shadow(inset 0px 1px 1px #b1b1b1);
+            @include border-radius(8px);
+            @include transition-duration;
+            &.checked{
+                background-color: _color($formcolor);
+                @include box-shadow(inset 0px 1px 1px darken(_color($formcolor),20));
+            }
+        }
+    }
+
+    /*    Checkbox
+        ========================================================================== */
+    .checker{
+        display:inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 16px; height: 16px;
+        background-color: lighten(_color($formcolor),30);
+        cursor: pointer;
+        position:relative;
+        border:none;
+        @include box-shadow(inset 0px 1px 1px lighten(_color($formcolor),20));
+        @include border-radius(2px);
+        span.checked:after{
+            display:block;
+            position:absolute;
+            top:0; left:0; right:0; bottom:0;
+            font-family: "FontAwesome";
+            content: "\f00c";
+            font-size: 12px; line-height: 22px; text-align:center;
+            color:darken(_color($formcolor),10);
+            @include transition-duration;
+        }
+    }
+    .checker.ios{
+        width: 66px; height: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px; font-weight: bold;
+        cursor: default;
+        &:before{
+            z-index: 1;
+            content:'OFF'; display:block;
+            font-size: 12px;
+            position:absolute;
+            right:0; top:0;
+            width: 33px; height: 25px; line-height: 25px;
+            text-align:center; color:lighten(_color($formcolor),10);
+            @include text-shadow(0px 1px 0px lighten(_color($formcolor),20));
+        }
+        &:after{
+            z-index: 1;
+            content:'ON'; display:block;
+            font-size: 12px;
+            position:absolute;
+            left:0; top:0;
+            width: 33px; height: 25px; line-height: 25px;
+            text-align:center; color:darken(_color($formcolor),10);
+        }
+        span{
+            z-index: 10;
+            display:block; position:absolute;
+            width: 31px; height: 29px;
+            top:-3px; left:0px;
+            cursor: pointer;
+            @extend .gradient;
+            @include border-radius(3px);
+            @include transition-duration;
+            &.checked{
+                left:35px;
+            }
+        }
+        span:after{ display: none; }
+    }
+
+    /*    Formulaire de recherche
+        ========================================================================== */
+    .searchform{
+        width: 166px;
+        height: 40px;
+        position:relative;
+        margin-bottom: 20px;
+        input[type=submit]{
+            padding: 0;
+            font-family: "FontAwesome";
+            position:absolute;
+            top:1px; right:-2px;
+            width: 38px; height: 41px;
+            background-color: _color($formcolor);
+            color:#FFF;
+            cursor: pointer;
+            line-height: 41px;
+            text-align:center; text-indent: 0; font-size: 17px;
+            @extend .gradient;
+        }
+    }
+
+    /*    Select Chosen
+        ========================================================================== */
+    select{ padding-left: 0; }
+    .chzn-container,.selector{
+        margin-bottom: 20px;
+        position:relative;
+        select{
+            position:absolute; top:0;left:0;right:0;bottom:0;
+        }
+    }
+    .chzn-container a, .selector span{
+        padding: 0; margin: 0;
+        line-height: 38px;
+        text-decoration: none;
+        position:relative;
+        cursor: pointer;
+        margin-bottom: 0;
+        text-indent: 10px;
+        @include background-image( linear-gradient(top,#f9f9f9,#f6f6f6) );
+        &:after{
+            content: "\f0d7";
+            font-family: "FontAwesome";
+            position:absolute;
+            top:1px; right:0; bottom:0;
+            width: 30px;
+            color:#a5a5a5;
+            line-height: 41px;
+            text-align:center; text-indent: 0; font-size: 17px; font-weight: bold;
+            border-left:solid 1px #e2e2e2;
+            @include box-shadow(inset 1px 0px 0px #FFF);
+        }
+        &.chzn-single-with-drop:after{
+            content: "\f0d8";
+        }
+    }
+    .chzn-drop{
+        position:absolute;
+        z-index: 20;
+        top:39px; left:0px;
+        background:#ffffff;
+        border:solid 1px #e7e7e7;
+        @include border-bottom-radius(3px);
+        input{
+            height: 36px;
+            position:relative;
+            text-indent: 10px;
+            border:none;
+            margin: 0; padding: 0;
+            @include box-shadow(none);
+            &:after{
+                position:absolute;
+                content: "\f002";
+                font-family: "FontAwesome";
+                top:0; right:0; bottom:0;
+                line-height: 40px; width: 30px; text-align:left;
+            }
+        }
+        ul li{
+            display: none;
+            list-style:none;
+            text-indent: 15px;
+            font-size:12px;
+            height: 36px; line-height: 36px;
+            border-top:solid 1px #e7e7e7;
+            cursor: pointer;
+            &:hover{
+                background-color: lighten(_color(_color($formcolor)),30%);
+            }
+        }
+        .active-result{
+            display:block;
+        }
+    }
+}
+
+@each $key, $value in $colors {
+    .#{$key} { @include formUI(#{$value});}
+}

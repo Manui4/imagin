@@ -3,7 +3,7 @@
     {% spaceless %}
     <div class="wrapper-select">
         <div class="form-select" style="{{ style }}">
-           {{ form_widget(item, { 'attr' : { 'class' : 'uniform' } }) }}
+           {{ form_widget(item, { 'attr' : { 'class' : 'form-control' } }) }}
         </div>
     </div>
     {% endspaceless %}
@@ -18,7 +18,7 @@
     {% endspaceless %}
 {% endmacro %}
 
-{% macro form_textarea(item, class, showLabel=true) %}
+{% macro form_textarea(item, class, showLabel=false) %}
     {% spaceless %}
     <div class="wrapper-textarea">
         {% if showLabel %}{{ form_label(item) }}{% endif %}
@@ -34,7 +34,7 @@
     {% endspaceless %}
 {% endmacro %}
 
-{% macro form_input(item, class, showLabel=true) %}
+{% macro form_input(item, class, showLabel=false) %}
     {% spaceless %}
     <div class="wrapper-input">
         {% if showLabel %}{{ form_label(item) }}{% endif %}

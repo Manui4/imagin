@@ -1,6 +1,35 @@
 /* ==|====================
    Module/Button
    ======================= */
+ /*    Submit
+        ========================================================================== */
+@mixin formBtn($formcolor) {
+    .gradient{
+        border:solid 1px darken(_color($formcolor),10%);
+        @include background-image( linear-gradient(top, _color($formcolor), lighten(_color($formcolor),5%)) );
+        @include box-shadow(inset 0px 0px 2px lighten(_color($formcolor),30%));
+        @include text-shadow(0px 1px 1px darken(_color($formcolor),20%));
+        &:hover{
+            @include background-image( linear-gradient(top, lighten(_color($formcolor),5), _color($formcolor)) )
+        }
+    }
+    button,input[type=submit]{
+        font-weight: bold;
+        color:#FFF;
+        cursor: pointer;
+        width: auto;
+        padding: 0 10px;
+        outline: none;
+        @extend .gradient;
+    }
+}
+
+@each $key, $value in $colors {
+    .#{$key} { @include formBtn(#{$value});}
+}
+
+/*
+
 .btn {
     display: inline-block;
     padding: 0 0.5em;
@@ -52,3 +81,4 @@
 .btn-mb {
     margin-bottom: 1.5em;
 }
+*/

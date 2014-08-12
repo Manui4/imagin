@@ -20,7 +20,7 @@ class PostType extends AbstractType
             ))
             ->add('slug', 'text', array(
                 'required' => true,
-                'label' => 'slug'
+                'label' => 'Slug'
             ))
             ->add('description', 'textarea', array(
                 'required' => false,
@@ -28,11 +28,11 @@ class PostType extends AbstractType
             ))
             ->add('published', 'checkbox', array(
                 'required' => false,
-                'label' => 'Published'
+                'label' => 'Mettre en ligne ?'
             ))
             ->add('content', 'textarea', array(
                 'required' => false,
-                'label' => 'Content',
+                'label' => 'Contenu',
             ))
             ->add('save', 'submit', array('label' => 'Save'))
         ;

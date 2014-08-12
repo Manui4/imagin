@@ -8,13 +8,16 @@
 
 {% block body_class %}blog-post{% endblock body_class %}
 
-{% block content %}
+{% block blog_content %}
     <section class="section">
         <div class="l-container">
             <div class="block-article">
-	            <article class="article">
-	                {{ post_content|markdown }}
-	            </article>
+                <div class="description">
+                    {{ post.description|markdown }}
+                </div>
+                <article class="article">
+                    {{ post_content|markdown }}
+                </article>
             </div>
             {% if config('blog.comment.enabled') %}
             <div class="block-comments">
@@ -24,4 +27,4 @@
         </div>
     </section>
 
-{% endblock content %}
+{% endblock %}
