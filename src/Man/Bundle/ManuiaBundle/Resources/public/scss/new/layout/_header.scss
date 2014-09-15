@@ -1,0 +1,266 @@
+/* =======================
+   Layout/Header
+   ======================= */
+
+@mixin colorize-header-top() {
+    @each $key, $value in $colors {
+        &.#{$key}:after, .toggle.#{$key}:before {
+            background-color: #{$value};
+        }
+    }
+}
+
+@mixin colorize-header-menu-item() {
+    @each $key, $value in $colors {
+        
+        &.#{$key} .menu-item.is-active span {
+            color: #{$value};
+        }
+        &.#{$key} .menu-item:hover {
+            background-color: #{$value};
+            &.is-active span {
+                color: $color-text-base;
+            }
+        }
+    }
+}
+
+.l-header {
+    display: block;
+    &.fixed {
+        position: fixed;
+        top:0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1;
+    }
+/* =======================
+   header TOP
+   ======================= */
+    .header-top {
+        color: $color-6;
+        font-size: 0.8em;
+        display: block;
+        background-color: $color-bg-header-top;
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: $color-6;
+            margin-top: -1px;
+        }
+        span {
+            margin: 0 1.5em;
+            text-align: center;
+        }
+        .wrapper-is-active {
+            display: block;
+        }
+        @media only screen and (max-width : $width-device-m ) {
+            span {
+                display: block;
+                height: 24px;
+            }
+        }
+        .toggle {
+            cursor: pointer;
+            position: relative;
+            display: block;
+            width: 100%;
+            background-position: center 5px;
+            background-repeat: no-repeat;
+            background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="11.006,3.491 5.504,9.228 0,3.544 1.523,2 5.504,5.989 9.491,2 "/></svg>');
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: $color-0;
+                margin-top: -1px;
+            }
+        }
+        @include colorize-header-top();
+        .toggle.visible {
+            background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve"><polygon fill="%238d9095" points="0,7.736 5.501,2 11.006,7.684 9.482,9.228 5.501,5.239 1.515,9.228 "/></svg>');
+        }
+    }
+
+/* =======================
+   header MAIN
+   ======================= */
+    .header-main {
+        position: relative;
+        display: block;
+        .header-wrapper {
+            position : relative;
+            display: block;
+            overflow: visible;
+            width: 100%;
+            height: 100%;
+            &:before, &:after{
+                content:'';
+                background-color: $color-bg-section;
+                position: absolute;
+                width: 100%;
+                top: 0; left: 0; right: 0; bottom: 0;
+                z-index: -1;
+            }
+        }
+
+        /* =======================
+           header main/LOGO
+           ======================= */
+        .header-logo {
+            padding-left: 1.5em;
+            height: 9em;
+            display: block;
+            img {
+                border: 2px solid rgba(0, 0, 0, 0);
+                @include transition-duration;
+                height: 9em;
+                width: 9em;
+            }
+            &:hover{
+                img{ @include opacity(0.9); }
+            }
+        }
+
+        @media only screen and (max-width : $width-device-m ) {
+            .header-logo {
+                height: 4.5em;
+                img {
+                    border: 1px solid rgba(0, 0, 0, 0);
+                    height: 4.5em;
+                    width: 4.5em;
+                }
+            }
+        }
+
+        /* =======================
+           header main/MENU
+           ======================= */
+        .header-toggle {
+            float: right;
+        }
+        .header-menu {
+            float: right;
+            .share, .more {
+                display: block;
+                width: 100%;
+                min-height: 3em;
+            }
+            .menu-item {
+                margin-top: 0.5em;
+                margin-left: 0.5em;
+                padding:0 1.5em;
+                float: left;
+                display: block;
+                @include border-radius(1.5em);
+                background-color: $color-1;
+                span {
+                    color: $color-6;
+                }
+                &:hover {
+                    @include transition-duration;
+                    background-color: $color-0;
+                }
+                &:first-child:before{ display: none; }
+                &.is-active span {
+                    @include transition-duration;
+                    color: $color-0;
+                }
+                &:hover span {
+                    @include transition-duration;
+                    color: $color-1;
+                }
+            }
+
+            @include colorize-header-menu-item();
+
+            @media only screen and (max-width : $width-device-m ) {
+                padding: 0;
+                .menu-item {
+                    background-color: $color-bg-header-menu;
+                    margin: 0;
+                    padding: 0.7em 1.5em;
+                    height: 3em;
+                    float: none;
+                    @include border-radius(0);
+                }
+
+                .sub-item {
+                    padding-left: 2.5em;
+                    &:before {content:'-'; margin-right: 0.5em;}
+                }
+            }
+        }
+
+        .menu-dropdown {
+            &.visible {
+                position: relative;
+                display: block;
+                padding-top: 1.5em;
+                &:before {
+                    z-index: -2;
+                    content:'';
+                    position: absolute;
+                    top:-3em;
+                    bottom: 0;
+                    right: 0; left: 0;
+                    display:block;
+                    background-color: $color-bg-header-menu;
+                }
+            }
+        }
+
+        .header-toggle {
+            padding: 0;
+            .navbar-toggle {
+                background-image: none;
+                border: 2px solid $color-navbar-toggle;
+                @include  border-radius(4px);
+                float: right;
+                padding: 6px 5px;
+                position: relative;
+                outline:none;
+                text-transform: none;
+                height: 1.5em;
+
+                @include appearance(none);
+                @include border-radius(5px);
+
+                &:focus {
+                    @include transition-duration;
+                    background-color: $color-bg-navbar-toggle-focus;
+                }
+
+                .icon-bar {
+                    background-color: $color-navbar-toggle;
+                    display: block;
+                    width: 22px;
+                    height: 2px;
+                    position: relative;
+                    top: -6px;
+                    margin: 0 auto;
+                    @include  border-radius(1px);
+                    &:before, &:after {
+                        content:'';
+                        background-color: $color-navbar-toggle;
+                        display: block;
+                        position: relative;
+                        top: 6px;
+                        width: 22px;
+                        height: 2px;
+                        @include  border-radius(1px);
+                    }
+                    &:after {
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

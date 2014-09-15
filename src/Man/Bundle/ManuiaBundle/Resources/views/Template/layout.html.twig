@@ -4,7 +4,7 @@
     {% block head_meta %}
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, end-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="robots" content="index,follow" />
@@ -75,7 +75,7 @@
                 '@ManManuiaBundle/Resources/public/js/outside/jquery.ba-outside-events.min.js'  %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
-            <script src="/bundles/manmanuia/js/manuia-app.js"></script>
+            <script src="/bundles/manmanuia/js/manuia/manuia-app.js"></script>
             <script type="text/javascript">
                 (function($){
                     $('input[type=radio],input[type=checkbox],select.uniform').uniform();

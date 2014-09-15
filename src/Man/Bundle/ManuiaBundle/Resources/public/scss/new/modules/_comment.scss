@@ -1,0 +1,67 @@
+/* ==|====================
+   Module/Post
+   ======================= */
+$color-main: rgba($color-7, 0.2);
+$border-radius: 10px;
+$img-size: 6em;
+
+.block-comments {
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1px; right: 0; left: 0; bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $color-main;
+    }
+    
+    .comments {
+        .comment {
+            @include border-radius($border-radius);
+            background-color: $color-main;
+            margin-bottom: 1.5em;
+            img {
+                display: block;
+                height: $img-size;
+                width: $img-size;
+                margin: 0;
+                padding: 0;
+            }
+            &:last-child {
+            margin-bottom: 0;
+            }
+            .comment-id {
+                padding-left: 4em;
+            }
+            .comment-author {
+                
+            }
+            .comment-avatar {
+                position: absolute;
+                left: -1.5em;top:-1em; 
+                overflow: hidden;
+                border: 3px solid darken($color-main, 30%);
+                width: $img-size;
+                height: $img-size;
+                @include border-radius($img-size);
+                
+            }
+            .comment-content {
+                padding: 1.5em;
+                background-color: lighten($color-main, 20%);
+            }
+        }
+    }
+    
+    .new {
+        padding: 1.5em;
+        @include border-radius($border-radius);
+        background-color: $color-main;
+        @media only screen and (min-width : $width-device-m ) {
+            
+        }
+    }
+}
+

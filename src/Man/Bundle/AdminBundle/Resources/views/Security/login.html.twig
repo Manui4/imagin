@@ -1,26 +1,26 @@
 {% extends 'ManAdminBundle::layout.html.twig' %}
 
-{% block title %}{{ 'Login'|trans }}{% endblock %}
+{% block title %}{{ 'Connexion'|trans }}{% endblock %}
 
 {% block admin_content %}
     <section class="section">
         <div class="l-container">
             <div class="col-s-12">
                 {% if error %}
-                    <div class="alert alert-warning">{{ error.message }}</div>
+                    <div class="alert alert-warning">{{ error.message|trans }}</div>
                 {% endif %}
             </div>
             <div class="col-s-12 ">
                 <form action="{{ path('admin_login_check') }}" method="post" class="form">
                     <div class="wrapper-input">
-                        <input type="text" class="form-input" placeholder="Username" id="username" name="_username" value="{{ last_username }}" />
+                        <input type="text" class="form-input" placeholder="Nom utilisateur" id="username" name="_username" value="{{ last_username }}" />
                     </div>
                     <div class="wrapper-input">
-                        <input type="password"  class="form-input" placeholder="Password" id="password" name="_password" />
+                        <input type="password"  class="form-input" placeholder="Mot de passe" id="password" name="_password" />
                     </div>
 
                     <p>
-                        <button type="submit" class="btn btn-large">{{ 'Login'|trans }}</button>
+                        <button type="submit" class="btn btn-large">{{ 'Se connecter'|trans }}</button>
                     </p>
                 </form>
             </div>

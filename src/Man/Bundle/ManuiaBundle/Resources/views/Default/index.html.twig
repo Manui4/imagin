@@ -19,12 +19,11 @@
 </div>
 
 <div id="skrollr-body" class="parallax-sections">
-
+{# {{ render(controller('ManManuiaBundle:Block:selfiSlider')) }}#}
     <section id="hash-whoiam" class="parallax-section whoami" >
         <div class="parallax-section-bg" style="background-image:url({{ section_url_bg_whoami }});"
             data-start="transform:translate3d(0px, 0%, 0px);"
             data-end="transform:translate3d(0px, -50%, 0px);"
-
             data-anchor-target="#hash-whoiam">
         </div>
         {{ include('ManManuiaBundle:Default:sections/_whoami.html.twig') }}
@@ -77,6 +76,6 @@
     %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
-    <script src="/bundles/manmanuia/js/selfi-slider.js"></script>
-    <script src="/bundles/manmanuia/js/parallax.js"></script>
+    <script src="/bundles/manmanuia/js/manuia/selfi-slider.js"></script>
+    <script src="/bundles/manmanuia/js/manuia/parallax.js"></script>
 {% endblock %}

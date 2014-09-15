@@ -1,0 +1,60 @@
+/* ==|====================
+   Module/HEADSHOTS
+   ======================= */
+
+.block-selfi-slider {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    display: block;
+
+    /* @include border-radius(125px);
+    overflow: hidden; */
+    
+    .list-selfi-top, 
+    .list-selfi-bottom {
+        position: absolute;
+        top: 0px;
+        height: 63px;
+        width: 125px;
+        overflow: hidden;
+        .list-items {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            .item {
+                position: absolute;
+                display: block;
+            }
+        }
+    }
+    
+    .list-selfi-top {
+        @include border-radius(125px 125px 0px 0px);
+    }
+
+    .list-selfi-bottom {
+        @include border-radius( 0px 0px 125px 125px);
+        top: 63px;
+        .list-items {
+            top: -63px;
+        }
+    }
+}
+
+footer.footer .tweet:before {
+    color: #454240;
+    content: "\"";
+    display: block;
+    font-family: "Rokkitt",sans-serif;
+    font-size: 50px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+}
+footer.footer .tweet {
+    border-bottom: 1px dashed #454240;
+    margin-bottom: 10px;
+    padding: 0 0 10px 30px;
+    position: relative;
+}

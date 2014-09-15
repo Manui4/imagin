@@ -1,0 +1,37 @@
+/* ==|====================
+   Layout/Section
+   ======================= */
+
+.section {
+    color: $color-text-section;
+    position: relative;
+    display: block;
+    hr {
+        border: 0;
+        height: 0;
+    }
+
+    h1 {
+        
+        line-height: 3em;
+        vertical-align: middle;
+    }
+    h2 { }
+    h3 { }
+    h4 { }
+    h5 { }
+    h6 { }
+}
+
+@media ( max-width : $width-device-s) {
+    .section {
+         margin: 3em 0;
+    }
+}
+
+@media ( max-width : $width-device-m) {
+    .section {
+        /* margin-top: 1.5em;
+        margin-bottom: 3.5em; */
+    }
+}

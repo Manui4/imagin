@@ -1,0 +1,36 @@
+/* ===========================
+   Color
+   =========================== */
+
+.info {
+    color: $color-0!important;
+}
+
+.success {
+    color: $color-2!important;
+}
+
+.warning {
+    color: $color-3!important;
+}
+
+.error, .danger {
+    color: $color-9!important;
+}
+
+
+.label-info {
+    color: $color-0!important;
+}
+
+.label-success {
+    color: $color-2!important;
+}
+
+.label-warning {
+    color: $color-3!important;
+}
+
+.label-error, .label-danger {
+    color: $color-9!important;
+}

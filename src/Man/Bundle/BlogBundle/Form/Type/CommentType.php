@@ -14,7 +14,7 @@ class CommentType extends AbstractType
 
         $builder->add('username', null, array(
             'required' => true,
-            'label' => 'Username'
+            'label' => 'Nom'
         ))
             ->add('email', null, array(
             'required' => true,
@@ -22,15 +22,15 @@ class CommentType extends AbstractType
         ))
             ->add('website', null, array(
             'required' => true,
-            'label' => 'Website'
+            'label' => 'Site internet'
         ))
             ->add('content', 'textarea', array(
             'required' => true,
-            'label' => 'Content',
+            'label' => 'Commentaire',
             'read_only' => false
         ))
             ->add('save', 'submit', array(
-            'label' => 'Save'
+            'label' => 'Envoyer'
         ));
     }
 

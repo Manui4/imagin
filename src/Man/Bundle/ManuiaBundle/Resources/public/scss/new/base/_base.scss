@@ -1,0 +1,54 @@
+/* ===========================
+   Base
+   =========================== */
+
+*,
+*:after,
+*:before {
+@include box-sizing(border-box);}
+    
+@include selection ($color-6, $color-15);
+
+body {
+    font-family: $font1;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    background-size: $line-height-base $line-height-base;
+    color: $color-text-base;
+}
+
+p,ul,ol,blockquote {
+    padding: 1.5em;
+    margin: 0;
+}
+
+a {
+    color: $color-link;
+    text-decoration: none;
+    
+    &:hover {
+        color: $color-link-hover;
+    }
+}
+
+%base-headline {
+    margin: 0;
+    margin-bottom: $margin-bottom-headline;
+    color: $color-carrot;
+    font-family: $font2;
+}
+
+p, ul, blockquote, hr { display: block; line-height: 1.5em; }
+h1, h2, h3, h4, h5, h6 { @extend %base-headline;}
+h1 { font-size: 1.5em;}
+h2 { font-size: 1.375em;}
+h3 { font-size: 1.25em;}
+h4 { font-size: 1.125em;}
+h5 { font-size: 1em;}
+h6 { font-size: 1em; color: lighten($color-headline, 10%);}
+
+
+strong {
+    color: $color-text-strong;
+    font-weight: bold;
+}

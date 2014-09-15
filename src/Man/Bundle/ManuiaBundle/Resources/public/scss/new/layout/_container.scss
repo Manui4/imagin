@@ -1,0 +1,19 @@
+/* ==|====================
+   Layout/Container
+   ======================= */
+
+.l-container {
+    
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: $color-bg-container;
+    width: 100%;
+    @include clearfix;
+}
+
+@media ( min-width : $width-device-l) {
+    .l-container { 
+         width: $width-device-l + $gutter;
+    }
+}

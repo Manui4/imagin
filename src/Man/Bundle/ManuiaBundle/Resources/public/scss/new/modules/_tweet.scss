@@ -1,0 +1,29 @@
+/* ==|====================
+   Module/Tweet
+   ======================= */
+
+.block-twitter {
+    .tweet {
+        margin-bottom: 3em;
+        padding: 1.5em;
+        position: relative;
+        border-bottom: 1px dashed $color-clouds;
+
+        &:before, &:after {
+            color: $color-clouds;
+            content: "\"";
+            display: block;
+            font-size: 6em;
+            position: absolute;
+        }
+        &:before {
+            top: 5px;
+            left: 0px;
+        }
+        &:after {
+            right: 0px;
+            bottom: 0px;
+        }
+    }
+}
+
